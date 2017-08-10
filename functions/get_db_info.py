@@ -11,7 +11,7 @@ def db_lines(data_file):
     f1.close()
     return totline
 
-def db_columns():
+def db_columns(data_file):
     f1 = open(data_file, "r")
     totline = 0
     line = f1.readline()

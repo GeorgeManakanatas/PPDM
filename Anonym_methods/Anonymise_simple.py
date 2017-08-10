@@ -3,14 +3,14 @@ import random
 import Kanon_file
 
 
-def master(lines, nums, kmin):
+def master(enc_temp_file, file_name, lines, nums, kmin):
     """ perform simple  """
     """ import the column selection """
-    selectcol = Kanon_file.grab_columns(lines, nums)
+    selectcol = Kanon_file.grab_columns(enc_temp_file, lines, nums)
     """ import the checklist """
     checklist = Kanon_file.checklist_generate(lines, nums, selectcol)
     """ bringing in newdb the encrypted DB """
-    newdb = newdb_listoflists()
+    newdb = newdb_listoflists(enc_temp_file)
 
     """ reading the first generated combination of the columns """
     for i in range(len(checklist)):
@@ -43,7 +43,7 @@ def master(lines, nums, kmin):
                         ranline[nums[b]] = val3[b]
                     kanonDB.insert(0, ranline)
 
-            with open("kanonDB_to_delete.txt", "a") as f1:
+            with open(file_name, "a") as f1:
                 mywriter = csv.writer(f1, delimiter=',', quotechar='|')
                 for line in range(len(kanonDB)):
                     mywriter.writerow(kanonDB[line])
@@ -52,10 +52,10 @@ def master(lines, nums, kmin):
     return
 
 
-def newdb_listoflists():
+def newdb_listoflists(enc_temp_file):
     """ reading the data from the file containing the encrypted form of the DB (perhaps pass direct?) """
     newdb = []
-    with open("pgp.txt", "r") as f1:
+    with open(enc_temp_file, "r") as f1:
         myreader = csv.reader(f1, delimiter=',')
         for row in myreader:
             vari = row

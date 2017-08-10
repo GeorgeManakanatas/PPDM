@@ -1,0 +1,103 @@
+"('  Private',)",0.3133753686924884
+"('  Female',)",0.33079001748529646
+"('  Never-married',)",0.32787580140942085
+"('  40',)",0.4673342870767763
+"('  Male',)",0.6692099825147035
+"('  United-States',)",0.8956887263992652
+"('  9',)",0.32416679913103374
+"('  0',)",1.0
+"('  Husband',)",0.403539447888518
+"('  Married-civ-spouse',)",0.457602571574913
+"('  <=50K',)",0.7589501757360604
+"('  White',)",0.8540595913032728
+"('  <=50K', '  0')",0.7589501757360604
+"('  40', '  United-States')",0.41288260124693127
+"('  Private', '  0')",0.3133753686924884
+"('  40', '  White')",0.3848531411716915
+"('  Male', '  0')",0.6692099825147035
+"('  White', '  United-States')",0.7859375827902294
+"('  Male', '  Married-civ-spouse')",0.40737208357618465
+"('  White', '  0')",0.8540595913032728
+"('  40', '  0')",0.4673342870767763
+"('  Husband', '  United-States')",0.3632879422102121
+"('  9', '  0')",0.32416679913103374
+"('  White', '  Male')",0.58920150479521
+"('  Female', '  0')",0.33079001748529646
+"('  White', '  <=50K')",0.6349282043130398
+"('  Husband', '  0')",0.403539447888518
+"('  40', '  Male')",0.31549479856585244
+"('  Husband', '  Married-civ-spouse')",0.4033098429855702
+"('  Married-civ-spouse', '  United-States')",0.4089616559812077
+"('  40', '  <=50K')",0.36853353114678816
+"('  Never-married', '  <=50K')",0.3123333156714177
+"('  Male', '  <=50K')",0.4644024090852894
+"('  Husband', '  Male')",0.4035217859729066
+"('  0', '  United-States')",0.8956887263992652
+"('  <=50K', '  United-States')",0.6753033434006253
+"('  Never-married', '  0')",0.32787580140942085
+"('  Husband', '  White')",0.36565463890213534
+"('  White', '  Married-civ-spouse')",0.4098977375086102
+"('  0', '  Married-civ-spouse')",0.457602571574913
+"('  Male', '  United-States')",0.5985093343224006
+"('  <=50K', '  0', '  United-States')",0.6753033434006253
+"('  Husband', '  Male', '  Married-civ-spouse')",0.40329218106995884
+"('  Husband', '  0', '  United-States')",0.3632879422102121
+"('  Husband', '  Male', '  0')",0.4035217859729066
+"('  White', '  Married-civ-spouse', '  United-States')",0.3782122609018174
+"('  Male', '  0', '  Married-civ-spouse')",0.40737208357618465
+"('  White', '  0', '  United-States')",0.7859375827902294
+"('  Male', '  United-States', '  Married-civ-spouse')",0.3660432010455854
+"('  <=50K', '  0', '  Never-married')",0.3123333156714177
+"('  40', '  White', '  United-States')",0.3502711104046345
+"('  Husband', '  0', '  Married-civ-spouse')",0.4033098429855702
+"('  White', '  Male', '  Husband')",0.365636976986524
+"('  Husband', '  Married-civ-spouse', '  United-States')",0.36305833730726433
+"('  0', '  United-States', '  Married-civ-spouse')",0.4089616559812077
+"('  Male', '  <=50K', '  United-States')",0.4110987477701832
+"('  White', '  <=50K', '  0')",0.6349282043130398
+"('  White', '  Husband', '  0')",0.36565463890213534
+"('  White', '  Male', '  0')",0.58920150479521
+"('  Male', '  <=50K', '  0')",0.4644024090852894
+"('  40', '  White', '  0')",0.3848531411716915
+"('  40', '  0', '  United-States')",0.41288260124693127
+"('  Husband', '  White', '  Married-civ-spouse')",0.3654250339991876
+"('  White', '  Male', '  Married-civ-spouse')",0.368621840724845
+"('  40', '  <=50K', '  0')",0.36853353114678816
+"('  White', '  Male', '  <=50K')",0.40161429908687896
+"('  White', '  <=50K', '  United-States')",0.5799466610148537
+"('  Husband', '  Male', '  United-States')",0.36327028029460073
+"('  White', '  Husband', '  United-States')",0.33854359843868664
+"('  40', '  Male', '  0')",0.31549479856585244
+"('  Male', '  0', '  United-States')",0.5985093343224006
+"('  White', '  Male', '  United-States')",0.541726275631855
+"('  White', '  0', '  Married-civ-spouse')",0.4098977375086102
+"('  40', '  <=50K', '  United-States')",0.3240255038061428
+"('  Husband', '  United-States', '  White', '  Married-civ-spouse')",0.3383139935357389
+"('  Husband', '  0', '  Male', '  Married-civ-spouse')",0.40329218106995884
+"('  Husband', '  0', '  United-States', '  White')",0.33854359843868664
+"('  Husband', '  United-States', '  Male', '  Married-civ-spouse')",0.36304067539165297
+"('  0', '  United-States', '  Male', '  Married-civ-spouse')",0.3660432010455854
+"('  0', '  United-States', '  White', '  Married-civ-spouse')",0.3782122609018174
+"('  Husband', '  0', '  United-States', '  Male')",0.36327028029460073
+"('  Husband', '  United-States', '  White', '  Male')",0.3385259365230753
+"('  40', '  0', '  United-States', '  White')",0.3502711104046345
+"('  United-States', '  White', '  Male', '  Married-civ-spouse')",0.3408926332149985
+"('  <=50K', '  0', '  United-States', '  40')",0.3240255038061428
+"('  <=50K', '  0', '  United-States', '  Male')",0.4110987477701832
+"('  <=50K', '  United-States', '  White', '  Male')",0.3654073720835762
+"('  0', '  United-States', '  White', '  Male')",0.541726275631855
+"('  Husband', '  White', '  Male', '  Married-civ-spouse')",0.3654073720835762
+"('  Husband', '  0', '  White', '  Male')",0.365636976986524
+"('  Husband', '  0', '  White', '  Married-civ-spouse')",0.3654250339991876
+"('  0', '  White', '  Male', '  Married-civ-spouse')",0.368621840724845
+"('  <=50K', '  0', '  White', '  Male')",0.40161429908687896
+"('  <=50K', '  0', '  United-States', '  White')",0.5799466610148537
+"('  Husband', '  0', '  United-States', '  Married-civ-spouse')",0.36305833730726433
+"('  Husband', '  0', '  United-States', '  Male', '  Married-civ-spouse')",0.36304067539165297
+"('  Husband', '  0', '  United-States', '  White', '  Married-civ-spouse')",0.3383139935357389
+"('  Husband', '  0', '  White', '  Male', '  Married-civ-spouse')",0.3654073720835762
+"('  <=50K', '  0', '  United-States', '  White', '  Male')",0.3654073720835762
+"('  Husband', '  United-States', '  White', '  Male', '  Married-civ-spouse')",0.3382963316201275
+"('  0', '  United-States', '  White', '  Male', '  Married-civ-spouse')",0.3408926332149985
+"('  Husband', '  0', '  United-States', '  White', '  Male')",0.3385259365230753
+"('  Husband', '  0', '  United-States', '  White', '  Male', '  Married-civ-spouse')",0.3382963316201275

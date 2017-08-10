@@ -2,7 +2,7 @@ import csv
 from cryptography.fernet import Fernet
 
 
-def master(lines, encrypt_col, data_file):
+def master(enc_temp_file, lines, encrypt_col, data_file):
 
     """calling the function that removes the selected columns from DB"""
     final = remove_columns(lines, encrypt_col, data_file)
@@ -14,7 +14,7 @@ def master(lines, encrypt_col, data_file):
     and commiting the end result to pgp.txt'''
     new_db = recompile_file(lines, encrypt_col, encrypted_text, data_file)
 
-    with open("pgp.txt", "wb") as csvfile:
+    with open(enc_temp_file, "wb") as csvfile:
         grafias = csv.writer(csvfile, delimiter=',', lineterminator='', quoting=csv.QUOTE_NONE, escapechar=" ")
         for index_line in range(lines-1):
             grafias.writerow(new_db[index_line])

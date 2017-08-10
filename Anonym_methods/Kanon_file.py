@@ -1,17 +1,17 @@
 import itertools
 
 
-def master(lines, nums):
-    selection = grab_columns(lines, nums)
+def master(enc_temp_file, lines, nums):
+    selection = grab_columns(enc_temp_file, lines, nums)
     checklist = checklist_generate(lines, nums, selection)
 
     return
 
 
-def grab_columns(lines, nums):
+def grab_columns(enc_temp_file, lines, nums):
     """ gets the selected columns from the new encrypted file
     also initialises the temp and selection lists """
-    f1 = open("pgp.txt", "r")
+    f1 = open(enc_temp_file, "r")
     selection = []
     temp = []
     """ getting the designated columns from the file """

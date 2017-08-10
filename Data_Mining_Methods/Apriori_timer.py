@@ -18,12 +18,12 @@ def master(file_name, min_supp, min_conf):
     items, rules = runApriori(inFile, minSupport, minConfidence)
 
     # printResults(items, rules)
-    with open("Apriori_items.txt", "w") as f1:
+    with open("data/output/Apriori_items.txt", "w") as f1:
                 mywriter = csv.writer(f1, delimiter=',')
                 for i in range(len(items)):
                     mywriter.writerow(items[i])
                 f1.close()
-    with open("Apriori_rules.txt", "w") as f1:
+    with open("data/output/Apriori_rules.txt", "w") as f1:
                 mywriter = csv.writer(f1, delimiter=',')
                 for i in range(len(rules)):
                     mywriter.writerow(rules[i])

@@ -1,4 +1,4 @@
-from packages import get_db_info
+# from .../packages import get_db_info
 import Tkinter as tk
 import ttk
 

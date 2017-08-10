@@ -1,65 +1,60 @@
 # -*- coding: utf-8 -*-
-import winsound
 import os
 import timeit
+import json
 from Anonym_methods import Anonymise_simple
 from Anonym_methods import Kanon_file
 from Data_Mining_Methods import Apriori_timer
-from packages import get_db_info
-from packages import pgp_encryption_file
+from functions import get_db_info
+from functions import pgp_encryption_file
 # from GUI import My_main_GUI_single
+# from GUI import licence
 
 
 def main():
     """
-    The main funciton calls the GUI for input then runs the encryption - anonymity - data mining modules as they have
-    been selected by the user in the GUI. The
-    """
+    Still not shure how to run the GUI properly.
 
-    """
-    call GUI and return a list with the proper values for:
-    name of the file with the data
-    level of required support and confidence
-    level of Kmin , columns to apply it to , columns to encrypt
-    -------------------------------------------
-    still problem harvesting the thing to work like I want it.
-    will use the following list for now:
-    user_input[0] is the level of anonymity we want to apply
-    user_input[1] is a list of the attributes we want to anonymise
-    user_input[2] is a list of the attributes we want to encrypt
+    Will read these values from the config file.
+
+    data_file is the csv file containing the original data
     min_sup is the minimum level of supprot
     min_conf is the minimum level of confidence
-    """
-    # My_main_GUI_single.start_gui_window()
-    user_input = [3, [0, 1, 3], [2]]
-    min_supp = 0.3
-    min_conf = 0.9
-    data_file = "adult_dataset.txt"
-
-    """
-    Get the number of lines in the databaze and the number of attributes (columns)
-    """
-    lines = get_db_info.db_lines(data_file)
-    """
-    initialising variables and tables
     kmin = k anonymity level
     nums = columns to anonymize
     encrypt_col = columns to encrypt
+    file_name = temp output file name
     """
-    kmin = user_input[0]
-    nums = user_input[1]
-    encrypt_col = user_input[2]
-
-    file_name = "kanonDB_to_delete.txt"
+    with open('config.json') as json_data_file:
+        conf = json.load(json_data_file)
+    """
+    assign values to variables
+    """
+    kmin = int(conf["kmin"])
+    nums = conf["nums"]
+    encrypt_col = conf["encrypt_col"]
+    min_supp = float(conf["min_supp"])
+    min_conf = float(conf["min_conf"])
+    data_file = conf["data_file_location"]+conf["data_file_name"]
+    file_name = conf["file_name"]
+    enc_temp_file = conf["enc_temp_file"]
+    """
+    Get the number of lines in the csv file
+    """
+    lines = get_db_info.db_lines(data_file)
+    """
+    Get the number of columns in the csv file
+    """
+    columns = get_db_info.db_columns(data_file)
     """
     calling the encryption and recompile routines
     """
     start = timeit.default_timer()
-    pgp_encryption_file.master(lines, encrypt_col, data_file)
-    Kanon_file.master(lines, nums)
+    pgp_encryption_file.master(enc_temp_file, lines, encrypt_col, data_file)
+    Kanon_file.master(enc_temp_file, lines, nums)
     stop = timeit.default_timer()
     print "prep time is:", stop-start
-    winsound.Beep(2000, 500)
+    # winsound.Beep(2000, 500)
 
     """
     calling k-anonymity for the encrypted file
@@ -67,10 +62,10 @@ def main():
     """
     start = timeit.default_timer()
     print "running k-anonymity"
-    Anonymise_simple.master(lines, nums, kmin)
+    Anonymise_simple.master(enc_temp_file, file_name, lines, nums, kmin)
     stop = timeit.default_timer()
     print "anonym time is:", stop-start
-    winsound.Beep(2000, 500)
+    # winsound.Beep(2000, 500)
 
     """
     calling the apriori method
@@ -80,18 +75,18 @@ def main():
     Apriori_timer.master(file_name, min_supp, min_conf)
     stop = timeit.default_timer()
     print "apriori time is:", stop-start
-    winsound.Beep(2000, 500)
+    # winsound.Beep(2000, 500)
 
     """
     deleting temp files
     """
-    os.remove("kanonDB_to_delete.txt")
-    os.remove("pgp.txt")
+    os.remove(file_name)
+    os.remove(enc_temp_file)
 
     """
     end of program line
     """
-    # s = raw_input('press enter to end the programm')
+    s = raw_input('press enter to end the programm')
 
 if __name__ == '__main__':
     main()
