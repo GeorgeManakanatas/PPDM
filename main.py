@@ -13,6 +13,10 @@ from functions import pgp_encryption_file
 
 def main():
     """
+    run the gui
+    """
+    os.system('python GUI/GUI_call_from_main.py')
+    """
     Still not shure how to run the GUI properly.
 
     Will read these values from the config file.
@@ -49,7 +53,7 @@ def main():
     """
     calling the encryption and recompile routines
     """
-    start = timeit.default_timer()
+    start = timeit.default_timer()  # starting timer
     pgp_encryption_file.master(enc_temp_file, lines, encrypt_col, data_file)
     Kanon_file.master(enc_temp_file, lines, nums)
     stop = timeit.default_timer()

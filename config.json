@@ -1,15 +1,1 @@
-{
-    "data_file_name":"adult_dataset.txt",
-    "data_file_location":"data/input/",
-    "min_supp":"0.3",
-    "min_conf":"0.9",
-    "user_input":[3, [0, 1, 3], [2]],
-    "kmin":"3",
-    "nums":[0, 1, 3],
-    "encrypt_col":[2],
-    "file_name":"temp/kanonDB_to_delete.txt",
-    "enc_temp_file":"temp/pgp.txt",
-    "":"",
-    "":"",
-    "":""
-}
+{"": "", "min_supp": "0.3", "nums": [0, 1, 3], "min_conf": "0.9", "data_file_name": "adult_dataset.txt", "kmin": 3, "data_file_location": "data/input/", "file_name": "temp_kanonDB_to_delete.txt", "encrypt_col": [2], "enc_temp_file": "temp_pgp.txt"}

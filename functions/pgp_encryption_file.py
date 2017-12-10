@@ -15,10 +15,10 @@ def master(enc_temp_file, lines, encrypt_col, data_file):
     new_db = recompile_file(lines, encrypt_col, encrypted_text, data_file)
 
     with open(enc_temp_file, "wb") as csvfile:
+        print "creating file"
         grafias = csv.writer(csvfile, delimiter=',', lineterminator='', quoting=csv.QUOTE_NONE, escapechar=" ")
         for index_line in range(lines-1):
             grafias.writerow(new_db[index_line])
-
     return
 
 '''
@@ -49,7 +49,7 @@ def remove_columns(lines, encrypt_col, data_file):
         temp = []
 
     f1.close()
-
+    print "end of remove columns"
     return final
 
 ''' gets the list of lists with the selected columns from master
@@ -66,7 +66,7 @@ def encrypt_routine(lines, encrypt_col, final):
     key = Fernet.generate_key()
     f = Fernet(key)
     encrypt_thing = f.encrypt(unitary_string)
-
+    print "end of encrypt routine"
     return encrypt_thing
 
 '''recompiling the DB into an encrypted one and saved in a file'''
@@ -99,5 +99,5 @@ def recompile_file(lines, encrypt_col, encrypted_text, data_file):
         final_DB.append(words)
 
     f1.close()
-
+    print "end of recompile file"
     return final_DB

@@ -1,6 +1,8 @@
 # from .../packages import get_db_info
 import Tkinter as tk
 import ttk
+import json
+import os
 
 """
 Initialising typefonts and vals list
@@ -12,7 +14,7 @@ SMALL_FONT = ("Verdana", 8)
 vals = []
 for position in range(7):
     vals.append(position)
-    print vals
+    # print vals
 
 class start_gui_window(tk.Tk):
 
@@ -78,31 +80,36 @@ class StartPage(ttk.Frame):
         """
         check_var = tk.IntVar()
         licence_text = "Copyright (c) 2015 George Manakanatas\n\n" \
-                     "Permission is hereby granted, free of charge, to any person obtaining a copy\n" \
-                     "of this software and associated documentation files (the \"Software\"), to deal\n" \
-                     "in the Software without restriction, including without limitation the rights\n" \
-                     "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n" \
-                     "copies of the Software, and to permit persons to whom the Software is\n" \
-                     "furnished to do so, subject to the following conditions:\n\n" \
-                     "The above copyright notice and this permission notice shall be included in\n" \
-                     "all copies or substantial portions of the Software.\n\n" \
-                     "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n" \
-                     "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n" \
-                     "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE\n" \
-                     "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n" \
-                     "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n" \
-                     "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n" \
-                     "THE SOFTWARE."
+                       "Permission is hereby granted, free of charge, to any person obtaining a copy\n" \
+                       "of this software and associated documentation files (the \"Software\"), to deal\n" \
+                       "in the Software without restriction, including without limitation the rights\n" \
+                       "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n" \
+                       "copies of the Software, and to permit persons to whom the Software is\n" \
+                       "furnished to do so, subject to the following conditions:\n\n" \
+                       "The above copyright notice and this permission notice shall be included in\n" \
+                       "all copies or substantial portions of the Software.\n\n" \
+                       "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n" \
+                       "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n" \
+                       "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE\n" \
+                       "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n" \
+                       "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n" \
+                       "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n" \
+                       "THE SOFTWARE."
         """
         Initialising widgets
         """
-        label = ttk.Label(self, text="The MIT License (MIT)", font=LARGE_FONT, anchor="center")
+        label = ttk.Label(self, text="The MIT License (MIT)", font=LARGE_FONT,
+                          anchor="center")
         txt = tk.Text(self, padx=10, pady=10, width=80)
+
         txt.insert(tk.INSERT, licence_text)
-        chk = tk.Checkbutton(self, text='I agree', variable=check_var, onvalue=1, offvalue=0,
+
+        chk = tk.Checkbutton(self, text='I agree', variable=check_var,
+                             onvalue=1, offvalue=0,
                              command=lambda: printvalue(check_var))
         chk.deselect()
-        button1 = ttk.Button(self, text="Next page", state="disabled", command=lambda: controller.show_frame(HomePage))
+        button1 = ttk.Button(self, text="Next page", state="disabled",
+                             command=lambda: controller.show_frame(HomePage))
         """
         Placing the widgets using the grid method in 3xROWS & 3xCOLUMNS
         """
@@ -154,8 +161,10 @@ class HomePage(ttk.Frame):
         Initialising widgets
         """
         label = ttk.Label(self, text="Home page", font=LARGE_FONT)
-        text_label1 = ttk.Label(self, text="Please insert the name of the file containing the data:", font=NORMAL_FONT)
-        text_label2 = ttk.Label(self, text="Please insert your name of choice for the results file:", font=NORMAL_FONT)
+        text_label1 = ttk.Label(self, text="Please insert the name of the file"
+                                " containing the data:", font=NORMAL_FONT)
+        text_label2 = ttk.Label(self, text="Please insert your name of choice "
+                                "for the results file:", font=NORMAL_FONT)
         get_file_name1 = tk.Entry(self, width=20, bd=3)
         get_file_name1.insert(0, "adultfull.txt")
         get_file_name2 = tk.Entry(self, width=20, bd=3)
@@ -202,6 +211,21 @@ class PageThree(ttk.Frame):
         Exit and return data function
         """
         def leave_mini():
+            """
+            opening config.json and saving the values
+            """
+            with open('../defaultConfig.json', 'r') as json_data_file:
+                conf = json.load(json_data_file)
+
+            print "values are: ", vals
+            conf["kmin"] = vals[3]
+            print "conf is: ", conf
+            newConfigFile = open('../config.json', 'w')
+            newConfigFile.write(json.dumps(conf))
+            newConfigFile.close()
+
+            # os.system('python ../main.py')
+
             PageThree.quit(self)
         """
         Initialising widgets
@@ -210,13 +234,10 @@ class PageThree(ttk.Frame):
         data_file = ttk.Label(self, text="The name of the file containing the data is: %s" % vals[0], font=NORMAL_FONT)
         output_file = ttk.Label(self, text="The name of the file containing the result data is: %s" % vals[1], font=NORMAL_FONT)
         anonym_method = ttk.Label(self, text="The anonymisation method selected is: %s" % vals[2], font=NORMAL_FONT)
-        anonym_level = ttk.Label(self, text="The level of anonymisation to be applied is: %s" % vals[3],
-                                 font=NORMAL_FONT)
+        anonym_level = ttk.Label(self, text="The level of anonymisation to be applied is: %s" % vals[3], font=NORMAL_FONT)
         anonym_columns = ttk.Label(self, text="The attributes to be anonymised are: %s" % vals[4], font=NORMAL_FONT)
-        encryption_level = ttk.Label(self, text="The level of encryption to be applied is: %s" % vals[5],
-                                     font=NORMAL_FONT)
-        encryption_method = ttk.Label(self, text="The method of encryption to be applied is: %s" % vals[6],
-                                      font=NORMAL_FONT)
+        encryption_level = ttk.Label(self, text="The level of encryption to be applied is: %s" % vals[5], font=NORMAL_FONT)
+        encryption_method = ttk.Label(self, text="The method of encryption to be applied is: %s" % vals[6], font=NORMAL_FONT)
         previous_page_button = ttk.Button(self, text="Previous page", command=lambda: controller.show_frame(HomePage))
         start_button = ttk.Button(self, text="Start the process", command=lambda: leave_mini())
         """
