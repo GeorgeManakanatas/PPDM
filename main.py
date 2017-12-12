@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import sys
 import timeit
 import json
 from Anonym_methods import Anonymise_simple
@@ -57,7 +58,7 @@ def main():
     pgp_encryption_file.master(enc_temp_file, lines, encrypt_col, data_file)
     Kanon_file.master(enc_temp_file, lines, nums)
     stop = timeit.default_timer()
-    print "prep time is:", stop-start
+    print ("prep time is:", stop-start)
     # winsound.Beep(2000, 500)
 
     """
@@ -65,20 +66,20 @@ def main():
     perhaps just return the list of lists and not go to file at all?
     """
     start = timeit.default_timer()
-    print "running k-anonymity"
+    print ("running k-anonymity")
     Anonymise_simple.master(enc_temp_file, file_name, lines, nums, kmin)
     stop = timeit.default_timer()
-    print "anonym time is:", stop-start
+    print ("anonym time is:", stop-start)
     # winsound.Beep(2000, 500)
 
     """
     calling the apriori method
     """
     start = timeit.default_timer()
-    print "running apriori"
+    print ("running apriori")
     Apriori_timer.master(file_name, min_supp, min_conf)
     stop = timeit.default_timer()
-    print "apriori time is:", stop-start
+    print ("apriori time is:", stop-start)
     # winsound.Beep(2000, 500)
 
     """
@@ -91,6 +92,7 @@ def main():
     end of program line
     """
     s = raw_input('press enter to end the programm')
+
 
 if __name__ == '__main__':
     main()

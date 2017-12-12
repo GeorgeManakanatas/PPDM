@@ -28,7 +28,7 @@ def master(file_name, min_supp, min_conf):
                 for i in range(len(rules)):
                     mywriter.writerow(rules[i])
                 f1.close()
-    print "results with min support:", minSupport, "and min confidence:", minConfidence
+    print ("results with min support:", minSupport, "and min confidence:", minConfidence)
 
     return
 
@@ -135,11 +135,11 @@ def runApriori(data_iter, minSupport, minConfidence):
 def printResults(items, rules):
     """prints the generated itemsets and the confidence rules"""
     for item, support in items:
-        print "item: %s , %.3f" % (str(item), support)
-    print "\n------------------------ RULES:"
+        print ("item: %s , %.3f" % (str(item), support))
+    print ("\n------------------------ RULES:")
     for rule, confidence in rules:
         pre, post = rule
-        print "Rule: %s ==> %s , %.3f" % (str(pre), str(post), confidence)
+        print ("Rule: %s ==> %s , %.3f" % (str(pre), str(post), confidence))
 
 
 def dataFromFile(fname):

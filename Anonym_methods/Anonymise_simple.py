@@ -1,6 +1,6 @@
 import csv
 import random
-import Kanon_file
+from . import Kanon_file
 
 
 def master(enc_temp_file, file_name, lines, nums, kmin):
@@ -62,3 +62,7 @@ def newdb_listoflists(enc_temp_file):
             newdb.append(vari)
         f1.close()
     return newdb
+
+
+if __name__ == '__main__':
+    master()

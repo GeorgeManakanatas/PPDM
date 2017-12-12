@@ -1,6 +1,6 @@
 # from .../packages import get_db_info
-import Tkinter as tk
-import ttk
+import tkinter as tk
+from tkinter import ttk
 import json
 import os
 
@@ -34,13 +34,13 @@ class start_gui_window(tk.Tk):
         menubar.add_cascade(label="File", menu=filemenu)
         tk.Tk.config(self, menu=menubar)
 
-        print "initialising frames"
+        # print "initialising frames"
         self.frames = {}
         for F in (StartPage, HomePage, PageThree):
             frame = F(container, self)
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")
-        print "showing the startpage"
+        # print "showing the startpage"
         self.show_frame(StartPage)
 
     def show_frame(self, cont):
@@ -135,7 +135,7 @@ class HomePage(ttk.Frame):
             vals[4] = attribute_list.get()
             vals[5] = self.variable3.get()
             vals[6] = self.variable2.get()
-            print "values are:", vals
+            print ("values are:", vals)
             controller.show_frame(PageThree)
         """
         need to replace this with automatic attribute count.
@@ -217,9 +217,9 @@ class PageThree(ttk.Frame):
             with open('defaultConfig.json', 'r') as json_data_file:
                 conf = json.load(json_data_file)
 
-            print "values are: ", vals
+            print ("values are: ", vals)
             conf["kmin"] = vals[3]
-            print "conf is: ", conf
+            print ("conf is: ", conf)
             newConfigFile = open('config.json', 'w')
             newConfigFile.write(json.dumps(conf))
             newConfigFile.close()

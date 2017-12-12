@@ -44,3 +44,7 @@ def checklist_generate(lines, nums, selection):
         final_list.append(temp)
 
     return final_list
+
+
+if __name__ == '__main__':
+    master()
