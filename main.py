@@ -6,7 +6,7 @@ import json
 from Anonym_methods import AnonymiseTheData
 from Data_Mining_Methods import Apriori_timer
 from functions import getDataInfo
-from functions import encryptTheInfo
+from dataMaskingMethods import maskTheInfo
 from functions import memoryRelated
 
 
@@ -30,69 +30,68 @@ def main():
     encrypt_col = columns to encrypt
     file_name = temp output file name
     """
+    totalPrepTimeStart = timeit.default_timer()  # starting timer
     with open('temp/config.json') as json_data_file:
         conf = json.load(json_data_file)
-    """
-    assign values to variables from configuration file
-    """
+    
+    # assign values to variables from configuration file #
+    
     kmin = int(conf["kmin"])
     nums = conf["nums"]
     encrypt_col = conf["encrypt_col"]
     min_supp = float(conf["min_supp"])
     min_conf = float(conf["min_conf"])
     data_file = conf["data_file_location"]+conf["data_file_name"]
-    file_name = conf["file_name"]
-    enc_temp_file = conf["enc_temp_file"]
+    file_name = conf["tempFileLocation"]+conf["file_name"]
+    enc_temp_file = conf["tempFileLocation"]+conf["enc_temp_file"]
     
+    # Check the size of the data to be imported
     memoryRelated.checkMemoryRequirement(data_file)
-    
     # Get the number of lines in the csv file
-
     lines = getDataInfo.db_lines(data_file)
-    
-    # Get the number of columns in the csv file
-  
+    # Get the number of columns in the csv file  
     columns = getDataInfo.db_columns(data_file)
-    
-    # calling the encryption and recompile routines
-    
-    totalPrepTimeStart = timeit.default_timer()  # starting timer
-    dataWithEncryption = encryptTheInfo.getDataWithEncryption(enc_temp_file, lines, encrypt_col, data_file)
-    # Kanon_file.master(enc_temp_file, lines, nums) # completely not needed now 
+    # Get dictionary with data from csv
+    dataDictionary = getDataInfo.CreateDataDictionary(lines, data_file)
     totalPrepTimeStop = timeit.default_timer() # stop timer
     print (" Total prep time is:", totalPrepTimeStop-totalPrepTimeStart)
-    # winsound.Beep(2000, 500)
-
-    """
-    calling k-anonymity for the encrypted file
-    perhaps just return the list of lists and not go to file at all?
-    """
+    
+    # calling the encryption and recompile routines #
+    
+    totalMaskTimeStart = timeit.default_timer()  # starting timer
+    # get the data after sections are masked
+    dataWithMasking = maskTheInfo.maskingMethodSelection(dataDictionary, enc_temp_file, lines, encrypt_col)
+    totalMaskTimeStop = timeit.default_timer() # stop timer
+    print (" Total mask time is:", totalMaskTimeStop-totalMaskTimeStart)  
+    
+    lines = getDataInfo.db_lines(data_file)
+    lines = getDataInfo.db_lines(enc_temp_file)
+    
+    
+    # calling k-anonymity for the encrypted file #
+    # perhaps just return the list of lists and not go to file at all? #
+    
     start = timeit.default_timer()
     print ("running k-anonymity")
-    AnonymiseTheData.master(enc_temp_file, file_name, lines, nums, kmin)
+    AnonymiseTheData.master(dataWithMasking, file_name, lines, nums, kmin)
     stop = timeit.default_timer()
     print ("anonym time is:", stop-start)
-    # winsound.Beep(2000, 500)
 
-    """
-    calling the apriori method
-    """
+
+    # calling the apriori method #
+   
     start = timeit.default_timer()
     print ("running apriori")
     Apriori_timer.master(file_name, min_supp, min_conf)
     stop = timeit.default_timer()
     print ("apriori time is:", stop-start)
-    # winsound.Beep(2000, 500)
 
-    """
-    deleting temp files
-    """
+    # deleting temp files #
     os.remove(file_name)
     os.remove(enc_temp_file)
     #os.remove("temp/config.json")
-    """
-    end of program line
-    """
+    
+    # end of program input to keep the window open #
     s = raw_input('press enter to end the programm')
 
 

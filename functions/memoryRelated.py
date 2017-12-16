@@ -28,7 +28,7 @@ def checkMemoryRequirement(data_file):
         print('data size: ',fileSize,' and memory limit: ',upperLimit)
         sys.exit(0)
          
-    return True
+    return
     
     
 def checkTheFileSize(data_file):

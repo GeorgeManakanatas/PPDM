@@ -19,6 +19,7 @@ def grab_columns(enc_temp_file, lines, nums):
         line = f1.readline()
         words = line.split(",")
         for index_col in range(len(nums)):
+            print('index_col ',index_col)
             temp.append(words[nums[index_col]])
         selection.append(temp)
         temp = []
