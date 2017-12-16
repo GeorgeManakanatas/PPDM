@@ -3,24 +3,24 @@ import os
 import sys
 import timeit
 import json
-from Anonym_methods import Anonymise_simple
-from Anonym_methods import Kanon_file
+from Anonym_methods import AnonymiseTheData
 from Data_Mining_Methods import Apriori_timer
-from functions import get_db_info
-from functions import pgp_encryption_file
-# from GUI import My_main_GUI_single
-# from GUI import licence
+from functions import getDataInfo
+from functions import encryptTheInfo
+from functions import memoryRelated
+
 
 
 def main():
+    
+    # run the gui
     """
-    run the gui
+     os.system('python3 GUI/licensePage.py')
+     os.system('python3 GUI/GUI_call_from_main.py')
+    # os.system('python3 GUI/test2.py')
     """
-    os.system('python GUI/GUI_call_from_main.py')
     """
-    Still not shure how to run the GUI properly.
-
-    Will read these values from the config file.
+    A temp config file is created with the values for this run.
 
     data_file is the csv file containing the original data
     min_sup is the minimum level of supprot
@@ -30,10 +30,10 @@ def main():
     encrypt_col = columns to encrypt
     file_name = temp output file name
     """
-    with open('config.json') as json_data_file:
+    with open('temp/config.json') as json_data_file:
         conf = json.load(json_data_file)
     """
-    assign values to variables
+    assign values to variables from configuration file
     """
     kmin = int(conf["kmin"])
     nums = conf["nums"]
@@ -43,22 +43,24 @@ def main():
     data_file = conf["data_file_location"]+conf["data_file_name"]
     file_name = conf["file_name"]
     enc_temp_file = conf["enc_temp_file"]
-    """
-    Get the number of lines in the csv file
-    """
-    lines = get_db_info.db_lines(data_file)
-    """
-    Get the number of columns in the csv file
-    """
-    columns = get_db_info.db_columns(data_file)
-    """
-    calling the encryption and recompile routines
-    """
-    start = timeit.default_timer()  # starting timer
-    pgp_encryption_file.master(enc_temp_file, lines, encrypt_col, data_file)
-    Kanon_file.master(enc_temp_file, lines, nums)
-    stop = timeit.default_timer()
-    print ("prep time is:", stop-start)
+    
+    memoryRelated.checkMemoryRequirement(data_file)
+    
+    # Get the number of lines in the csv file
+
+    lines = getDataInfo.db_lines(data_file)
+    
+    # Get the number of columns in the csv file
+  
+    columns = getDataInfo.db_columns(data_file)
+    
+    # calling the encryption and recompile routines
+    
+    totalPrepTimeStart = timeit.default_timer()  # starting timer
+    dataWithEncryption = encryptTheInfo.getDataWithEncryption(enc_temp_file, lines, encrypt_col, data_file)
+    # Kanon_file.master(enc_temp_file, lines, nums) # completely not needed now 
+    totalPrepTimeStop = timeit.default_timer() # stop timer
+    print (" Total prep time is:", totalPrepTimeStop-totalPrepTimeStart)
     # winsound.Beep(2000, 500)
 
     """
@@ -67,7 +69,7 @@ def main():
     """
     start = timeit.default_timer()
     print ("running k-anonymity")
-    Anonymise_simple.master(enc_temp_file, file_name, lines, nums, kmin)
+    AnonymiseTheData.master(enc_temp_file, file_name, lines, nums, kmin)
     stop = timeit.default_timer()
     print ("anonym time is:", stop-start)
     # winsound.Beep(2000, 500)
@@ -87,7 +89,7 @@ def main():
     """
     os.remove(file_name)
     os.remove(enc_temp_file)
-
+    #os.remove("temp/config.json")
     """
     end of program line
     """

@@ -8,7 +8,5 @@
     "encrypt_col":[2],
     "file_name":"temp_kanonDB_to_delete.txt",
     "enc_temp_file":"temp_pgp.txt",
-    "":"",
-    "":"",
-    "":""
+    "tempFileLocation":"temp/"
 }

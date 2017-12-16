@@ -1,4 +1,4 @@
-# from .../packages import get_db_info
+# from .../packages import getDataInfo
 import tkinter as tk
 from tkinter import ttk
 import json
@@ -36,12 +36,12 @@ class start_gui_window(tk.Tk):
 
         # print "initialising frames"
         self.frames = {}
-        for F in (StartPage, HomePage, PageThree):
+        for F in (HomePage, PageThree):
             frame = F(container, self)
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")
-        # print "showing the startpage"
-        self.show_frame(StartPage)
+
+        self.show_frame(HomePage)
 
     def show_frame(self, cont):
 
@@ -61,62 +61,6 @@ def pop_up_msg(msg):
     exit_button = ttk.Button(popup, text="OK", command=leave_mini)
     exit_button.pack()
     popup.mainloop()
-
-
-class StartPage(ttk.Frame):
-
-    def __init__(self, parent, controller):
-        ttk.Frame.__init__(self, parent)
-        """
-        changes the state of the button according to the state of the checkbox
-        """
-        def printvalue(check_var):
-            if check_var.get() == 1:
-                button1.configure(state="enabled")
-            else:
-                button1.configure(state="disabled")
-        """
-        initialise variables and text for window
-        """
-        check_var = tk.IntVar()
-        licence_text = "Copyright (c) 2015 George Manakanatas\n\n" \
-                       "Permission is hereby granted, free of charge, to any person obtaining a copy\n" \
-                       "of this software and associated documentation files (the \"Software\"), to deal\n" \
-                       "in the Software without restriction, including without limitation the rights\n" \
-                       "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n" \
-                       "copies of the Software, and to permit persons to whom the Software is\n" \
-                       "furnished to do so, subject to the following conditions:\n\n" \
-                       "The above copyright notice and this permission notice shall be included in\n" \
-                       "all copies or substantial portions of the Software.\n\n" \
-                       "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n" \
-                       "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n" \
-                       "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE\n" \
-                       "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n" \
-                       "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n" \
-                       "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n" \
-                       "THE SOFTWARE."
-        """
-        Initialising widgets
-        """
-        label = ttk.Label(self, text="The MIT License (MIT)", font=LARGE_FONT,
-                          anchor="center")
-        txt = tk.Text(self, padx=10, pady=10, width=80)
-
-        txt.insert(tk.INSERT, licence_text)
-
-        chk = tk.Checkbutton(self, text='I agree', variable=check_var,
-                             onvalue=1, offvalue=0,
-                             command=lambda: printvalue(check_var))
-        chk.deselect()
-        button1 = ttk.Button(self, text="Next page", state="disabled",
-                             command=lambda: controller.show_frame(HomePage))
-        """
-        Placing the widgets using the grid method in 3xROWS & 3xCOLUMNS
-        """
-        label.grid(row=0, column=0, columnspan=2, sticky="nsew")
-        txt.grid(row=1, column=0, columnspan=2, sticky="nsew")
-        chk.grid(row=3, column=0, rowspan=2, sticky="nsw")
-        button1.grid(row=3, column=1, rowspan=2, sticky="nse")
 
 
 class HomePage(ttk.Frame):
@@ -140,7 +84,7 @@ class HomePage(ttk.Frame):
         """
         need to replace this with automatic attribute count.
         """
-        # attributes = get_db_info.db_columns()
+        # attributes = getDataInfo.db_columns()
         attributes = 10
         """
         initialising the Option menu variables
@@ -220,7 +164,7 @@ class PageThree(ttk.Frame):
             print ("values are: ", vals)
             conf["kmin"] = vals[3]
             print ("conf is: ", conf)
-            newConfigFile = open('config.json', 'w')
+            newConfigFile = open('temp/config.json', 'w')
             newConfigFile.write(json.dumps(conf))
             newConfigFile.close()
 

@@ -1,4 +1,7 @@
-﻿# PPDM
+<!-- <img align="right" src="./GUI/images/PPDM_landing_small_graphic.png"> -->
+<!-- <img align="center" src="./GUI/images/PPDM_landing_large_graphic.png"> -->
+
+# PPDM
 Privacy Protecting Data Mining tool
 
 ##Description: 	
@@ -27,23 +30,25 @@ common configuration folder.
 root
 -- main.py							# Starts the application
 -- defaultConfig.json		# Baseline configuration (more as a set of default values)
--- config.json         	# The configuration file used in the actual run
+--
 -- Readme.md         		# The project readme file
----- GUI        									# Contains all the tkinter gui code
+---- GUI/        									# Contains all the tkinter gui code
 			+-- GUI_call_from_main.py		# The interface called from main to configure the run
-			+-- licence.py							# The licence agreement
----- Functions      									# Contains generic functions that fit not other folder
-			+-- get_db_info.py							# Misnamed file that reads the data from the csv
-			+-- pgp_encryption_file.py			# Encrypts the selected column
----- Data_Mining_Methods			# Contains the code for the various data mining methods
+			+-- license.py							# The license agreement
+---- Functions/      									# Contains generic functions that fit not other folder
+			+-- getDataInfo.py							# Misnamed file that reads the data from the csv
+			+-- encryptTheInfo.py			# Encrypts the selected column
+---- Data_Mining_Methods/			# Contains the code for the various data mining methods
 			+-- Apriori_timer.py		# Misnamed file Apriori association mining
 			+--	Elcat.py						# Work in progress for adding the Elcat method
----- data    		# Contains the input and output data files
------- input		# Contains the input files
------- output		# Contains the result files
----- Anonym_methods    					# Contains the various anonymisation methods
+---- data/  			# Contains the input and output data files
+------ input/			# Contains the input files
+------ output/		# Contains the result files
+---- Anonym_methods/    					# Contains the various anonymisation methods
 			+-- Anonymise_simple.py		#
 			+-- Kanon_file.py					#
+---- Temp/							# General purpose folder for temporary files
+			+-- config.json		# The configuration file used in the actual run
 ```
 Data mining is used to store the data mining methods, as of now it contains an
 ## Installing
@@ -57,10 +62,21 @@ These are applied to the included datafile that is census data from the census b
 The datafile source is the machine learning repository: https://archive.ics.uci.edu/ml/datasets/Adult
 
 ## Author
+
 George Manakanatas
 
 ##License:
-MIT-License
+
+MIT License
+Copyright (c) , 2015 , George Manakanatas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Acknowledgments
-The included Apriori method was uploaded to github under the MIT License by the user asaini (abhinav saini) on the 7th of August 2013 and mildly modified.
+
+- The included Apriori method was uploaded to github under the MIT License by the user asaini (abhinav saini) on the 7th of August 2013 and mildly modified.
+- The logo and landing page graphics are very slightly modified versions of free vectors from [freepik](http://www.freepik.com) and [Garry Killian](https://www.freepik.com/garrykillian) on freepik respectively

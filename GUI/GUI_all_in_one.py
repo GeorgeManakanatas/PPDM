@@ -1,4 +1,4 @@
-# from .../packages import get_db_info
+# from .../packages import getDataInfo
 import Tkinter as tk
 import ttk
 import json
@@ -79,7 +79,7 @@ class StartPage(ttk.Frame):
         initialise variables and text for window
         """
         check_var = tk.IntVar()
-        licence_text = "Copyright (c) 2015 George Manakanatas\n\n" \
+        license_text = "Copyright (c) 2015 George Manakanatas\n\n" \
                        "Permission is hereby granted, free of charge, to any person obtaining a copy\n" \
                        "of this software and associated documentation files (the \"Software\"), to deal\n" \
                        "in the Software without restriction, including without limitation the rights\n" \
@@ -102,7 +102,7 @@ class StartPage(ttk.Frame):
                           anchor="center")
         txt = tk.Text(self, padx=10, pady=10, width=80)
 
-        txt.insert(tk.INSERT, licence_text)
+        txt.insert(tk.INSERT, license_text)
 
         chk = tk.Checkbutton(self, text='I agree', variable=check_var,
                              onvalue=1, offvalue=0,
@@ -140,7 +140,7 @@ class HomePage(ttk.Frame):
         """
         need to replace this with automatic attribute count.
         """
-        # attributes = get_db_info.db_columns()
+        # attributes = getDataInfo.db_columns()
         attributes = 10
         """
         initialising the Option menu variables
@@ -220,7 +220,7 @@ class PageThree(ttk.Frame):
             print "values are: ", vals
             conf["kmin"] = vals[3]
             print "conf is: ", conf
-            newConfigFile = open('../config.json', 'w')
+            newConfigFile = open('../temp/config.json', 'w')
             newConfigFile.write(json.dumps(conf))
             newConfigFile.close()
 

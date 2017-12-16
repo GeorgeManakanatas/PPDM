@@ -1,13 +1,13 @@
-import Tkinter as tk
+# from .../packages import getDataInfo
+import tkinter as tk
 import time
-import threading
 
 
 class SampleApp(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
         self.frame = tk.Frame(self)
-        self.frame.pack(side="top", fill="both", expand=True)
+        self.frame.pack(side="top", fill="both", background="red", expand=True)
         # text displayed
         self.label = tk.Label(self, text="Hello, world")
         # button1 text
