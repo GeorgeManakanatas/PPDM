@@ -31,7 +31,7 @@ def main():
     file_name = temp output file name
     """
     totalPrepTimeStart = timeit.default_timer()  # starting timer
-    with open('temp/config.json') as json_data_file:
+    with open('temp/config.json','r') as json_data_file:
         conf = json.load(json_data_file)
     
     # assign values to variables from configuration file #

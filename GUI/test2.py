@@ -1,54 +1,67 @@
-# from .../packages import getDataInfo
 import tkinter as tk
-import time
+from PIL import Image
+from PIL import ImageTk
 
+class Program(tk.Tk):
+    def __init__(self, *args,**kwargs):
+        tk.Tk.__init__(self,*args,**kwargs)
+        container = tk.Frame(self)
+        container.pack(side='top',fill='both', expand=True)
+        container.grid_rowconfigure(0,weight=1)
+        container.grid_columnconfigure(0,weight=1)
 
-class SampleApp(tk.Tk):
-    def __init__(self, *args, **kwargs):
-        tk.Tk.__init__(self, *args, **kwargs)
-        self.frame = tk.Frame(self)
-        self.frame.pack(side="top", fill="both", background="red", expand=True)
-        # text displayed
-        self.label = tk.Label(self, text="Hello, world")
-        # button1 text
-        button1text = "Start process"
-        # button 1 dynamic
-        button1 = tk.Button(self, text=button1text,
-                            command=self.button1Process)
-        # button quit text
-        buttonQuitText = "Quit"
-        # button quit dynamic
-        buttonQuit = tk.Button(self, text=buttonQuitText,
-                               command=self.buttonQuitProcess)
-        # packing the buttons
-        self.label.pack(in_=self.frame)
-        button1.pack(in_=self.frame)
-        buttonQuit.pack(in_=self.frame)
+        self.frames = {}
+        Frames = (LoginPage, StartPage)
+        for F in Frames:
+            frame = F(container, self)
+            self.frames[F] = frame
+            frame.grid(row=0, column = 0, sticky="nsew")
 
-    def buttonQuitProcess(self):
-        SampleApp.quit(self)
+        self.ShowF(LoginPage)
 
-    def button1Process(self):
-        startTime = time.time()
-        working = True
-        time.sleep(5)
-        while working:
-            elapsedTime = int(time.time() - startTime)
-            displayText = 'Working for: '+str(elapsedTime)+' secs'
-            self.label.config(text=displayText)
-            self.label.update_idletasks()
-            time.sleep(1)
+    def ShowF(self, cont):
+        frame = self.frames[cont]
+        frame.tkraise()
 
-        self.label.config(text="Finished")
+class LoginPage(tk.Frame):
+    def __init__(self,parent,controller):
+        self.controller = controller
+        #background = Image.open('GUI/images/free-abstract-background-25.jpeg')
+        #tkimage = ImageTk.PhotoImage(background)
+        tk.Frame.__init__(self,parent, bg='#a1dbcd')
+        stats = tk.Label(self, text = 'Insira os dados para a validação', bg='#a1dbcd')
+        stats.pack()
+        lab = tk.Label(self, text = ('Usuário'), bg='#a1dbcd')
+        lab.pack()
+        self.ent = tk.Entry(self)
+        self.ent.pack()
+        lab2 = tk.Label(self, text = ('Senha'), bg='#a1dbcd')
+        lab2.pack()
+        self.ent2 = tk.Entry(self, show='*')
+        self.ent2.pack()
+        but = tk.Button(self, text = 'Validar', bg='#a1dbcd', command = self.Validacao)
+        but.pack()
+        self.lab3 = tk.Label(self, text = '', bg='#a1dbcd')
+        self.lab3.pack()
 
+    def Validacao(self):
+        user = self.ent.get()
+        passw = self.ent2.get()
+        print ('user: ',user,' passw ',passw)
+        self.lab3['text'] = ('Validação concluída!')
+        self.controller.ShowF(StartPage) #The problem is here(I think)
+                
 
-def main():
+class StartPage(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self,parent)
+        label = tk.Label(self, text="Start Page")
+        label.pack(pady=10, padx=10)
 
-    app = SampleApp()
-    app.mainloop()
+        button = tk.Button(self, text="Button1")
+        button.pack()
+        buttona = tk.Button(self, text="Button2")
+        buttona.pack()
 
-    return 0
-
-
-if __name__ == '__main__':
-    main()
+app = Program()
+app.mainloop()

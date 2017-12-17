@@ -1,48 +1,55 @@
 # from .../packages import getDataInfo
 import tkinter as tk
-from tkinter import ttk
 import json
 import os
-
+from PIL import Image, ImageTk
+from functions import getDataInfo
 """
-Initialising typefonts and vals list
+Initialising typefonts
 """
 LARGE_FONT = ("Verdana", 12)
 NORMAL_FONT = ("Verdana", 10)
 SMALL_FONT = ("Verdana", 8)
 
+'''
 vals = []
 for position in range(7):
     vals.append(position)
     # print vals
+'''
 
 class start_gui_window(tk.Tk):
 
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
-
-        container = ttk.Frame(self)
+        
+        self.title('Home page')
+        #self.geometry('800x800')
+        
+        # can't load images still
+        #imgicon = Image.open('images\icons\image18_icon_2.png')
+        #self.tk.call('wm', 'iconphoto', self._w, imgicon)
+        #self.wm_iconbitmap(imgicon)
+        container = tk.Frame(self)
         container.pack(side="top", fill="both", expand=True)
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
 
-        menubar = tk.Menu(container)
+        menubar = tk.Menu(container, bg='blue')
         filemenu = tk.Menu(menubar, tearoff=0)
         filemenu.add_command(label="Save settings", command=lambda: pop_up_msg("Not Supported Yet!"))
         filemenu.add_separator()
         filemenu.add_command(label="Exit", command=quit)
-        menubar.add_cascade(label="File", menu=filemenu)
+        menubar.add_cascade(label="File", foreground='white', font=SMALL_FONT, menu=filemenu)
         tk.Tk.config(self, menu=menubar)
 
         # print "initialising frames"
         self.frames = {}
-        for F in (HomePage, PageThree):
-            frame = F(container, self)
-            self.frames[F] = frame
-            frame.grid(row=0, column=0, sticky="nsew")
-
+        frame = HomePage(container, self)
+        self.frames[HomePage] = frame
+        frame.grid(row=0, column=0, sticky="nsew")
         self.show_frame(HomePage)
-
+        
     def show_frame(self, cont):
 
         frame = self.frames[cont]
@@ -57,39 +64,38 @@ def pop_up_msg(msg):
         popup.destroy()
 
     popup.wm_title("!!!")
-    label = ttk.Label(popup, text=msg, font=NORMAL_FONT)
+    label = tk.Label(popup, text=msg, font=NORMAL_FONT)
     label.pack(side="top", fill="x", pady=10)
-    exit_button = ttk.Button(popup, text="OK", command=leave_mini)
+    exit_button = tk.Button(popup, text="OK", command=leave_mini)
     exit_button.pack()
     popup.mainloop()
 
 
-class HomePage(ttk.Frame):
+
+class HomePage(tk.Frame):
 
     def __init__(self, parent, controller):
-        ttk.Frame.__init__(self, parent)
-        """
-        Nextpage button and input gathering.
-        """
+        tk.Frame.__init__(self, parent, bg='OrangeRed3', width=600, height=600)
+    
+        with open('../defaultConfig.json', 'r') as json_data_file:
+            confvals = json.load(json_data_file)
+        
+        # Nextpage button and input gathering.
+        
         def leave_button():
-            global vals
-            vals[0] = get_file_name1.get()
-            vals[1] = get_file_name2.get()
-            vals[2] = self.variable.get()
-            vals[3] = self.val.get()
-            vals[4] = attribute_list.get()
-            vals[5] = self.variable3.get()
-            vals[6] = self.variable2.get()
-            print ("values are:", vals)
-            controller.show_frame(PageThree)
-        """
-        need to replace this with automatic attribute count.
-        """
+            # dump the data to temp file
+            newConfigFile = open('../temp/config.json', 'w')
+            newConfigFile.write(json.dumps(confvals))
+            newConfigFile.close()
+            HomePage.destroy(self)
+            HomePage.quit(self)
+        # need to replace this with automatic attribute count.
+        
         # attributes = getDataInfo.db_columns()
-        attributes = 10
-        """
-        initialising the Option menu variables
-        """
+        attributes = getDataInfo.db_columns('../'+confvals["data_file_location"]+confvals["data_file_name"])
+        
+        # initialising the Option menu variables
+        
         option_list = ('Simple', 'Simple', 'Mondrian', 'Partially distributed', 'Fully distributed')
         self.variable = tk.StringVar()
         self.variable.set(option_list[0])
@@ -102,34 +108,34 @@ class HomePage(ttk.Frame):
         option_list2 = ('Python native', 'Python native', 'method2', 'method3', 'method4')
         self.variable2 = tk.StringVar()
         self.variable2.set(option_list2[0])
-        """
-        Initialising widgets
-        """
-        label = ttk.Label(self, text="Home page", font=LARGE_FONT)
-        text_label1 = ttk.Label(self, text="Please insert the name of the file"
+        
+        # Initialising widgets
+        
+        label = tk.Label(self, text="Configuration", font=LARGE_FONT)
+        text_label1 = tk.Label(self, text="Please insert the name of the file"
                                 " containing the data:", font=NORMAL_FONT)
-        text_label2 = ttk.Label(self, text="Please insert your name of choice "
-                                "for the results file:", font=NORMAL_FONT)
+        text_label2 = tk.Label(self, text="Please insert the relative path "
+                                "for the data file:", font=NORMAL_FONT)
         get_file_name1 = tk.Entry(self, width=20, bd=3)
-        get_file_name1.insert(0, "adultfull.txt")
+        get_file_name1.insert(0, confvals["data_file_name"])
         get_file_name2 = tk.Entry(self, width=20, bd=3)
-        get_file_name2.insert(0, "results.txt")
-        button1 = ttk.Button(self, text="Next page", command=leave_button)
-        ano_lev_select_text = ttk.Label(self, text="Please select the desired level of k-anonymity:", font=NORMAL_FONT)
+        get_file_name2.insert(0, confvals["data_file_location"])
+        button1 = tk.Button(self, text="Start process", command=leave_button)
+        ano_lev_select_text = tk.Label(self, text="Please select the desired level of k-anonymity:", font=NORMAL_FONT)
         ano_lev_select = tk.Spinbox(self, from_=0, to=20, textvariable=self.val)
-        attribute_list_text = ttk.Label(self, text="There are %i attributes in the database please insert the column "
+        attribute_list_text = tk.Label(self, text="There are %i attributes in the database please insert the column "
                                                    "\n numbers that you want to have anonymised seperated by "
                                                    "a comma" %attributes, font=NORMAL_FONT)
         attribute_list = tk.Entry(self, width=20, bd=3)
-        anon_meth_text = ttk.Label(self, text="Please select the method to be used in the process:", font=NORMAL_FONT)
-        anon_meth = ttk.OptionMenu(self, self.variable, *option_list)
-        encr_level_text = ttk.Label(self, text="Please select the desired level of encryption:", font=NORMAL_FONT)
-        encr_level = ttk.OptionMenu(self, self.variable3, *option_list3)
-        encr_method_text = ttk.Label(self, text="Please select the desired method of encryption:", font=NORMAL_FONT)
-        encr_method = ttk.OptionMenu(self, self.variable2, *option_list2)
-        """
-        Placing the widgets using the grid method in 5xROWS & 3xCOLUMNS
-        """
+        anon_meth_text = tk.Label(self, text="Please select the method to be used in the process:", font=NORMAL_FONT)
+        anon_meth = tk.OptionMenu(self, self.variable, *option_list)
+        encr_level_text = tk.Label(self, text="Please select the desired level of encryption:", font=NORMAL_FONT)
+        encr_level = tk.OptionMenu(self, self.variable3, *option_list3)
+        encr_method_text = tk.Label(self, text="Please select the desired method of encryption:", font=NORMAL_FONT)
+        encr_method = tk.OptionMenu(self, self.variable2, *option_list2)
+        
+        # Placing the widgets using the grid method in 5xROWS & 3xCOLUMNS
+        
         label.grid(row=0, column=0, pady=10, rowspan=2, columnspan=3,)
         text_label1.grid(row=2, column=0, pady=10, sticky="w")
         text_label2.grid(row=3, column=0, pady=10, sticky="w")
@@ -146,19 +152,19 @@ class HomePage(ttk.Frame):
         encr_level.grid(row=9, column=1, pady=10, sticky="e")
         encr_method.grid(row=10, column=1, pady=10, sticky="e")
         button1.grid(row=11, column=1, columnspan=2, sticky="e")
+    
 
-
-class PageThree(ttk.Frame):
+'''
+class PageThree(tk.Frame):
 
     def __init__(self, parent, controller):
-        ttk.Frame.__init__(self, parent)
-        """
-        Exit and return data function
-        """
+        tk.Frame.__init__(self, parent)
+        # Exit and return data function
+       
         def leave_mini():
-            """
-            opening config.json and saving the values
-            """
+            
+            # opening config.json and saving the values
+            
             with open('defaultConfig.json', 'r') as json_data_file:
                 conf = json.load(json_data_file)
 
@@ -172,22 +178,22 @@ class PageThree(ttk.Frame):
             # os.system('python main.py')
 
             PageThree.quit(self)
-        """
-        Initialising widgets
-        """
-        label = ttk.Label(self, text="You have selected the following settings", font=LARGE_FONT)
-        data_file = ttk.Label(self, text="The name of the file containing the data is: %s" %vals[0], font=NORMAL_FONT)
-        output_file = ttk.Label(self, text="The name of the file containing the result data is: %s" % vals[1], font=NORMAL_FONT)
-        anonym_method = ttk.Label(self, text="The anonymisation method selected is: %s" % vals[2], font=NORMAL_FONT)
-        anonym_level = ttk.Label(self, text="The level of anonymisation to be applied is: %s" % vals[3], font=NORMAL_FONT)
-        anonym_columns = ttk.Label(self, text="The attributes to be anonymised are: %s" % vals[4], font=NORMAL_FONT)
-        encryption_level = ttk.Label(self, text="The level of encryption to be applied is: %s" % vals[5], font=NORMAL_FONT)
-        encryption_method = ttk.Label(self, text="The method of encryption to be applied is: %s" % vals[6], font=NORMAL_FONT)
-        previous_page_button = ttk.Button(self, text="Previous page", command=lambda: controller.show_frame(HomePage))
-        start_button = ttk.Button(self, text="Start the process", command=lambda: leave_mini())
-        """
-        Placing the widgets using the grid method in 10xROWS & 3xCOLUMNS
-        """
+        
+        # Initialising widgets
+        
+        label = tk.Label(self, text="You have selected the following settings", font=LARGE_FONT)
+        data_file = tk.Label(self, text="The name of the file containing the data is: %s" %vals[0], font=NORMAL_FONT)
+        output_file = tk.Label(self, text="The name of the file containing the result data is: %s" % vals[1], font=NORMAL_FONT)
+        anonym_method = tk.Label(self, text="The anonymisation method selected is: %s" % vals[2], font=NORMAL_FONT)
+        anonym_level = tk.Label(self, text="The level of anonymisation to be applied is: %s" % vals[3], font=NORMAL_FONT)
+        anonym_columns = tk.Label(self, text="The attributes to be anonymised are: %s" % vals[4], font=NORMAL_FONT)
+        encryption_level = tk.Label(self, text="The level of encryption to be applied is: %s" % vals[5], font=NORMAL_FONT)
+        encryption_method = tk.Label(self, text="The method of encryption to be applied is: %s" % vals[6], font=NORMAL_FONT)
+        previous_page_button = tk.Button(self, text="Previous page", command=lambda: controller.show_frame(HomePage))
+        start_button = tk.Button(self, text="Start the process", command=lambda: leave_mini())
+        
+        # Placing the widgets using the grid method in 10xROWS & 3xCOLUMNS
+        
         label.grid(row=0, column=0, pady=10, rowspan=2, columnspan=3,)
         data_file.grid(row=2, column=0, pady=10, sticky="w")
         output_file.grid(row=3, column=0, pady=10, sticky="w")
@@ -198,6 +204,8 @@ class PageThree(ttk.Frame):
         encryption_method.grid(row=8, column=0, pady=10, sticky="w")
         previous_page_button.grid(row=10, column=0, pady=10, sticky="w")
         start_button.grid(row=10, column=3, pady=10, sticky="w")
+'''
+
 
 if __name__ == "__main__":
     app = start_gui_window()
