@@ -15,6 +15,7 @@ def checkMemoryRequirement(data_file):
     # calculating upper limit set to 80% of max available memory (configurable in the future)
     maxMemory = freeMem + buffMem + cachedMem
     upperLimit =  maxMemory * 80 /100
+    print('fileSize: ',fileSize,' and freeMem: ',freeMem)
     # if data size less than free memory ok 
     if fileSize < freeMem:
         # do nothing

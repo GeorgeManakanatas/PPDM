@@ -16,7 +16,7 @@ for position in range(7):
     vals.append(position)
     # print vals
 
-class start_gui_window(tk.Tk):
+class start_new_gui_window(tk.Tk):
 
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
@@ -81,6 +81,7 @@ class HomePage(ttk.Frame):
             vals[5] = self.variable3.get()
             vals[6] = self.variable2.get()
             print ("values are:", vals)
+            
             controller.show_frame(PageThree)
         """
         need to replace this with automatic attribute count.
@@ -175,6 +176,7 @@ class PageThree(ttk.Frame):
         """
         Initialising widgets
         """
+        
         label = ttk.Label(self, text="You have selected the following settings", font=LARGE_FONT)
         data_file = ttk.Label(self, text="The name of the file containing the data is: %s" %vals[0], font=NORMAL_FONT)
         output_file = ttk.Label(self, text="The name of the file containing the result data is: %s" % vals[1], font=NORMAL_FONT)
@@ -200,6 +202,6 @@ class PageThree(ttk.Frame):
         start_button.grid(row=10, column=3, pady=10, sticky="w")
 
 if __name__ == "__main__":
-    app = start_gui_window()
+    app = start_new_gui_window()
     # app.geometry("640x420")
     app.mainloop()

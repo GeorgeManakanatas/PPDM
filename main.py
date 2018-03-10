@@ -14,11 +14,11 @@ from functions import memoryRelated
 def main():
     
     # run the gui
-    """
-     os.system('python3 GUI/licensePage.py')
-     os.system('python3 GUI/GUI_call_from_main.py')
+   
+    os.system('python3 GUI/licensePage.py')
+    os.system('python3 GUI/GUI_call_from_main.py')
     # os.system('python3 GUI/test2.py')
-    """
+  
     """
     A temp config file is created with the values for this run.
 
