@@ -1,4 +1,4 @@
-<!-- <img align="right" src="./GUI/images/PPDM_landing_small_graphic.png"> -->
+<img align="right" src="./GUI/images/NEW_LAND_GRAPH1.png">
 <!-- <img align="center" src="./GUI/images/PPDM_landing_large_graphic.png"> -->
 
 # PPDM
