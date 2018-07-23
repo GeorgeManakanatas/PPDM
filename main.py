@@ -14,7 +14,7 @@ from functions import memoryRelated
 def main():
 
     # run the gui
-
+    # 
     # os.system('python3 GUI/licensePage.py')
     # os.system('python3 GUI/GUI_call_from_main.py')
     # os.system('python3 GUI/test2.py')
