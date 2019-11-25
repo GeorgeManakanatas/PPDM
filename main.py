@@ -7,7 +7,7 @@ import json
 from anonym_methods import anonymise_the_data
 from data_mining_methods import Apriori_timer
 from functions import getDataInfo, memoryRelated
-from dataMaskingMethods import mask_the_info
+from data_masking_methods import mask_the_info
 
 
 def main():
@@ -92,7 +92,7 @@ def main():
     total_apriori_stop = timeit.default_timer()
     logging.info(" Total apriori time is:"+str(total_apriori_stop-total_apriori_start))
 #    throw_away_variable = input('press enter to end the programm')
-    
+
     # cleaning up the temp files
     # os.remove(anonym_file)
     # os.remove(masked_file)

@@ -2,53 +2,37 @@
 <!-- <img align="center" src="./GUI/images/PPDM_landing_large_graphic.png"> -->
 
 # PPDM
-Privacy Protecting Data Mining tool
+Privacy Protecting Data Mining
 
 ##Description: 	
-This is a program based on code that I used for my master's thesis in the Hellenic Open University.
-As it stands now it will read data from a csv file, encrypt the attributes we want with native python encryption,
-then use a simple k-anonymity method on the attributes we select (they must be different from those we encrypt)
-then run an apriori algorithm on the resulting new data and return the results in a file.
+This is a program based on my master's thesis in the Hellenic Open University.
+As it stands now it will read data from a csv file, encrypt or replace the attributes we want,
+then use a simple k-anonymity method on the attributes we select
+then run an Apriori algorithm on the resulting new data and return the results in a file.
 
 ##Goal:		
-My goal is to eventually provide a free and open tool that can be used to demonstrate and test multiple simple k-anonymity and data mining techniques.
-As well as to be useful for comparison of different combinations of anonymity – encryption and data mining methods.
-At this time I am working on a GUI so that changes in the attribute selection and other values can be made in a user friendly environment.
-Also the long term goal is to add as many encryption, anonymity and data mining methods as possible.
+The goal is to provide useful for comparison of different combinations of anonymity – encryption and data mining methods. Also play around with Tkinter for the GUI
 
 ## File structure
 
 The file structure of the project in detail.
-
-The root folder contains fundamental files and the node_modules filder.
-All front_end components are in the front end folder and all back end components
-in the back_end folder. The goal for now is to use npm for moth the front
-and back end in order to keep a common modules folder as well as to keep
-common configuration folder.
-
 ```
-root
--- main.py							# Starts the application
--- defaultConfig.json		# Baseline configuration (more as a set of default values)
---
--- Readme.md         		# The project readme file
----- GUI/        									# Contains all the tkinter gui code
-			+-- GUI_call_from_main.py		# The interface called from main to configure the run
-			+-- license.py							# The license agreement
----- functions/      									# Contains generic functions that fit not other folder
-			+-- getDataInfo.py							# Misnamed file that reads the data from the csv
-			+-- encryptTheInfo.py			# Encrypts the selected column
----- data_mining_methods/			# Contains the code for the various data mining methods
-			+-- Apriori_timer.py		# Misnamed file Apriori association mining
-			+--	Elcat.py						# Work in progress for adding the Elcat method
----- data/  			# Contains the input and output data files
------- input/			# Contains the input files
------- output/		# Contains the result files
----- anonym_methods/    					# Contains the various anonymisation methods
-			+-- Anonymise_simple.py		#
-			+-- Kanon_file.py					#
----- Temp/							# General purpose folder for temporary files
-			+-- config.json		# The configuration file used in the actual run
+.
+├── anonym_methods  # anonymisation methods ( basic k-anonymity only for now)
+├── config  # storing configuration files
+├── data  # input and output folders
+├── data_masking_methods  # encryption or replacement only for now
+├── data_mining_methods  # only Apriori data mining working for now
+├── functions  # various utility functions
+├── GUI  # not working properly still
+├── logs  # logging to file not to command line
+├── temp  # temp files or intermediate steps
+├── config.json  # current running ocnfiguration
+├── guiTest.py  # gui start (not working)
+├── main.py
+└── README.md
+
+9 directories, 4 files
 ```
 Data mining is used to store the data mining methods, as of now it contains an
 ## Installing
