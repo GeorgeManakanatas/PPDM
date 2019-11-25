@@ -3,9 +3,9 @@ import random
 import csv
 
 
-def master(dataWithMasking, file_name, lines, nums, kmin):
+def master(start_dataframe, file_name, nums, kmin):
     # should be a list of possible options later
-    anonymizedAndMaskedData = kAnonymitySimplistic(dataWithMasking, file_name, lines, nums, kmin)
+    anonymizedAndMaskedData = kAnonymitySimplistic(start_dataframe, file_name, nums, kmin)
 
     return anonymizedAndMaskedData
 
@@ -28,13 +28,13 @@ def grab_columns(dataWithMasking, lines, nums):
     return selection_tuples
 
 
-def checklist_generate(lines, nums, selection):
+def checklist_generate(nums, selected_columns):
 
     temp = []
     checklist = []
     for index_col in range(len(nums)):
-        for index_line in range(lines-1):
-            temp.append(selection[index_line][index_col])
+        for index_line in range(selected_columns.shape[0]):
+            temp.append(selected_columns[index_line][index_col])
         temp = list(set(temp))
         checklist.append(temp)
         temp = []
@@ -46,19 +46,20 @@ def checklist_generate(lines, nums, selection):
     return final_list
 
 
-def kAnonymitySimplistic(dataWithMasking, file_name, lines, nums, kmin):
+def kAnonymitySimplistic(start_dataframe, file_name, nums, kmin):
     # perform simple  #
+    
     # import the column selection #
-    selectcol = grab_columns(dataWithMasking, lines, nums)
-    with open("temp/selectCol.txt", "w") as f1:
-                mywriter = csv.writer(f1, delimiter=',', quotechar='|')
-                for line in range(len(selectcol)-1):
-                    mywriter.writerow(selectcol[line])
-                f1.close()
+    selected_columns = start_dataframe[nums]
+    with open("temp/selectCol.csv", "w") as csvfile:
+        selected_columns.to_csv(csvfile)
     
     # import the checklist #
-    checklist = checklist_generate(lines, nums, selectcol)
-    with open("temp/checklist.txt", "w") as f1:
+    combination_counts = start_dataframe.groupby(nums).size()
+    print(combination_counts)
+    print()
+    checklist = checklist_generate(num, selected_columns)
+    with open("temp/checklist.csv", "w") as f1:
                 mywriter = csv.writer(f1, delimiter=',', quotechar='|')
                 for line in range(len(checklist)-1):
                     mywriter.writerow(checklist[line])

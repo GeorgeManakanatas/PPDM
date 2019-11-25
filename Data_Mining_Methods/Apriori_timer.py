@@ -7,6 +7,7 @@ import sys
 import csv
 from itertools import chain, combinations
 from collections import defaultdict
+from itertools import islice
 
 
 def master(file_name, min_supp, min_conf):
@@ -119,7 +120,8 @@ def runApriori(data_iter, minSupport, minConfidence):
                            for item in value])
 
     toRetRules = []
-    for key, value in largeSet.items()[1:]:
+#    for key, value in largeSet.items()[1:]:
+    for key, value in islice(largeSet.items(), 1, None):
         for item in value:
             _subsets = map(frozenset, [x for x in subsets(item)])
             for element in _subsets:

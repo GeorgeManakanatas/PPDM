@@ -35,16 +35,16 @@ root
 ---- GUI/        									# Contains all the tkinter gui code
 			+-- GUI_call_from_main.py		# The interface called from main to configure the run
 			+-- license.py							# The license agreement
----- Functions/      									# Contains generic functions that fit not other folder
+---- functions/      									# Contains generic functions that fit not other folder
 			+-- getDataInfo.py							# Misnamed file that reads the data from the csv
 			+-- encryptTheInfo.py			# Encrypts the selected column
----- Data_Mining_Methods/			# Contains the code for the various data mining methods
+---- data_mining_methods/			# Contains the code for the various data mining methods
 			+-- Apriori_timer.py		# Misnamed file Apriori association mining
 			+--	Elcat.py						# Work in progress for adding the Elcat method
 ---- data/  			# Contains the input and output data files
 ------ input/			# Contains the input files
 ------ output/		# Contains the result files
----- Anonym_methods/    					# Contains the various anonymisation methods
+---- anonym_methods/    					# Contains the various anonymisation methods
 			+-- Anonymise_simple.py		#
 			+-- Kanon_file.py					#
 ---- Temp/							# General purpose folder for temporary files

@@ -2,10 +2,10 @@ import csv
 from . import kAnonymity
 
 
-def master(dataWithMasking, file_name, lines, nums, kmin):
+def master(start_dataframe, file_name, nums, kmin):
     """ perform simple  """
     """ import the column selection """
-    anonymizedAndMaskedData = kAnonymity.master(dataWithMasking, file_name, lines, nums, kmin)
+    anonymizedAndMaskedData = kAnonymity.master(start_dataframe, file_name, nums, kmin)
     # write the info in a file because the Apriori is not updated #
     with open(file_name, "w") as f1:
         mywriter = csv.writer(f1, delimiter=',', quotechar='|')

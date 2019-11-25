@@ -5,8 +5,8 @@
     "min_conf":"0.9",
     "kmin":"3",
     "nums":[0, 1, 3],
-    "encrypt_col":[2],
+    "encrypt_col":[2,3],
     "file_name":"temp_kanonDB_to_delete.txt",
     "enc_temp_file":"temp_pgp.txt",
-    "tempFileLocation":"temp/"
+    "temp_folder_location":"temp/"
 }

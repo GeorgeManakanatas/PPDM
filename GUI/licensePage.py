@@ -16,6 +16,7 @@ for position in range(7):
     vals.append(position)
     # print vals
 
+
 class start_gui_window(tk.Tk):
 
     def __init__(self, *args, **kwargs):

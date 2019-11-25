@@ -1,4 +1,7 @@
 import timeit
+import pandas as pd
+pd.set_option('display.max_columns', None)
+
 
 # get the number of lines in the csv file
 def db_lines(data_file):
@@ -10,8 +13,8 @@ def db_lines(data_file):
         if info == "":
             break
     f1.close()
-    print(totline,' lines in file: ',data_file)
-    
+#    print(totline, ' lines in file: ', data_file)
+
     return totline
 
 
@@ -22,13 +25,15 @@ def db_columns(data_file):
     words = line.split(",")
     totcol = len(words)
     f1.close()
-    
+
     return totcol
 
 
 # get the data out of the csv file
-def CreateDataDictionary(lines, data_file):
+def CreateDataDictionary(data_file):
     start = timeit.default_timer()  # starting timer
+    # Get the number of lines in the csv file
+    lines = db_lines(data_file)
     # opening the data file
     openFile = open(data_file, "r")
     # initializing the dictionary
@@ -42,6 +47,14 @@ def CreateDataDictionary(lines, data_file):
     # closing the opened data file   
     openFile.close()
     stop = timeit.default_timer() # stop timer
-    print ("get the data from file time", stop-start) # print the time
+#    print ("create dictionary time", stop-start) # print the time
     
     return dataDictionary
+
+
+def create_dataframe(data_file):
+    start = timeit.default_timer()  # starting timer
+    new_dataframe = pd.read_csv(data_file, header=None)
+    stop = timeit.default_timer() # stop timer
+#    print ("create dataframe time", stop-start) # print the time
+    return new_dataframe
