@@ -18,9 +18,9 @@ The goal is to provide useful for comparison of different combinations of anonym
 The file structure of the project in detail.
 ```
 .
-├── anonym_methods  # anonymisation methods ( basic k-anonymity only for now)
 ├── config  # storing configuration files
 ├── data  # input and output folders
+├── data_anonym_methods  # anonymisation methods ( basic k-anonymity only for now)
 ├── data_masking_methods  # encryption or replacement only for now
 ├── data_mining_methods  # only Apriori data mining working for now
 ├── functions  # various utility functions

@@ -4,7 +4,7 @@ import logging
 # import sys
 import timeit
 import json
-from anonym_methods import anonymise_the_data
+from data_anonym_methods import anonymise_the_data
 from data_mining_methods import Apriori_timer
 from functions import getDataInfo, memoryRelated
 from data_masking_methods import mask_the_info
@@ -94,9 +94,8 @@ def main():
 #    throw_away_variable = input('press enter to end the programm')
 
     # cleaning up the temp files
-    # os.remove(anonym_file)
-    # os.remove(masked_file)
-    # os.remove("temp/config.json")
+    os.remove(anonym_file)
+    os.remove(masked_file)
 
     # end of program input to keep the window open
     # throw_away_variable = input('press enter to end the programm')
