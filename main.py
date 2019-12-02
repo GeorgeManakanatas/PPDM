@@ -44,6 +44,7 @@ def main():
     kmin = int(conf["kmin"])
     nums = conf["nums"]
     mask_col = conf["mask_col"]
+    mask_method = conf["mask_method"]
     min_supp = float(conf["min_supp"])
     min_conf = float(conf["min_conf"])
     data_file = conf["data_file_location"]+conf["data_file_name"]
@@ -55,34 +56,29 @@ def main():
     # load data into dataframe
     start_dataframe = getDataInfo.create_dataframe(data_file)
     total_prep_time_stop = timeit.default_timer()
-    logging.info(" Total prep time is:"+str(total_prep_time_stop-total_prep_time_start))
+    logging.info(" Total prep time is:" +
+                 str(total_prep_time_stop-total_prep_time_start))
 #    throw_away_variable = input('press enter to continue the programm')
 
     # encrypting / masking the proper columns
     total_mask_time_start = timeit.default_timer()
-    print("running data masking")
-    logging.info('running masking on columns : '+str(mask_col))
-    logging.info('dataframe before masking : '+str(start_dataframe.shape))
     start_dataframe = mask_the_info.masking_method_selection(start_dataframe,
-                                                         mask_col)
-    logging.info('dataframe after masking : '+str(start_dataframe.shape))
-    if save_to_file:
-        start_dataframe.to_csv(masked_file, index=False, header=False)
+                                                             mask_col,
+                                                             mask_method,
+                                                             save_to_file,
+                                                             masked_file)
     total_mask_time_stop = timeit.default_timer()
-    logging.info(" Total mask time is:"+str(total_mask_time_stop-total_mask_time_start))
+    logging.info(" Total masking time is:" +
+                 str(total_mask_time_stop-total_mask_time_start))
 #    throw_away_variable = input('press enter to continue the programm')
 
     # calling k-anonymity for the masked data file
     total_anonymise_start = timeit.default_timer()
-    print("running k-anonymity")
-    logging.info('running k-anonymity on columns : '+str(nums)+' with kmin : '+str(kmin))
-    logging.info('dataframe before anonymisation : '+str(start_dataframe.shape))
-    start_dataframe = anonymise_the_data.master(start_dataframe, nums, kmin)
-    logging.info('dataframe after anonymisation : '+str(start_dataframe.shape))
-    if save_to_file:
-        start_dataframe.to_csv(anonym_file, index=False, header=False)
+    start_dataframe = anonymise_the_data.master(start_dataframe, nums, kmin,
+                                                save_to_file, anonym_file)
     total_anonymise_stop = timeit.default_timer()
-    logging.info(" Total anonymisation time is:"+str(total_anonymise_stop-total_anonymise_start))
+    logging.info(" Total anonymisation time is:" +
+                 str(total_anonymise_stop-total_anonymise_start))
 #    throw_away_variable = input('press enter to continue the programm')
 
     # calling the apriori method for the masked and anonymised data
@@ -90,7 +86,8 @@ def main():
     print("running apriori")
     Apriori_timer.master(anonym_file, min_supp, min_conf)
     total_apriori_stop = timeit.default_timer()
-    logging.info(" Total apriori time is:"+str(total_apriori_stop-total_apriori_start))
+    logging.info(" Total apriori time is:" +
+                 str(total_apriori_stop-total_apriori_start))
 #    throw_away_variable = input('press enter to end the programm')
 
     # cleaning up the temp files

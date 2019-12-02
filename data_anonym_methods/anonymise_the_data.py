@@ -5,19 +5,25 @@ functions:
 
 # import csv
 from . import k_anonymity
+import logging
 
 
-def master(start_dataframe, nums, kmin):
+def master(start_dataframe, nums, kmin, save_to_file, anonym_file):
     """ perform simple
     import the column selection """
+
+    print("running k-anonymity")
+    logging.info('running k-anonymity on columns : '+str(nums)+' with kmin : '
+                 + str(kmin))
+    logging.info('dataframe before anonymisation : ' +
+                 str(start_dataframe.shape))
     anonymized_and_masked_data = k_anonymity.simple_kanonymity(start_dataframe,
                                                                nums, kmin)
-    # write the info in a file because the Apriori is not updated #
-#    with open(file_name, "w") as f1:
-#        mywriter = csv.writer(f1, delimiter=',', quotechar='|')
-#        for line in range(len(anonymized_and_masked_data)):
-#            mywriter.writerow(anonymized_and_masked_data[line])
-#        f1.close()
+    logging.info('dataframe after anonymisation : ' +
+                 str(anonymized_and_masked_data.shape))
+    if save_to_file:
+        start_dataframe.to_csv(anonym_file, index=False, header=False)
+
     return anonymized_and_masked_data
 
 

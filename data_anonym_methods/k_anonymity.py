@@ -42,15 +42,21 @@ def simple_kanonymity(start_dataframe, nums, kmin):
 
     # getting a count of the identifying column combination
     combination_counts = start_dataframe.groupby(nums).size()
-    # removing those above the threshhold
-    in_need_of_expansion = combination_counts[combination_counts <= kmin]
-    # looping through all the combinations in need of expansion
+    # keeping those with fewer entries than the minimum needed
+    in_need_of_expansion = combination_counts[combination_counts < kmin]
+    # looping through all the combinations that need to be expanded with
+    # false entries to reach our minimum goal
     for index_number, identyfying_combination_count in\
             enumerate(in_need_of_expansion):
         # determine number of false entries needed
         false_entries = kmin - identyfying_combination_count
         # generate the number of false entries
         rows = start_dataframe.sample(n=false_entries)
+        # loop through every column we want to anonymise
+        for column in range(len(in_need_of_expansion.index.names)):
+            # set the values of the column to the one we want to mask
+            rows[in_need_of_expansion.index.names[column]] = \
+                in_need_of_expansion.index[index_number][column]
         # append new rows to dataframe
         start_dataframe = start_dataframe.append(rows, ignore_index=True)
 

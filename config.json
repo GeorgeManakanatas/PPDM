@@ -7,6 +7,7 @@
     "kmin":"10",
     "nums":[0, 4, 5],
     "mask_col":[1, 2],
+    "mask_method":"replace",
     "masked_file":"masked_file.csv",
     "anonym_file":"anonym_file.csv",
     "temp_folder_location":"temp/",
