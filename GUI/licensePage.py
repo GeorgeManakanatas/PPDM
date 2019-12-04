@@ -1,4 +1,4 @@
-# from .../packages import getDataInfo
+# from .../packages import get_data_info
 import tkinter as tk
 from tkinter import ttk
 import json

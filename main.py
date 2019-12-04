@@ -6,7 +6,7 @@ import timeit
 import json
 from data_anonym_methods import anonymise_the_data
 from data_mining_methods import Apriori_timer
-from functions import getDataInfo, memoryRelated
+from functions import get_data_info, memory_related, fileFunctions
 from data_masking_methods import mask_the_info
 
 
@@ -32,6 +32,10 @@ def main():
     """
     logging.info("--- starting new run ---")
     total_prep_time_start = timeit.default_timer()
+    
+    #
+    # general check
+    
     # initialize environment
     with open('config.json', 'r') as json_data_file:
         conf = json.load(json_data_file)
@@ -52,9 +56,10 @@ def main():
     masked_file = conf["temp_folder_location"]+conf["masked_file"]
     save_to_file = conf["save_to_file"]
     # Check the size of the data to be imported
-    memoryRelated.checkMemoryRequirement(data_file)
+    memory_related.check_memory_requirement(data_file)
     # load data into dataframe
-    start_dataframe = getDataInfo.create_dataframe(data_file)
+    start_dataframe = get_data_info.create_dataframe(data_file)
+
     total_prep_time_stop = timeit.default_timer()
     logging.info(" Total prep time is:" +
                  str(total_prep_time_stop-total_prep_time_start))
