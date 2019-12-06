@@ -1,28 +1,45 @@
-2019-12-02 14:33:56,423 - root - INFO - --- starting new run ---
-2019-12-02 14:33:56,497 - root - INFO -  Total prep time is:0.074141842905874
-2019-12-02 14:34:55,268 - root - INFO - --- starting new run ---
-2019-12-02 14:34:55,358 - root - INFO -  Total prep time is:0.08985828245113225
-2019-12-02 14:35:26,969 - root - INFO - --- starting new run ---
-2019-12-02 14:35:27,052 - root - INFO -  Total prep time is:0.0823308238028694
-2019-12-02 14:35:27,053 - root - INFO - running masking on columns : [1, 2]
-2019-12-02 14:35:27,053 - root - INFO - masking method : replace
-2019-12-02 14:35:27,053 - root - INFO - dataframe before masking : (32561, 15)
-2019-12-02 14:35:27,066 - root - INFO - dataframe after masking : (32561, 15)
-2019-12-02 14:35:27,392 - root - INFO -  Total mask time is:0.34029693740119177
-2019-12-02 14:35:27,393 - root - INFO - running k-anonymity on columns : [0, 4, 5] with kmin : 10
-2019-12-02 14:35:27,394 - root - INFO - dataframe before anonymisation : (32561, 15)
-2019-12-02 14:36:30,364 - root - INFO - dataframe after anonymisation : (49619, 15)
-2019-12-02 14:36:30,671 - root - INFO -  Total anonymisation time is:63.277187639351055
-2019-12-02 14:36:38,880 - root - INFO -  Total apriori time is:8.208885467164222
-2019-12-02 14:55:52,180 - root - INFO - --- starting new run ---
-2019-12-02 14:55:52,251 - root - INFO -  Total prep time is:0.07021424334425319
-2019-12-02 14:55:52,251 - root - INFO - running masking on columns : [1, 2]
-2019-12-02 14:55:52,251 - root - INFO - masking method : replace
-2019-12-02 14:55:52,252 - root - INFO - dataframe before masking : (32561, 15)
-2019-12-02 14:55:52,262 - root - INFO - dataframe after masking : (32561, 15)
-2019-12-02 14:55:52,540 - root - INFO -  Total masking time is:0.28914601329006473
-2019-12-02 14:55:52,541 - root - INFO - running k-anonymity on columns : [0, 4, 5] with kmin : 10
-2019-12-02 14:55:52,541 - root - INFO - dataframe before anonymisation : (32561, 15)
-2019-12-02 14:56:48,762 - root - INFO - dataframe after anonymisation : (49619, 15)
-2019-12-02 14:56:49,061 - root - INFO -  Total anonymisation time is:56.51919717176588
-2019-12-02 14:56:56,120 - root - INFO -  Total apriori time is:7.059080884310106
+2019-12-06 13:20:52,253 - root - INFO - --- starting new run ---
+2019-12-06 13:20:52,337 - root - INFO -  Total prep time is:0.0839782105445579
+2019-12-06 13:20:52,350 - root - INFO - dataframe before masking : (32561, 15)
+2019-12-06 13:20:52,365 - root - INFO - dataframe after masking : (32561, 15)
+2019-12-06 13:20:52,717 - root - INFO -  Total masking time is:0.3796473165116083
+2019-12-06 13:20:52,718 - root - INFO - running k-anonymity on columns : [0, 4, 5] with kmin : 10
+2019-12-06 13:20:52,718 - root - INFO - dataframe before anonymisation : (32561, 15)
+2019-12-06 13:22:12,459 - root - INFO - dataframe after anonymisation : (49619, 15)
+2019-12-06 13:22:12,786 - root - INFO -  Total anonymisation time is:80.0663463016111
+2019-12-06 13:22:22,008 - root - INFO -  Total apriori time is:9.219906307002958
+2019-12-06 13:33:55,819 - root - INFO - --- starting new run ---
+2019-12-06 13:33:55,895 - root - INFO -  Total prep time is:0.07607505860994479
+2019-12-06 13:33:55,903 - root - INFO - dataframe before masking : (32561, 15)
+2019-12-06 13:33:55,920 - root - INFO - dataframe after masking : (32561, 15)
+2019-12-06 13:33:56,231 - root - INFO -  Total masking time is:0.33555489520801984
+2019-12-06 13:33:56,231 - root - INFO - running k-anonymity on columns : [0, 4, 5] with kmin : 10
+2019-12-06 13:33:56,231 - root - INFO - dataframe before anonymisation : (32561, 15)
+2019-12-06 13:35:00,214 - root - INFO - dataframe after anonymisation : (49619, 15)
+2019-12-06 13:35:00,507 - root - INFO -  Total anonymisation time is:64.27441770372491
+2019-12-06 13:35:08,596 - root - INFO -  Total apriori time is:8.088206364735129
+2019-12-06 13:35:51,955 - root - INFO - --- starting new run ---
+2019-12-06 13:35:52,037 - root - INFO -  Total prep time is:0.08230250521345231
+2019-12-06 13:35:52,066 - root - INFO - dataframe before masking : (32561, 15)
+2019-12-06 13:35:52,084 - root - INFO - dataframe after masking : (32561, 15)
+2019-12-06 13:35:52,440 - root - INFO -  Total masking time is:0.4019971024419309
+2019-12-06 13:35:52,440 - root - INFO - running k-anonymity on columns : [0, 4, 5] with kmin : 10
+2019-12-06 13:35:52,440 - root - INFO - dataframe before anonymisation : (32561, 15)
+2019-12-06 13:37:00,241 - root - INFO - dataframe after anonymisation : (49619, 15)
+2019-12-06 13:37:00,502 - root - INFO -  Total anonymisation time is:68.06107413542404
+2019-12-06 13:37:09,055 - root - INFO -  Total apriori time is:8.550535277977161
+2019-12-06 13:38:48,544 - root - INFO - --- starting new run ---
+2019-12-06 13:38:48,622 - root - INFO -  Total prep time is:0.07844589091604348
+2019-12-06 13:38:48,625 - root - INFO - dataframe before masking : (32561, 15)
+2019-12-06 13:38:48,641 - root - INFO - dataframe after masking : (32561, 15)
+2019-12-06 13:38:48,922 - root - INFO -  Total masking time is:0.2994177320434801
+2019-12-06 13:43:45,165 - root - INFO - --- starting new run ---
+2019-12-06 13:43:45,261 - root - INFO -  Total prep time is:0.09577384698974356
+2019-12-06 13:43:45,269 - root - INFO - dataframe before masking : (32561, 15)
+2019-12-06 13:43:45,283 - root - INFO - dataframe after masking : (32561, 15)
+2019-12-06 13:43:45,634 - root - INFO -  Total masking time is:0.37280667805197254
+2019-12-06 13:43:45,635 - root - INFO - running k-anonymity on columns : [0, 4, 5] with kmin : 10
+2019-12-06 13:43:45,635 - root - INFO - dataframe before anonymisation : (32561, 15)
+2019-12-06 13:44:55,384 - root - INFO - dataframe after anonymisation : (49619, 15)
+2019-12-06 13:44:56,248 - root - INFO -  Total anonymisation time is:70.61217654035192
+2019-12-06 13:45:04,947 - root - INFO -  Total apriori time is:8.697219152277398

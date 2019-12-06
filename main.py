@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import logging
-# import sys
 import timeit
 import json
 from data_anonym_methods import anonymise_the_data
@@ -32,10 +31,7 @@ def main():
     """
     logging.info("--- starting new run ---")
     total_prep_time_start = timeit.default_timer()
-    
-    #
-    # general check
-    
+
     # initialize environment
     with open('config.json', 'r') as json_data_file:
         conf = json.load(json_data_file)
@@ -45,16 +41,13 @@ def main():
         # os.environ[item] = str(conf[item])
 
     # assign values to variables from configuration file
-    kmin = int(conf["kmin"])
-    nums = conf["nums"]
-    mask_col = conf["mask_col"]
-    mask_method = conf["mask_method"]
-    min_supp = float(conf["min_supp"])
-    min_conf = float(conf["min_conf"])
+    conf["kmin"] = int(conf["kmin"])
+    conf["min_supp"] = float(conf["min_supp"])
+    conf["min_conf"] = float(conf["min_conf"])
     data_file = conf["data_file_location"]+conf["data_file_name"]
     anonym_file = conf["temp_folder_location"]+conf["anonym_file"]
     masked_file = conf["temp_folder_location"]+conf["masked_file"]
-    save_to_file = conf["save_to_file"]
+    conf["save_to_file"] = bool(conf["save_to_file"])
     # Check the size of the data to be imported
     memory_related.check_memory_requirement(data_file)
     # load data into dataframe
@@ -63,41 +56,26 @@ def main():
     total_prep_time_stop = timeit.default_timer()
     logging.info(" Total prep time is:" +
                  str(total_prep_time_stop-total_prep_time_start))
-#    throw_away_variable = input('press enter to continue the programm')
-
     # encrypting / masking the proper columns
-    total_mask_time_start = timeit.default_timer()
-    start_dataframe = mask_the_info.masking_method_selection(start_dataframe,
-                                                             mask_col,
-                                                             mask_method,
-                                                             save_to_file,
-                                                             masked_file)
-    total_mask_time_stop = timeit.default_timer()
-    logging.info(" Total masking time is:" +
-                 str(total_mask_time_stop-total_mask_time_start))
-#    throw_away_variable = input('press enter to continue the programm')
-
+    start_dataframe = mask_the_info.masking_method_selection(
+            start_dataframe,
+            conf["mask_col"],
+            conf["mask_method"],
+            conf["save_to_file"],
+            masked_file)
     # calling k-anonymity for the masked data file
-    total_anonymise_start = timeit.default_timer()
-    start_dataframe = anonymise_the_data.master(start_dataframe, nums, kmin,
-                                                save_to_file, anonym_file)
-    total_anonymise_stop = timeit.default_timer()
-    logging.info(" Total anonymisation time is:" +
-                 str(total_anonymise_stop-total_anonymise_start))
-#    throw_away_variable = input('press enter to continue the programm')
-
+    start_dataframe = anonymise_the_data.master(start_dataframe,
+                                                conf["nums"],
+                                                conf["kmin"],
+                                                conf["save_to_file"],
+                                                anonym_file)
     # calling the apriori method for the masked and anonymised data
-    total_apriori_start = timeit.default_timer()
-    print("running apriori")
-    Apriori_timer.master(anonym_file, min_supp, min_conf)
-    total_apriori_stop = timeit.default_timer()
-    logging.info(" Total apriori time is:" +
-                 str(total_apriori_stop-total_apriori_start))
-#    throw_away_variable = input('press enter to end the programm')
-
+    Apriori_timer.master(anonym_file, conf["min_supp"], conf["min_conf"])
+    print('execution is finished.')
     # cleaning up the temp files
-    os.remove(anonym_file)
-    os.remove(masked_file)
+    if not conf["save_to_file"]:
+        os.remove(anonym_file)
+        os.remove(masked_file)
 
     # end of program input to keep the window open
     # throw_away_variable = input('press enter to end the programm')

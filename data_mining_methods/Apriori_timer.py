@@ -1,21 +1,32 @@
-# """
-# Description     : Simple Python implementation of the Apriori Algorith
-#
-# """
-
+'''
+Description     : Simple Python implementation of the Apriori Algorith
+'''
 import sys
 import csv
+import logging
+import timeit
 from itertools import chain, combinations
 from collections import defaultdict
 from itertools import islice
 
 
 def master(file_name, min_supp, min_conf):
+    '''
+    Apriori data mingi implementation
 
+    Arguments:
+        file_name(str): the name of the file containing the data
+        min_supp(float): list of column numbers for the attributes to mask
+        min_conf(float): the way the attributes should be masked
+
+    Returns:
+        Nothing output is in a file
+    '''
+    total_apriori_start = timeit.default_timer()
     inFile = dataFromFile(file_name)
     minSupport = min_supp
     minConfidence = min_conf
-
+    print('infile type is : ', type(inFile))
     items, rules = runApriori(inFile, minSupport, minConfidence)
 
     # printResults(items, rules)
@@ -29,8 +40,12 @@ def master(file_name, min_supp, min_conf):
                 for i in range(len(rules)):
                     mywriter.writerow(rules[i])
                 f1.close()
-    print ("results with min support:", minSupport, "and min confidence:", minConfidence)
+    # print ("results with min support:", minSupport, "and min confidence:", minConfidence)
 
+    total_apriori_stop = timeit.default_timer()
+    # logging the excecution time
+    logging.info(" Total apriori time is:" +
+                 str(total_apriori_stop-total_apriori_start))
     return
 
 
@@ -151,3 +166,6 @@ def dataFromFile(fname):
             line = line.strip().rstrip(',')                         # Remove trailing comma
             record = frozenset(line.split(','))
             yield record
+
+if __name__ == '__main__':
+    master()
