@@ -23,7 +23,6 @@ def masking_method_selection(start_dataframe, mask_col, mask_method,
         dataframe with masked properties
     '''
 
-    print("running data masking")
     logging.info('running masking method : ', str(mask_method),
                  ' on columns : ' + str(mask_col))
     logging.info('dataframe before masking : '+str(start_dataframe.shape))
@@ -36,6 +35,7 @@ def masking_method_selection(start_dataframe, mask_col, mask_method,
             start_dataframe, mask_col)
     else:
         logging.info('improper masking method provided : '+str(mask_method))
+        return False
 
     logging.info('dataframe after masking : '+str(start_dataframe.shape))
 
