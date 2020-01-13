@@ -25,8 +25,9 @@ def masking_method_selection(start_dataframe, mask_col, mask_method,
     '''
     total_mask_time_start = timeit.default_timer()
 
-    logging.info('running masking method : ', str(mask_method), ' on columns : ' + str(mask_col))
-    logging.info('dataframe before masking : '+str(start_dataframe.shape))
+    logging.info('running masking method : ' + str(mask_method) +
+                 ' on columns : ' + str(mask_col))
+    logging.info('dataframe before masking : ' + str(start_dataframe.shape))
     # should be a list with selection in the future
     if mask_method == 'encrypt':
         start_dataframe = encrypt_the_info.encrypt_the_proper_columns(
