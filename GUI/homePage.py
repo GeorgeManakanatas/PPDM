@@ -1,9 +1,9 @@
-# from .../packages import getDataInfo
+# from .../packages import get_data_info
 import tkinter as tk
 import json
 import os
 from PIL import Image, ImageTk
-from functions import getDataInfo
+from functions import get_data_info
 """
 Initialising typefonts
 """
@@ -91,8 +91,8 @@ class HomePage(tk.Frame):
             HomePage.quit(self)
         # need to replace this with automatic attribute count.
         
-        # attributes = getDataInfo.db_columns()
-        attributes = getDataInfo.db_columns('../'+confvals["data_file_location"]+confvals["data_file_name"])
+        # attributes = get_data_info.db_columns()
+        attributes = get_data_info.db_columns('../'+confvals["data_file_location"]+confvals["data_file_name"])
         
         # initialising the Option menu variables
         

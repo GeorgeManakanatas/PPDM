@@ -1,4 +1,4 @@
-# from .../packages import getDataInfo
+# from .../packages import get_data_info
 import Tkinter as tk
 import ttk
 import json
@@ -140,7 +140,7 @@ class HomePage(ttk.Frame):
         """
         need to replace this with automatic attribute count.
         """
-        # attributes = getDataInfo.db_columns()
+        # attributes = get_data_info.db_columns()
         attributes = 10
         """
         initialising the Option menu variables

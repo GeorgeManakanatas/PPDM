@@ -1,0 +1,15 @@
+{
+    "data_file_name":"adult_dataset.txt",
+    "data_file_location":"data/input/",
+    "data_output_location":"data/output/",
+    "min_supp":"0.3",
+    "min_conf":"0.9",
+    "kmin":"10",
+    "nums":[0, 4, 5],
+    "mask_col":[1, 2],
+    "mask_method":"replace",
+    "masked_file":"masked_file.csv",
+    "anonym_file":"anonym_file.csv",
+    "temp_folder_location":"temp/",
+    "save_to_file":"True"
+}

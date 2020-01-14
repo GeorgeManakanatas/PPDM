@@ -1,4 +1,4 @@
-# from .../packages import getDataInfo
+# from .../packages import get_data_info
 import tkinter as tk
 from tkinter import ttk
 import json
@@ -15,6 +15,7 @@ vals = []
 for position in range(7):
     vals.append(position)
     # print vals
+
 
 class start_gui_window(tk.Tk):
 

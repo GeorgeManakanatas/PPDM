@@ -1,100 +1,88 @@
 # -*- coding: utf-8 -*-
 import os
-import sys
+import logging
 import timeit
 import json
-from Anonym_methods import AnonymiseTheData
-from Data_Mining_Methods import Apriori_timer
-from functions import getDataInfo
-from dataMaskingMethods import maskTheInfo
-from functions import memoryRelated
-
+from data_anonym_methods import anonymise_the_data
+from data_mining_methods import Apriori_timer
+from functions import get_data_info, memory_related, fileFunctions
+from data_masking_methods import mask_the_info
 
 
 def main():
-
+    logging.basicConfig(filename='logs/app.log', level=logging.INFO,
+                        filemode='a',
+                        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     # run the gui
-
-    os.system('python3 GUI/licensePage.py')
-    os.system('python3 GUI/GUI_call_from_main.py')
+    # os.system('python3 GUI/licensePage.py')
+    # os.system('python3 GUI/GUI_call_from_main.py')
     # os.system('python3 GUI/test2.py')
 
     """
-    A temp config file is created with the values for this run.
+    A config file is created with the values for this run.
 
     data_file is the csv file containing the original data
     min_sup is the minimum level of supprot
     min_conf is the minimum level of confidence
     kmin = k anonymity level
     nums = columns to anonymize
-    encrypt_col = columns to encrypt
-    file_name = temp output file name
+    mask_col = columns to encrypt
+    anonym_file = temp output file name
     """
-    totalPrepTimeStart = timeit.default_timer()  # starting timer
-    with open('temp/config.json','r') as json_data_file:
+    logging.info("--- starting new run ---")
+    total_prep_time_start = timeit.default_timer()
+
+    # initialize environment
+    with open('config.json', 'r') as json_data_file:
         conf = json.load(json_data_file)
+        # trouble getting arrays in to the environment
+        # for item in conf:
+        # print(item, conf[item])
+        # os.environ[item] = str(conf[item])
 
-    # assign values to variables from configuration file #
-
-    kmin = int(conf["kmin"])
-    nums = conf["nums"]
-    encrypt_col = conf["encrypt_col"]
-    min_supp = float(conf["min_supp"])
-    min_conf = float(conf["min_conf"])
+    # assign values to variables from configuration file
+    conf["kmin"] = int(conf["kmin"])
+    conf["min_supp"] = float(conf["min_supp"])
+    conf["min_conf"] = float(conf["min_conf"])
     data_file = conf["data_file_location"]+conf["data_file_name"]
-    file_name = conf["tempFileLocation"]+conf["file_name"]
-    enc_temp_file = conf["tempFileLocation"]+conf["enc_temp_file"]
-
+    anonym_file = conf["temp_folder_location"]+conf["anonym_file"]
+    masked_file = conf["temp_folder_location"]+conf["masked_file"]
+    conf["save_to_file"] = bool(conf["save_to_file"])
     # Check the size of the data to be imported
-    memoryRelated.checkMemoryRequirement(data_file)
-    # Get the number of lines in the csv file
-    lines = getDataInfo.db_lines(data_file)
-    # Get the number of columns in the csv file
-    columns = getDataInfo.db_columns(data_file)
-    # Get dictionary with data from csv
-    dataDictionary = getDataInfo.CreateDataDictionary(lines, data_file)
-    totalPrepTimeStop = timeit.default_timer() # stop timer
-    print (" Total prep time is:", totalPrepTimeStop-totalPrepTimeStart)
+    memory_related.check_memory_requirement(data_file)
+    # load data into dataframe
+    start_dataframe = get_data_info.create_dataframe(data_file)
 
-    # calling the encryption and recompile routines #
+    
 
-    totalMaskTimeStart = timeit.default_timer()  # starting timer
-    # get the data after sections are masked
-    dataWithMasking = maskTheInfo.maskingMethodSelection(dataDictionary, enc_temp_file, lines, encrypt_col)
-    totalMaskTimeStop = timeit.default_timer() # stop timer
-    print (" Total mask time is:", totalMaskTimeStop-totalMaskTimeStart)
+    
+    total_prep_time_stop = timeit.default_timer()
+    logging.info(" Total prep time is:" +
+                 str(total_prep_time_stop-total_prep_time_start))
+    # encrypting / masking the proper columns
+    start_dataframe = mask_the_info.masking_method_selection(
+            start_dataframe,
+            conf["mask_col"],
+            conf["mask_method"],
+            conf["save_to_file"],
+            masked_file)
+    # calling k-anonymity for the masked data file
+    start_dataframe = anonymise_the_data.master(start_dataframe,
+                                                conf["nums"],
+                                                conf["kmin"],
+                                                conf["save_to_file"],
+                                                anonym_file)
+    # calling the apriori method for the masked and anonymised data
+    Apriori_timer.master(anonym_file, conf["min_supp"], conf["min_conf"])
+    print('execution is finished.')
+    # cleaning up the temp files
+    if not conf["save_to_file"]:
+        os.remove(anonym_file)
+        os.remove(masked_file)
 
-    lines = getDataInfo.db_lines(data_file)
-    lines = getDataInfo.db_lines(enc_temp_file)
+    # end of program input to keep the window open
+    # throw_away_variable = input('press enter to end the programm')
 
-
-    # calling k-anonymity for the encrypted file #
-    # perhaps just return the list of lists and not go to file at all? #
-
-    start = timeit.default_timer()
-    print ("running k-anonymity")
-    time.sleep(5)
-    # AnonymiseTheData.master(dataWithMasking, file_name, lines, nums, kmin)
-    stop = timeit.default_timer()
-    print ("anonym time is:", stop-start)
-
-
-    # calling the apriori method #
-
-    start = timeit.default_timer()
-    print ("running apriori")
-    time.sleep(5)
-    # Apriori_timer.master(file_name, min_supp, min_conf)
-    stop = timeit.default_timer()
-    print ("apriori time is:", stop-start)
-
-    # deleting temp files #
-    os.remove(file_name)
-    os.remove(enc_temp_file)
-    #os.remove("temp/config.json")
-
-    # end of program input to keep the window open #
-    s = raw_input('press enter to end the programm')
 
 
 if __name__ == '__main__':
