@@ -53,6 +53,9 @@ def main():
     # load data into dataframe
     start_dataframe = get_data_info.create_dataframe(data_file)
 
+    
+
+    
     total_prep_time_stop = timeit.default_timer()
     logging.info(" Total prep time is:" +
                  str(total_prep_time_stop-total_prep_time_start))
