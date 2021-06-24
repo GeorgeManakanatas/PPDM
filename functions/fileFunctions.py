@@ -4,7 +4,7 @@ import json
 
 
 def master():
-    with open('config/defaultConfig.json', 'r') as json_data_file:
+    with open('config/config.json', 'r') as json_data_file:
         default_config = json.load(json_data_file)
 
     file_cleanup_before_start(default_config)

@@ -1,11 +1,24 @@
-2020-01-14 11:05:14,599 - root - INFO - --- starting new run ---
-2020-01-14 11:05:14,647 - root - INFO -  Total prep time is:0.047409100000010085
-2020-01-14 11:05:14,647 - root - INFO - running masking method : replace on columns : [1, 2]
-2020-01-14 11:05:14,647 - root - INFO - dataframe before masking : (32561, 15)
-2020-01-14 11:05:14,653 - root - INFO - dataframe after masking : (32561, 15)
-2020-01-14 11:05:14,864 - root - INFO -  Total masking time is:0.21655880000000138
-2020-01-14 11:05:14,864 - root - INFO - running k-anonymity on columns : [0, 4, 5] with kmin : 10
-2020-01-14 11:05:14,864 - root - INFO - dataframe before anonymisation : (32561, 15)
-2020-01-14 11:05:48,265 - root - INFO - dataframe after anonymisation : (49619, 15)
-2020-01-14 11:05:48,490 - root - INFO -  Total anonymisation time is:33.6261777
-2020-01-14 11:05:53,422 - root - INFO -  Total apriori time is:4.931193300000018
+2021-06-24 23:35:06,738 - PPDM - INFO - --- starting new run ---
+2021-06-24 23:35:06,740 - PPDM - INFO - the data is a fraction of the free memory
+2021-06-24 23:35:07,041 - PPDM - INFO -  Total prep time is:0.30375292801181786
+2021-06-24 23:35:07,046 - PPDM - INFO - running masking method : replace on columns : [1, 2]
+2021-06-24 23:35:07,047 - PPDM - INFO - dataframe before masking : (32561, 15)
+2021-06-24 23:35:07,058 - PPDM - INFO - dataframe after masking : (32561, 15)
+2021-06-24 23:35:07,847 - PPDM - INFO -  Total masking time is:0.8017136559938081
+2021-06-24 23:35:07,848 - PPDM - INFO - running k-anonymity on columns : [0, 4, 5] with kmin : 10
+2021-06-24 23:35:07,848 - PPDM - INFO - dataframe before anonymisation : (32561, 15)
+2021-06-24 23:37:19,121 - PPDM - INFO - dataframe after anonymisation : (49619, 15)
+2021-06-24 23:37:19,961 - PPDM - INFO -  Total anonymisation time is:132.11311785200087
+2021-06-24 23:37:44,905 - PPDM - INFO -  Total apriori time is:24.941826755995862
+2021-06-24 23:43:10,521 - PPDM - INFO - --- starting new run ---
+2021-06-24 23:43:10,522 - PPDM - INFO - the data is a fraction of the free memory
+2021-06-24 23:43:10,807 - PPDM - INFO -  Total prep time is:0.2885366150003392
+2021-06-24 23:43:10,807 - PPDM - INFO - running masking method : replace on columns : [1, 2]
+2021-06-24 23:43:10,808 - PPDM - INFO - dataframe before masking : (32561, 15)
+2021-06-24 23:43:10,817 - PPDM - INFO - dataframe after masking : (32561, 15)
+2021-06-24 23:43:10,817 - PPDM - INFO -  Total masking time is:0.00948259499273263
+2021-06-24 23:43:10,817 - PPDM - INFO - running k-anonymity on columns : [0, 4, 5] with kmin : 10
+2021-06-24 23:43:10,817 - PPDM - INFO - dataframe before anonymisation : (32561, 15)
+2021-06-24 23:45:23,030 - PPDM - INFO - dataframe after anonymisation : (49619, 15)
+2021-06-24 23:45:23,030 - PPDM - INFO -  Total anonymisation time is:132.213107425996
+2021-06-24 23:45:48,209 - PPDM - INFO -  Total apriori time is:25.177805093000643

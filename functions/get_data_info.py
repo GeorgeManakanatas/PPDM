@@ -4,7 +4,17 @@ pd.set_option('display.max_columns', None)
 
 
 # get the number of lines in the csv file
-def db_lines(data_file):
+def db_lines(data_file, logger):
+    '''
+    Getting the number of lines in the csv data file.
+
+    Arguments:
+        data_file: the csv file to be read
+        logger: custom logging function
+
+    Returns:
+        totline: (int) the number of lines
+    '''
     f1 = open(data_file, "r")
     totline = 0
     while True:
@@ -13,13 +23,12 @@ def db_lines(data_file):
         if info == "":
             break
     f1.close()
-#    print(totline, ' lines in file: ', data_file)
 
     return totline
 
 
 # get the number of columns in the csv file
-def db_columns(data_file):
+def db_columns(data_file, logger):
     f1 = open(data_file, "r")
     line = f1.readline()
     words = line.split(",")
@@ -30,7 +39,7 @@ def db_columns(data_file):
 
 
 # get the data out of the csv file
-def CreateDataDictionary(data_file):
+def CreateDataDictionary(data_file, logger):
     start = timeit.default_timer()  # starting timer
     # Get the number of lines in the csv file
     lines = db_lines(data_file)
@@ -52,7 +61,7 @@ def CreateDataDictionary(data_file):
     return dataDictionary
 
 
-def create_dataframe(data_file):
+def create_dataframe(data_file, logger):
     start = timeit.default_timer()  # starting timer
     new_dataframe = pd.read_csv(data_file, header=None)
     stop = timeit.default_timer() # stop timer

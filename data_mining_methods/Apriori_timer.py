@@ -1,16 +1,14 @@
 '''
 Description     : Simple Python implementation of the Apriori Algorith
 '''
-import sys
 import csv
-import logging
 import timeit
 from itertools import chain, combinations
 from collections import defaultdict
 from itertools import islice
 
 
-def master(file_name, min_supp, min_conf):
+def master(file_name, min_supp, min_conf, logger):
     '''
     Apriori data mingi implementation
 
@@ -18,6 +16,7 @@ def master(file_name, min_supp, min_conf):
         file_name(str): the name of the file containing the data
         min_supp(float): list of column numbers for the attributes to mask
         min_conf(float): the way the attributes should be masked
+        logger: custom logging method
 
     Returns:
         Nothing output is in a file
@@ -26,7 +25,6 @@ def master(file_name, min_supp, min_conf):
     inFile = dataFromFile(file_name)
     minSupport = min_supp
     minConfidence = min_conf
-    print('infile type is : ', type(inFile))
     items, rules = runApriori(inFile, minSupport, minConfidence)
 
     # printResults(items, rules)
@@ -44,7 +42,7 @@ def master(file_name, min_supp, min_conf):
 
     total_apriori_stop = timeit.default_timer()
     # logging the excecution time
-    logging.info(" Total apriori time is:" +
+    logger.info(" Total apriori time is:" +
                  str(total_apriori_stop-total_apriori_start))
     return
 
