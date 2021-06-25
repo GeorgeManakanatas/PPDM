@@ -11,8 +11,9 @@
     "masked_file":"masked_file.csv",
     "anonym_file":"anonym_file.csv",
     "temp_folder_location":"temp/",
-    "save_to_file":true,
+    "save_to_file":false,
     "logging_configuration":{
+        "level":"INFO",
         "folder":"logs/",
         "filename":"app.log"
     }

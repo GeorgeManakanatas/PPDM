@@ -30,7 +30,7 @@ def master(start_dataframe, nums, kmin, save_to_file, anonym_file, logger):
     logger.info('dataframe before anonymisation : ' +
                  str(start_dataframe.shape))
     anonymized_and_masked_data = k_anonymity.simple_kanonymity(start_dataframe,
-                                                               nums, kmin)
+                                                               nums, kmin, logger)
     # logging the outcome
     logger.info('dataframe after anonymisation : ' +
                  str(anonymized_and_masked_data.shape))

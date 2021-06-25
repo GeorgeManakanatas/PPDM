@@ -25,20 +25,16 @@ anonym_file = temp output file name
 
 total_prep_time_start = timeit.default_timer()
 
-# Reading config file into global variable
+# Reading config file into variable
 my_config.config_file()
 # setting up custom logger
 logger = setup_custom_logger('PPDM', my_config.config_values['logging_configuration'])
 logger.info("--- starting new run ---")
 
 # assign values to variables from configuration file
-# conf["kmin"] = int(conf["kmin"])
-# conf["min_supp"] = float(conf["min_supp"])
-# conf["min_conf"] = float(conf["min_conf"])
 data_file = my_config.config_values["data_file_location"]+my_config.config_values["data_file_name"]
 anonym_file = my_config.config_values["temp_folder_location"]+my_config.config_values["anonym_file"]
 masked_file = my_config.config_values["temp_folder_location"]+my_config.config_values["masked_file"]
-# my_config.config_values["save_to_file"] = bool(conf["save_to_file"])
 # Check the size of the data to be imported
 memory_related.check_memory_requirement(data_file, logger)
 # load data into dataframe
@@ -58,6 +54,7 @@ start_dataframe = mask_the_info.masking_method_selection(
         my_config.config_values["save_to_file"],
         masked_file,
         logger)
+
 # calling k-anonymity for the masked data file
 start_dataframe = anonymise_the_data.master(start_dataframe,
                                             my_config.config_values["nums"],
@@ -65,16 +62,14 @@ start_dataframe = anonymise_the_data.master(start_dataframe,
                                             my_config.config_values["save_to_file"],
                                             anonym_file,
                                             logger)
+
 # calling the apriori method for the masked and anonymised data
-Apriori_timer.master(anonym_file,
+Apriori_timer.master(start_dataframe, anonym_file,
                      my_config.config_values["min_supp"],
                      my_config.config_values["min_conf"],
                      logger)
-print('execution is finished.')
-# cleaning up the temp files
-if not my_config.config_values["save_to_file"]:
-    os.remove(anonym_file)
-    os.remove(masked_file)
+logger.info("--- execution is finished ---")
+print('--- execution is finished ---')
 
 # end of program input to keep the window open
 # throw_away_variable = input('press enter to end the programm')

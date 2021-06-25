@@ -1,870 +1,381 @@
-"((' Married-civ-spouse',), ('0',))",1.0
-"((' Husband',), ('0',))",1.0
-"((' Never-married',), ('null',))",1.0
-"((' Husband',), (' Male',))",0.9999242022284545
-"((' HS-grad',), ('null',))",1.0
-"((' Never-married',), (' <=50K',))",0.9540391275858842
-"(('40',), ('0',))",1.0
-"(('9',), ('null',))",1.0
-"((' Husband',), (' White',))",0.9050253922534677
-"(('40',), ('null',))",1.0
-"((' Female',), ('null',))",1.0
-"(('9',), (' HS-grad',))",0.9985736021300875
-"((' HS-grad',), ('9',))",1.0
-"(('null',), ('0',))",1.0
-"(('0',), ('null',))",1.0
-"(('9',), ('0',))",1.0
-"((' HS-grad',), ('0',))",1.0
-"((' Husband',), (' Married-civ-spouse',))",0.9993178200560904
-"((' <=50K',), ('0',))",1.0
-"((' Male',), ('null',))",1.0
-"((' <=50K',), ('null',))",1.0
-"((' Married-civ-spouse',), ('null',))",1.0
-"((' Male',), ('0',))",1.0
-"((' White',), ('0',))",1.0
-"((' Female',), ('0',))",1.0
-"((' White',), ('null',))",1.0
-"((' Husband',), ('null',))",1.0
-"((' United-States',), ('null',))",1.0
-"((' Never-married',), ('0',))",1.0
-"((' United-States',), ('0',))",1.0
-"((' White',), (' United-States',))",0.9210885821110152
-"((' White', '40'), ('0',))",1.0
-"((' Husband',), (' White', 'null'))",0.9050253922534677
-"((' Husband', ' White'), ('null',))",1.0
-"((' Husband', 'null'), (' White',))",0.9050253922534677
-"((' Husband',), (' Married-civ-spouse', ' Male'))",0.9992420222845448
-"((' Husband', ' Married-civ-spouse'), (' Male',))",0.9999241504854368
-"((' Husband', ' Male'), (' Married-civ-spouse',))",0.9993177683444512
-"((' Married-civ-spouse', ' Male'), (' Husband',))",0.98978902319994
-"((' <=50K', ' Male'), ('0',))",1.0
-"(('9',), ('0', ' HS-grad'))",0.9985736021300875
-"((' HS-grad',), ('9', '0'))",1.0
-"(('9', '0'), (' HS-grad',))",0.9985736021300875
-"(('9', ' HS-grad'), ('0',))",1.0
-"(('0', ' HS-grad'), ('9',))",1.0
-"((' White',), (' United-States', 'null'))",0.9210885821110152
-"((' United-States', ' White'), ('null',))",1.0
-"(('null', ' White'), (' United-States',))",0.9210885821110152
-"((' HS-grad',), ('null', '0'))",1.0
-"(('null', ' HS-grad'), ('0',))",1.0
-"(('0', ' HS-grad'), ('null',))",1.0
-"((' Married-civ-spouse', ' Male'), (' White',))",0.9036714468053157
-"((' United-States', ' Married-civ-spouse'), ('null',))",1.0
-"((' United-States', ' Husband'), ('null',))",1.0
-"((' Never-married',), (' <=50K', 'null'))",0.9540391275858842
-"((' Never-married', 'null'), (' <=50K',))",0.9540391275858842
-"((' Never-married', ' <=50K'), ('null',))",1.0
-"((' United-States', '40'), ('null',))",1.0
-"(('9',), ('null', '0'))",1.0
-"(('null', '9'), ('0',))",1.0
-"(('9', '0'), ('null',))",1.0
-"((' <=50K', ' White'), (' United-States',))",0.9139088844871733
-"((' Husband',), ('0', ' Married-civ-spouse'))",0.9993178200560904
-"((' Husband', '0'), (' Married-civ-spouse',))",0.9993178200560904
-"((' Husband', ' Married-civ-spouse'), ('0',))",1.0
-"((' White', ' Married-civ-spouse'), ('0',))",1.0
-"((' Male',), ('null', '0'))",1.0
-"(('null', ' Male'), ('0',))",1.0
-"(('0', ' Male'), ('null',))",1.0
-"((' <=50K',), ('null', '0'))",1.0
-"((' <=50K', 'null'), ('0',))",1.0
-"((' <=50K', '0'), ('null',))",1.0
-"((' White', ' Married-civ-spouse'), ('null',))",1.0
-"((' <=50K', ' White'), ('null',))",1.0
-"((' United-States', ' Husband'), (' Male',))",0.9999156900767221
-"((' White', ' Male'), ('0',))",1.0
-"((' Never-married',), ('null', '0'))",1.0
-"((' Never-married', 'null'), ('0',))",1.0
-"((' Never-married', '0'), ('null',))",1.0
-"(('40', ' Male'), ('0',))",1.0
-"((' <=50K', '40'), ('null',))",1.0
-"((' United-States', ' Husband'), ('0',))",1.0
-"((' United-States', ' Husband'), (' White',))",0.9318775819914005
-"((' Husband', ' White'), (' United-States',))",0.92571189279732
-"(('9',), ('null', ' HS-grad'))",0.9985736021300875
-"((' HS-grad',), ('null', '9'))",1.0
-"(('null', '9'), (' HS-grad',))",0.9985736021300875
-"(('null', ' HS-grad'), ('9',))",1.0
-"(('9', ' HS-grad'), ('null',))",1.0
-"((' <=50K', ' Male'), ('null',))",1.0
-"((' Married-civ-spouse', ' Male'), ('null',))",1.0
-"((' White', '40'), (' United-States',))",0.9108818738850538
-"((' Never-married',), (' <=50K', '0'))",0.9540391275858842
-"((' <=50K', ' Never-married'), ('0',))",1.0
-"((' Never-married', '0'), (' <=50K',))",0.9540391275858842
-"((' White',), ('null', '0'))",1.0
-"((' White', 'null'), ('0',))",1.0
-"((' White', '0'), ('null',))",1.0
-"((' Married-civ-spouse',), ('null', '0'))",1.0
-"(('null', ' Married-civ-spouse'), ('0',))",1.0
-"(('0', ' Married-civ-spouse'), ('null',))",1.0
-"((' Husband',), ('null', '0'))",1.0
-"((' Husband', '0'), ('null',))",1.0
-"((' Husband', 'null'), ('0',))",1.0
-"(('40',), ('null', '0'))",1.0
-"(('null', '40'), ('0',))",1.0
-"(('0', '40'), ('null',))",1.0
-"((' White', '40'), ('null',))",1.0
-"((' United-States', ' Husband'), (' Married-civ-spouse',))",0.9992412106904983
-"((' United-States', ' Married-civ-spouse'), (' White',))",0.9252692998204668
-"((' White', ' Married-civ-spouse'), (' United-States',))",0.9223713646532439
-"((' United-States', ' Male'), ('null',))",1.0
-"((' <=50K', ' United-States'), ('0',))",1.0
-"((' Husband',), (' White', ' Married-civ-spouse'))",0.904343212309558
-"((' Husband', ' White'), (' Married-civ-spouse',))",0.9992462311557789
-"((' Husband', ' Married-civ-spouse'), (' White',))",0.9049605582524272
-"(('40', ' Male'), ('null',))",1.0
-"((' <=50K', '40'), ('0',))",1.0
-"((' Married-civ-spouse', ' Male'), ('0',))",1.0
-"((' Husband',), ('0', ' Male'))",0.9999242022284545
-"((' Husband', '0'), (' Male',))",0.9999242022284545
-"((' Husband', ' Male'), ('0',))",1.0
-"((' United-States',), ('null', '0'))",1.0
-"((' United-States', 'null'), ('0',))",1.0
-"((' United-States', '0'), ('null',))",1.0
-"((' Female',), ('null', '0'))",1.0
-"((' Female', 'null'), ('0',))",1.0
-"((' Female', '0'), ('null',))",1.0
-"((' <=50K', ' White'), ('0',))",1.0
-"((' White', ' Male'), ('null',))",1.0
-"((' Husband',), ('null', ' Male'))",0.9999242022284545
-"((' Husband', 'null'), (' Male',))",0.9999242022284545
-"((' Husband', ' Male'), ('null',))",1.0
-"((' United-States', '40'), ('0',))",1.0
-"((' Husband',), (' White', ' Male'))",0.9049495944819221
-"((' Husband', ' White'), (' Male',))",0.9999162479061976
-"((' Husband', ' Male'), (' White',))",0.905018192844148
-"((' Husband',), ('null', ' Married-civ-spouse'))",0.9993178200560904
-"((' Husband', 'null'), (' Married-civ-spouse',))",0.9993178200560904
-"((' Husband', ' Married-civ-spouse'), ('null',))",1.0
-"((' United-States', ' Male'), ('0',))",1.0
-"((' <=50K', ' United-States'), ('null',))",1.0
-"((' United-States', ' Male'), (' White',))",0.9058394909688012
-"((' White', ' Male'), (' United-States',))",0.920673829143632
-"((' United-States', ' Married-civ-spouse'), ('0',))",1.0
-"((' White',), (' United-States', '0'))",0.9210885821110152
-"((' United-States', ' White'), ('0',))",1.0
-"((' White', '0'), (' United-States',))",0.9210885821110152
-"((' Husband',), (' White', '0'))",0.9050253922534677
-"((' White', ' Husband'), ('0',))",1.0
-"((' Husband', '0'), (' White',))",0.9050253922534677
-"((' White', ' Husband'), (' United-States', '0'))",0.92571189279732
-"((' United-States', ' Husband'), (' White', '0'))",0.9318775819914005
-"((' White', '0', ' Husband'), (' United-States',))",0.92571189279732
-"((' United-States', ' White', ' Husband'), ('0',))",1.0
-"((' United-States', ' Husband', '0'), (' White',))",0.9318775819914005
-"((' White', ' Married-civ-spouse'), (' United-States', '0'))",0.9223713646532439
-"((' United-States', ' Married-civ-spouse'), (' White', '0'))",0.9252692998204668
-"((' White', '0', ' Married-civ-spouse'), (' United-States',))",0.9223713646532439
-"((' United-States', ' White', ' Married-civ-spouse'), ('0',))",1.0
-"((' United-States', '0', ' Married-civ-spouse'), (' White',))",0.9252692998204668
-"((' <=50K', ' United-States', ' Male'), ('null',))",1.0
-"((' White', '40'), (' United-States', 'null'))",0.9108818738850538
-"((' United-States', ' White', '40'), ('null',))",1.0
-"((' White', 'null', '40'), (' United-States',))",0.9108818738850538
-"((' Never-married',), (' <=50K', 'null', '0'))",0.9540391275858842
-"((' <=50K', ' Never-married'), ('null', '0'))",1.0
-"((' Never-married', '0'), (' <=50K', 'null'))",0.9540391275858842
-"((' Never-married', 'null'), (' <=50K', '0'))",0.9540391275858842
-"((' <=50K', ' Never-married', '0'), ('null',))",1.0
-"((' <=50K', 'null', ' Never-married'), ('0',))",1.0
-"((' Never-married', 'null', '0'), (' <=50K',))",0.9540391275858842
-"((' White', ' Married-civ-spouse', ' Male'), (' United-States',))",0.9243104021269525
-"((' United-States', ' Married-civ-spouse', ' Male'), (' White',))",0.9311961161797943
-"((' White',), (' United-States', 'null', '0'))",0.9210885821110152
-"((' White', '0'), (' United-States', 'null'))",0.9210885821110152
-"((' United-States', ' White'), ('null', '0'))",1.0
-"((' White', 'null'), (' United-States', '0'))",0.9210885821110152
-"((' United-States', ' White', '0'), ('null',))",1.0
-"((' White', '0', 'null'), (' United-States',))",0.9210885821110152
-"((' United-States', ' White', 'null'), ('0',))",1.0
-"((' United-States', ' Married-civ-spouse', ' Male'), ('0',))",1.0
-"((' <=50K', ' White', ' Male'), (' United-States',))",0.9104317921283914
-"((' Husband',), (' White', ' Married-civ-spouse', ' Male'))",0.9042674145380125
-"((' White', ' Husband'), (' Married-civ-spouse', ' Male'))",0.9991624790619765
-"((' Husband', ' Male'), (' White', ' Married-civ-spouse'))",0.9043359611885992
-"((' Husband', ' Married-civ-spouse'), (' White', ' Male'))",0.904884708737864
-"((' White', ' Husband', ' Male'), (' Married-civ-spouse',))",0.9992461680207723
-"((' White', ' Married-civ-spouse', ' Male'), (' Husband',))",0.9911930874044533
-"((' White', ' Married-civ-spouse', ' Husband'), (' Male',))",0.9999161847288576
-"((' Husband', ' Married-civ-spouse', ' Male'), (' White',))",0.9049533490100887
-"((' Husband',), (' White', '0', 'null'))",0.9050253922534677
-"((' White', ' Husband'), ('null', '0'))",1.0
-"((' Husband', '0'), (' White', 'null'))",0.9050253922534677
-"(('null', ' Husband'), (' White', '0'))",0.9050253922534677
-"((' White', '0', ' Husband'), ('null',))",1.0
-"((' White', 'null', ' Husband'), ('0',))",1.0
-"(('null', '0', ' Husband'), (' White',))",0.9050253922534677
-"(('40', ' Male'), ('null', '0'))",1.0
-"(('0', '40', ' Male'), ('null',))",1.0
-"(('null', '40', ' Male'), ('0',))",1.0
-"((' Husband',), ('null', ' Married-civ-spouse', ' Male'))",0.9992420222845448
-"(('null', ' Husband'), (' Married-civ-spouse', ' Male'))",0.9992420222845448
-"((' Husband', ' Male'), ('null', ' Married-civ-spouse'))",0.9993177683444512
-"((' Married-civ-spouse', ' Male'), ('null', ' Husband'))",0.98978902319994
-"((' Husband', ' Married-civ-spouse'), ('null', ' Male'))",0.9999241504854368
-"(('null', ' Husband', ' Male'), (' Married-civ-spouse',))",0.9993177683444512
-"(('null', ' Married-civ-spouse', ' Male'), (' Husband',))",0.98978902319994
-"(('null', ' Married-civ-spouse', ' Husband'), (' Male',))",0.9999241504854368
-"((' Husband', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"((' Husband',), (' White', 'null', ' Male'))",0.9049495944819221
-"((' White', ' Husband'), ('null', ' Male'))",0.9999162479061976
-"(('null', ' Husband'), (' White', ' Male'))",0.9049495944819221
-"((' Husband', ' Male'), (' White', 'null'))",0.905018192844148
-"((' White', 'null', ' Husband'), (' Male',))",0.9999162479061976
-"((' White', ' Husband', ' Male'), ('null',))",1.0
-"(('null', ' Husband', ' Male'), (' White',))",0.905018192844148
-"((' Married-civ-spouse', ' Male'), (' White', 'null'))",0.9036714468053157
-"((' White', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"(('null', ' Married-civ-spouse', ' Male'), (' White',))",0.9036714468053157
-"((' United-States', ' Male'), ('null', '0'))",1.0
-"((' United-States', '0', ' Male'), ('null',))",1.0
-"((' United-States', 'null', ' Male'), ('0',))",1.0
-"((' HS-grad',), ('null', '9', '0'))",1.0
-"(('9',), ('null', '0', ' HS-grad'))",0.9985736021300875
-"(('0', ' HS-grad'), ('null', '9'))",1.0
-"(('9', '0'), ('null', ' HS-grad'))",0.9985736021300875
-"(('null', ' HS-grad'), ('9', '0'))",1.0
-"(('9', ' HS-grad'), ('null', '0'))",1.0
-"(('null', '9'), ('0', ' HS-grad'))",0.9985736021300875
-"(('null', '0', ' HS-grad'), ('9',))",1.0
-"(('9', '0', ' HS-grad'), ('null',))",1.0
-"(('null', '9', '0'), (' HS-grad',))",0.9985736021300875
-"(('null', '9', ' HS-grad'), ('0',))",1.0
-"((' <=50K', ' White'), (' United-States', '0'))",0.9139088844871733
-"((' <=50K', ' White', '0'), (' United-States',))",0.9139088844871733
-"((' <=50K', ' White', ' United-States'), ('0',))",1.0
-"((' White', ' Male'), (' United-States', 'null'))",0.920673829143632
-"((' United-States', ' Male'), (' White', 'null'))",0.9058394909688012
-"((' United-States', ' White', ' Male'), ('null',))",1.0
-"((' White', 'null', ' Male'), (' United-States',))",0.920673829143632
-"((' United-States', 'null', ' Male'), (' White',))",0.9058394909688012
-"((' <=50K', '40'), ('null', '0'))",1.0
-"((' <=50K', '0', '40'), ('null',))",1.0
-"((' <=50K', 'null', '40'), ('0',))",1.0
-"((' <=50K', ' White'), (' United-States', 'null'))",0.9139088844871733
-"((' <=50K', ' White', ' United-States'), ('null',))",1.0
-"((' <=50K', ' White', 'null'), (' United-States',))",0.9139088844871733
-"((' White', ' Male'), (' United-States', '0'))",0.920673829143632
-"((' United-States', ' Male'), (' White', '0'))",0.9058394909688012
-"((' White', '0', ' Male'), (' United-States',))",0.920673829143632
-"((' United-States', ' White', ' Male'), ('0',))",1.0
-"((' United-States', '0', ' Male'), (' White',))",0.9058394909688012
-"((' United-States', ' Married-civ-spouse'), ('null', '0'))",1.0
-"((' United-States', '0', ' Married-civ-spouse'), ('null',))",1.0
-"((' United-States', 'null', ' Married-civ-spouse'), ('0',))",1.0
-"((' United-States', ' Husband'), ('0', ' Male'))",0.9999156900767221
-"((' United-States', ' Husband', '0'), (' Male',))",0.9999156900767221
-"((' United-States', ' Husband', ' Male'), ('0',))",1.0
-"((' Husband',), (' White', '0', ' Male'))",0.9049495944819221
-"((' White', ' Husband'), ('0', ' Male'))",0.9999162479061976
-"((' Husband', '0'), (' White', ' Male'))",0.9049495944819221
-"((' Husband', ' Male'), (' White', '0'))",0.905018192844148
-"((' White', '0', ' Husband'), (' Male',))",0.9999162479061976
-"((' White', ' Husband', ' Male'), ('0',))",1.0
-"((' Husband', '0', ' Male'), (' White',))",0.905018192844148
-"((' Husband',), ('0', ' Married-civ-spouse', ' Male'))",0.9992420222845448
-"((' Husband', '0'), (' Married-civ-spouse', ' Male'))",0.9992420222845448
-"((' Husband', ' Male'), ('0', ' Married-civ-spouse'))",0.9993177683444512
-"((' Married-civ-spouse', ' Male'), (' Husband', '0'))",0.98978902319994
-"((' Husband', ' Married-civ-spouse'), ('0', ' Male'))",0.9999241504854368
-"((' Husband', '0', ' Male'), (' Married-civ-spouse',))",0.9993177683444512
-"(('0', ' Married-civ-spouse', ' Male'), (' Husband',))",0.98978902319994
-"((' Husband', '0', ' Married-civ-spouse'), (' Male',))",0.9999241504854368
-"((' Husband', ' Married-civ-spouse', ' Male'), ('0',))",1.0
-"((' <=50K', ' Male'), ('null', '0'))",1.0
-"((' <=50K', '0', ' Male'), ('null',))",1.0
-"((' <=50K', 'null', ' Male'), ('0',))",1.0
-"((' United-States', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"((' United-States', '40'), ('null', '0'))",1.0
-"((' United-States', '0', '40'), ('null',))",1.0
-"((' United-States', 'null', '40'), ('0',))",1.0
-"((' <=50K', ' White', '40'), ('null',))",1.0
-"((' United-States', ' Husband'), ('null', '0'))",1.0
-"((' United-States', ' Husband', '0'), ('null',))",1.0
-"((' United-States', 'null', ' Husband'), ('0',))",1.0
-"((' White', ' Husband'), (' United-States', 'null'))",0.92571189279732
-"((' United-States', ' Husband'), (' White', 'null'))",0.9318775819914005
-"((' White', 'null', ' Husband'), (' United-States',))",0.92571189279732
-"((' United-States', ' White', ' Husband'), ('null',))",1.0
-"((' United-States', 'null', ' Husband'), (' White',))",0.9318775819914005
-"((' Husband',), ('null', '0', ' Married-civ-spouse'))",0.9993178200560904
-"((' Husband', '0'), ('null', ' Married-civ-spouse'))",0.9993178200560904
-"(('null', ' Husband'), ('0', ' Married-civ-spouse'))",0.9993178200560904
-"((' Husband', ' Married-civ-spouse'), ('null', '0'))",1.0
-"(('null', '0', ' Husband'), (' Married-civ-spouse',))",0.9993178200560904
-"((' Husband', '0', ' Married-civ-spouse'), ('null',))",1.0
-"(('null', ' Married-civ-spouse', ' Husband'), ('0',))",1.0
-"((' White', ' Married-civ-spouse'), ('null', '0'))",1.0
-"((' White', '0', ' Married-civ-spouse'), ('null',))",1.0
-"((' White', ' Married-civ-spouse', 'null'), ('0',))",1.0
-"((' <=50K', ' White', '40'), ('0',))",1.0
-"((' White', ' Male'), ('null', '0'))",1.0
-"((' White', '0', ' Male'), ('null',))",1.0
-"((' White', 'null', ' Male'), ('0',))",1.0
-"((' White', ' Husband'), (' United-States', ' Married-civ-spouse'))",0.9249581239530987
-"((' United-States', ' Husband'), (' White', ' Married-civ-spouse'))",0.9311187926818987
-"((' United-States', ' White', ' Husband'), (' Married-civ-spouse',))",0.9991857414276666
-"((' White', ' Married-civ-spouse', ' Husband'), (' United-States',))",0.9256558544966892
-"((' United-States', ' Husband', ' Married-civ-spouse'), (' White',))",0.9318258521768478
-"((' United-States', ' Husband'), ('null', ' Male'))",0.9999156900767221
-"((' United-States', 'null', ' Husband'), (' Male',))",0.9999156900767221
-"((' United-States', ' Husband', ' Male'), ('null',))",1.0
-"((' United-States', ' Husband'), ('0', ' Married-civ-spouse'))",0.9992412106904983
-"((' United-States', ' Husband', '0'), (' Married-civ-spouse',))",0.9992412106904983
-"((' United-States', ' Husband', ' Married-civ-spouse'), ('0',))",1.0
-"((' <=50K', ' United-States', '40'), ('null',))",1.0
-"((' White', '40'), ('null', '0'))",1.0
-"((' White', '0', '40'), ('null',))",1.0
-"((' White', 'null', '40'), ('0',))",1.0
-"((' White', ' Husband'), (' United-States', ' Male'))",0.9256281407035176
-"((' United-States', ' Husband'), (' White', ' Male'))",0.9317932720681226
-"((' White', ' Husband', ' Male'), (' United-States',))",0.925705670491666
-"((' United-States', ' White', ' Husband'), (' Male',))",0.9999095268252962
-"((' United-States', ' Husband', ' Male'), (' White',))",0.9318718381112985
-"((' United-States', ' Husband'), (' Married-civ-spouse', ' Male'))",0.9991569007672204
-"((' United-States', ' Husband', ' Male'), (' Married-civ-spouse',))",0.9992411467116358
-"((' United-States', ' Married-civ-spouse', ' Male'), (' Husband',))",0.9919645099188082
-"((' United-States', ' Husband', ' Married-civ-spouse'), (' Male',))",0.9999156260546744
-"((' <=50K', ' United-States'), ('null', '0'))",1.0
-"((' <=50K', ' United-States', '0'), ('null',))",1.0
-"((' <=50K', 'null', ' United-States'), ('0',))",1.0
-"((' Married-civ-spouse', ' Male'), (' White', '0'))",0.9036714468053157
-"((' White', ' Married-civ-spouse', ' Male'), ('0',))",1.0
-"(('0', ' Married-civ-spouse', ' Male'), (' White',))",0.9036714468053157
-"((' <=50K', ' White', ' Male'), ('0',))",1.0
-"((' <=50K', ' United-States', '40'), ('0',))",1.0
-"((' Married-civ-spouse', ' Male'), ('null', '0'))",1.0
-"(('0', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"(('null', ' Married-civ-spouse', ' Male'), ('0',))",1.0
-"((' <=50K', ' White', ' Male'), ('null',))",1.0
-"((' United-States', ' Husband'), ('null', ' Married-civ-spouse'))",0.9992412106904983
-"((' United-States', ' Husband', 'null'), (' Married-civ-spouse',))",0.9992412106904983
-"((' United-States', ' Husband', ' Married-civ-spouse'), ('null',))",1.0
-"((' <=50K', ' United-States', ' Male'), ('0',))",1.0
-"((' White', ' Married-civ-spouse'), (' United-States', 'null'))",0.9223713646532439
-"((' United-States', ' Married-civ-spouse'), (' White', 'null'))",0.9252692998204668
-"((' United-States', ' White', ' Married-civ-spouse'), ('null',))",1.0
-"((' White', ' Married-civ-spouse', 'null'), (' United-States',))",0.9223713646532439
-"((' United-States', 'null', ' Married-civ-spouse'), (' White',))",0.9252692998204668
-"((' <=50K', ' White'), ('null', '0'))",1.0
-"((' <=50K', ' White', '0'), ('null',))",1.0
-"((' <=50K', ' White', 'null'), ('0',))",1.0
-"((' Husband',), (' White', ' Married-civ-spouse', 'null'))",0.904343212309558
-"((' White', ' Husband'), ('null', ' Married-civ-spouse'))",0.9992462311557789
-"(('null', ' Husband'), (' White', ' Married-civ-spouse'))",0.904343212309558
-"((' Husband', ' Married-civ-spouse'), (' White', 'null'))",0.9049605582524272
-"((' White', 'null', ' Husband'), (' Married-civ-spouse',))",0.9992462311557789
-"((' White', ' Married-civ-spouse', ' Husband'), ('null',))",1.0
-"(('null', ' Married-civ-spouse', ' Husband'), (' White',))",0.9049605582524272
-"((' White', '40'), (' United-States', '0'))",0.9108818738850538
-"((' White', '0', '40'), (' United-States',))",0.9108818738850538
-"((' United-States', ' White', '40'), ('0',))",1.0
-"((' Husband',), (' White', '0', ' Married-civ-spouse'))",0.904343212309558
-"((' White', ' Husband'), ('0', ' Married-civ-spouse'))",0.9992462311557789
-"((' Husband', '0'), (' White', ' Married-civ-spouse'))",0.904343212309558
-"((' Husband', ' Married-civ-spouse'), (' White', '0'))",0.9049605582524272
-"((' White', '0', ' Husband'), (' Married-civ-spouse',))",0.9992462311557789
-"((' White', ' Married-civ-spouse', ' Husband'), ('0',))",1.0
-"((' Husband', '0', ' Married-civ-spouse'), (' White',))",0.9049605582524272
-"((' Husband',), ('null', '0', ' Male'))",0.9999242022284545
-"((' Husband', '0'), ('null', ' Male'))",0.9999242022284545
-"((' Husband', ' Male'), ('null', '0'))",1.0
-"(('null', ' Husband'), ('0', ' Male'))",0.9999242022284545
-"((' Husband', '0', ' Male'), ('null',))",1.0
-"(('null', '0', ' Husband'), (' Male',))",0.9999242022284545
-"(('null', ' Husband', ' Male'), ('0',))",1.0
-"((' Husband',), (' Married-civ-spouse', ' White', '0', 'null'))",0.904343212309558
-"((' White', ' Husband'), ('null', '0', ' Married-civ-spouse'))",0.9992462311557789
-"((' Husband', '0'), (' White', ' Married-civ-spouse', 'null'))",0.904343212309558
-"(('null', ' Husband'), (' White', '0', ' Married-civ-spouse'))",0.904343212309558
-"((' Husband', ' Married-civ-spouse'), (' White', '0', 'null'))",0.9049605582524272
-"((' White', '0', ' Husband'), ('null', ' Married-civ-spouse'))",0.9992462311557789
-"((' White', 'null', ' Husband'), ('0', ' Married-civ-spouse'))",0.9992462311557789
-"((' White', ' Married-civ-spouse', ' Husband'), ('null', '0'))",1.0
-"(('null', '0', ' Husband'), (' White', ' Married-civ-spouse'))",0.904343212309558
-"((' Husband', '0', ' Married-civ-spouse'), (' White', 'null'))",0.9049605582524272
-"(('null', ' Married-civ-spouse', ' Husband'), (' White', '0'))",0.9049605582524272
-"((' White', '0', 'null', ' Husband'), (' Married-civ-spouse',))",0.9992462311557789
-"((' White', '0', ' Married-civ-spouse', ' Husband'), ('null',))",1.0
-"((' White', ' Married-civ-spouse', 'null', ' Husband'), ('0',))",1.0
-"(('null', '0', ' Married-civ-spouse', ' Husband'), (' White',))",0.9049605582524272
-"((' White', ' Married-civ-spouse'), (' United-States', 'null', '0'))",0.9223713646532439
-"((' United-States', ' Married-civ-spouse'), (' White', '0', 'null'))",0.9252692998204668
-"((' White', '0', ' Married-civ-spouse'), (' United-States', 'null'))",0.9223713646532439
-"((' White', ' Married-civ-spouse', 'null'), (' United-States', '0'))",0.9223713646532439
-"((' United-States', ' White', ' Married-civ-spouse'), ('null', '0'))",1.0
-"((' United-States', '0', ' Married-civ-spouse'), (' White', 'null'))",0.9252692998204668
-"((' United-States', 'null', ' Married-civ-spouse'), (' White', '0'))",0.9252692998204668
-"((' Married-civ-spouse', ' White', '0', 'null'), (' United-States',))",0.9223713646532439
-"((' United-States', ' White', '0', ' Married-civ-spouse'), ('null',))",1.0
-"((' United-States', ' White', ' Married-civ-spouse', 'null'), ('0',))",1.0
-"((' United-States', 'null', '0', ' Married-civ-spouse'), (' White',))",0.9252692998204668
-"((' United-States', ' Husband'), ('null', '0', ' Married-civ-spouse'))",0.9992412106904983
-"((' United-States', ' Husband', '0'), ('null', ' Married-civ-spouse'))",0.9992412106904983
-"((' United-States', 'null', ' Husband'), ('0', ' Married-civ-spouse'))",0.9992412106904983
-"((' United-States', ' Husband', ' Married-civ-spouse'), ('null', '0'))",1.0
-"((' United-States', 'null', '0', ' Husband'), (' Married-civ-spouse',))",0.9992412106904983
-"((' United-States', ' Husband', '0', ' Married-civ-spouse'), ('null',))",1.0
-"((' United-States', 'null', ' Married-civ-spouse', ' Husband'), ('0',))",1.0
-"((' White', ' Married-civ-spouse', ' Male'), (' United-States', 'null'))",0.9243104021269525
-"((' United-States', ' Married-civ-spouse', ' Male'), (' White', 'null'))",0.9311961161797943
-"((' White', ' Married-civ-spouse', 'null', ' Male'), (' United-States',))",0.9243104021269525
-"((' United-States', ' White', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"((' United-States', 'null', ' Married-civ-spouse', ' Male'), (' White',))",0.9311961161797943
-"((' White', ' Husband'), (' United-States', 'null', ' Male'))",0.9256281407035176
-"((' United-States', ' Husband'), (' White', 'null', ' Male'))",0.9317932720681226
-"((' White', 'null', ' Husband'), (' United-States', ' Male'))",0.9256281407035176
-"((' White', ' Husband', ' Male'), (' United-States', 'null'))",0.925705670491666
-"((' United-States', ' White', ' Husband'), ('null', ' Male'))",0.9999095268252962
-"((' United-States', 'null', ' Husband'), (' White', ' Male'))",0.9317932720681226
-"((' United-States', ' Husband', ' Male'), (' White', 'null'))",0.9318718381112985
-"((' White', ' Husband', 'null', ' Male'), (' United-States',))",0.925705670491666
-"((' United-States', ' White', 'null', ' Husband'), (' Male',))",0.9999095268252962
-"((' United-States', ' White', ' Husband', ' Male'), ('null',))",1.0
-"((' United-States', 'null', ' Husband', ' Male'), (' White',))",0.9318718381112985
-"((' United-States', ' Husband'), ('null', ' Married-civ-spouse', ' Male'))",0.9991569007672204
-"((' United-States', 'null', ' Husband'), (' Married-civ-spouse', ' Male'))",0.9991569007672204
-"((' United-States', ' Husband', ' Male'), ('null', ' Married-civ-spouse'))",0.9992411467116358
-"((' United-States', ' Married-civ-spouse', ' Male'), ('null', ' Husband'))",0.9919645099188082
-"((' United-States', ' Husband', ' Married-civ-spouse'), ('null', ' Male'))",0.9999156260546744
-"((' United-States', 'null', ' Husband', ' Male'), (' Married-civ-spouse',))",0.9992411467116358
-"((' United-States', 'null', ' Married-civ-spouse', ' Male'), (' Husband',))",0.9919645099188082
-"((' United-States', 'null', ' Married-civ-spouse', ' Husband'), (' Male',))",0.9999156260546744
-"((' United-States', ' Husband', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"((' Husband',), (' White', ' Married-civ-spouse', 'null', ' Male'))",0.9042674145380125
-"((' White', ' Husband'), ('null', ' Married-civ-spouse', ' Male'))",0.9991624790619765
-"(('null', ' Husband'), (' White', ' Married-civ-spouse', ' Male'))",0.9042674145380125
-"((' Husband', ' Male'), (' White', ' Married-civ-spouse', 'null'))",0.9043359611885992
-"((' Husband', ' Married-civ-spouse'), (' White', 'null', ' Male'))",0.904884708737864
-"((' White', 'null', ' Husband'), (' Married-civ-spouse', ' Male'))",0.9991624790619765
-"((' White', ' Husband', ' Male'), ('null', ' Married-civ-spouse'))",0.9992461680207723
-"((' White', ' Married-civ-spouse', ' Male'), ('null', ' Husband'))",0.9911930874044533
-"((' White', ' Married-civ-spouse', ' Husband'), ('null', ' Male'))",0.9999161847288576
-"(('null', ' Husband', ' Male'), (' White', ' Married-civ-spouse'))",0.9043359611885992
-"(('null', ' Married-civ-spouse', ' Husband'), (' White', ' Male'))",0.904884708737864
-"((' Husband', ' Married-civ-spouse', ' Male'), (' White', 'null'))",0.9049533490100887
-"((' White', ' Husband', 'null', ' Male'), (' Married-civ-spouse',))",0.9992461680207723
-"((' White', ' Married-civ-spouse', 'null', ' Male'), (' Husband',))",0.9911930874044533
-"((' White', ' Married-civ-spouse', 'null', ' Husband'), (' Male',))",0.9999161847288576
-"((' White', ' Husband', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"(('null', ' Husband', ' Married-civ-spouse', ' Male'), (' White',))",0.9049533490100887
-"((' <=50K', ' White', ' Male'), ('null', '0'))",1.0
-"((' <=50K', ' White', '0', ' Male'), ('null',))",1.0
-"((' <=50K', ' White', 'null', ' Male'), ('0',))",1.0
-"((' United-States', ' Husband'), ('0', ' Married-civ-spouse', ' Male'))",0.9991569007672204
-"((' United-States', ' Husband', '0'), (' Married-civ-spouse', ' Male'))",0.9991569007672204
-"((' United-States', ' Husband', ' Male'), ('0', ' Married-civ-spouse'))",0.9992411467116358
-"((' United-States', ' Married-civ-spouse', ' Male'), (' Husband', '0'))",0.9919645099188082
-"((' United-States', ' Husband', ' Married-civ-spouse'), ('0', ' Male'))",0.9999156260546744
-"((' United-States', ' Husband', '0', ' Male'), (' Married-civ-spouse',))",0.9992411467116358
-"((' United-States', '0', ' Married-civ-spouse', ' Male'), (' Husband',))",0.9919645099188082
-"((' United-States', ' Husband', '0', ' Married-civ-spouse'), (' Male',))",0.9999156260546744
-"((' United-States', ' Husband', ' Married-civ-spouse', ' Male'), ('0',))",1.0
-"((' White', ' Husband'), (' United-States', '0', ' Male'))",0.9256281407035176
-"((' United-States', ' Husband'), (' White', '0', ' Male'))",0.9317932720681226
-"((' White', '0', ' Husband'), (' United-States', ' Male'))",0.9256281407035176
-"((' White', ' Husband', ' Male'), (' United-States', '0'))",0.925705670491666
-"((' United-States', ' White', ' Husband'), ('0', ' Male'))",0.9999095268252962
-"((' United-States', ' Husband', '0'), (' White', ' Male'))",0.9317932720681226
-"((' United-States', ' Husband', ' Male'), (' White', '0'))",0.9318718381112985
-"((' White', ' Husband', '0', ' Male'), (' United-States',))",0.925705670491666
-"((' United-States', ' White', '0', ' Husband'), (' Male',))",0.9999095268252962
-"((' United-States', ' White', ' Husband', ' Male'), ('0',))",1.0
-"((' United-States', ' Husband', '0', ' Male'), (' White',))",0.9318718381112985
-"((' <=50K', ' United-States', '40'), ('null', '0'))",1.0
-"((' <=50K', ' United-States', '0', '40'), ('null',))",1.0
-"((' <=50K', 'null', ' United-States', '40'), ('0',))",1.0
-"((' United-States', ' Husband'), ('null', '0', ' Male'))",0.9999156900767221
-"((' United-States', ' Husband', '0'), ('null', ' Male'))",0.9999156900767221
-"((' United-States', 'null', ' Husband'), ('0', ' Male'))",0.9999156900767221
-"((' United-States', ' Husband', ' Male'), ('null', '0'))",1.0
-"((' United-States', 'null', '0', ' Husband'), (' Male',))",0.9999156900767221
-"((' United-States', ' Husband', '0', ' Male'), ('null',))",1.0
-"((' United-States', 'null', ' Husband', ' Male'), ('0',))",1.0
-"((' White', ' Husband'), (' United-States', '0', ' Married-civ-spouse'))",0.9249581239530987
-"((' United-States', ' Husband'), (' White', '0', ' Married-civ-spouse'))",0.9311187926818987
-"((' White', '0', ' Husband'), (' United-States', ' Married-civ-spouse'))",0.9249581239530987
-"((' United-States', ' White', ' Husband'), ('0', ' Married-civ-spouse'))",0.9991857414276666
-"((' White', ' Married-civ-spouse', ' Husband'), (' United-States', '0'))",0.9256558544966892
-"((' United-States', ' Husband', '0'), (' White', ' Married-civ-spouse'))",0.9311187926818987
-"((' United-States', ' Husband', ' Married-civ-spouse'), (' White', '0'))",0.9318258521768478
-"((' United-States', ' White', '0', ' Husband'), (' Married-civ-spouse',))",0.9991857414276666
-"((' White', '0', ' Married-civ-spouse', ' Husband'), (' United-States',))",0.9256558544966892
-"((' United-States', ' White', ' Married-civ-spouse', ' Husband'), ('0',))",1.0
-"((' United-States', ' Husband', '0', ' Married-civ-spouse'), (' White',))",0.9318258521768478
-"((' White', ' Husband'), (' United-States', 'null', '0'))",0.92571189279732
-"((' United-States', ' Husband'), (' White', '0', 'null'))",0.9318775819914005
-"((' White', '0', ' Husband'), (' United-States', 'null'))",0.92571189279732
-"((' White', 'null', ' Husband'), (' United-States', '0'))",0.92571189279732
-"((' United-States', ' White', ' Husband'), ('null', '0'))",1.0
-"((' United-States', ' Husband', '0'), (' White', 'null'))",0.9318775819914005
-"((' United-States', 'null', ' Husband'), (' White', '0'))",0.9318775819914005
-"((' White', '0', 'null', ' Husband'), (' United-States',))",0.92571189279732
-"((' United-States', ' White', '0', ' Husband'), ('null',))",1.0
-"((' United-States', ' White', 'null', ' Husband'), ('0',))",1.0
-"((' United-States', 'null', '0', ' Husband'), (' White',))",0.9318775819914005
-"((' White', ' Husband'), (' United-States', ' Married-civ-spouse', ' Male'))",0.9248743718592966
-"((' United-States', ' Husband'), (' White', ' Married-civ-spouse', ' Male'))",0.9310344827586208
-"((' White', ' Husband', ' Male'), (' United-States', ' Married-civ-spouse'))",0.9249518385124383
-"((' White', ' Married-civ-spouse', ' Male'), (' United-States', ' Husband'))",0.9174975074775673
-"((' United-States', ' White', ' Husband'), (' Married-civ-spouse', ' Male'))",0.999095268252963
-"((' White', ' Married-civ-spouse', ' Husband'), (' United-States', ' Male'))",0.9255720392255469
-"((' United-States', ' Husband', ' Male'), (' White', ' Married-civ-spouse'))",0.9311129848229343
-"((' United-States', ' Married-civ-spouse', ' Male'), (' White', ' Husband'))",0.9243324684021095
-"((' United-States', ' Husband', ' Married-civ-spouse'), (' White', ' Male'))",0.9317414782315222
-"((' United-States', ' White', ' Husband', ' Male'), (' Married-civ-spouse',))",0.999185667752443
-"((' United-States', ' White', ' Married-civ-spouse', ' Male'), (' Husband',))",0.992629213483146
-"((' White', ' Husband', ' Married-civ-spouse', ' Male'), (' United-States',))",0.9256496227996648
-"((' United-States', ' White', ' Married-civ-spouse', ' Husband'), (' Male',))",0.9999094530967042
-"((' United-States', ' Husband', ' Married-civ-spouse', ' Male'), (' White',))",0.9318200995696565
-"((' <=50K', ' White', '40'), ('null', '0'))",1.0
-"((' <=50K', ' White', '0', '40'), ('null',))",1.0
-"((' <=50K', ' White', 'null', '40'), ('0',))",1.0
-"((' <=50K', ' White', ' Male'), (' United-States', 'null'))",0.9104317921283914
-"((' <=50K', ' White', 'null', ' Male'), (' United-States',))",0.9104317921283914
-"((' <=50K', ' White', ' United-States', ' Male'), ('null',))",1.0
-"((' United-States', ' Married-civ-spouse', ' Male'), ('null', '0'))",1.0
-"((' United-States', '0', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"((' United-States', 'null', ' Married-civ-spouse', ' Male'), ('0',))",1.0
-"((' White', ' Husband'), (' United-States', 'null', ' Married-civ-spouse'))",0.9249581239530987
-"((' United-States', ' Husband'), (' White', ' Married-civ-spouse', 'null'))",0.9311187926818987
-"((' White', 'null', ' Husband'), (' United-States', ' Married-civ-spouse'))",0.9249581239530987
-"((' United-States', ' White', ' Husband'), ('null', ' Married-civ-spouse'))",0.9991857414276666
-"((' White', ' Married-civ-spouse', ' Husband'), (' United-States', 'null'))",0.9256558544966892
-"((' United-States', 'null', ' Husband'), (' White', ' Married-civ-spouse'))",0.9311187926818987
-"((' United-States', ' Husband', ' Married-civ-spouse'), (' White', 'null'))",0.9318258521768478
-"((' United-States', ' White', 'null', ' Husband'), (' Married-civ-spouse',))",0.9991857414276666
-"((' White', ' Married-civ-spouse', 'null', ' Husband'), (' United-States',))",0.9256558544966892
-"((' United-States', ' White', ' Married-civ-spouse', ' Husband'), ('null',))",1.0
-"((' United-States', 'null', ' Married-civ-spouse', ' Husband'), (' White',))",0.9318258521768478
-"((' <=50K', ' White'), (' United-States', 'null', '0'))",0.9139088844871733
-"((' <=50K', ' White', '0'), (' United-States', 'null'))",0.9139088844871733
-"((' <=50K', ' White', 'null'), (' United-States', '0'))",0.9139088844871733
-"((' <=50K', ' White', ' United-States'), ('null', '0'))",1.0
-"((' <=50K', ' White', '0', 'null'), (' United-States',))",0.9139088844871733
-"((' <=50K', ' White', ' United-States', '0'), ('null',))",1.0
-"((' <=50K', ' White', ' United-States', 'null'), ('0',))",1.0
-"((' White', ' Male'), (' United-States', 'null', '0'))",0.920673829143632
-"((' United-States', ' Male'), (' White', '0', 'null'))",0.9058394909688012
-"((' White', '0', ' Male'), (' United-States', 'null'))",0.920673829143632
-"((' White', 'null', ' Male'), (' United-States', '0'))",0.920673829143632
-"((' United-States', ' White', ' Male'), ('null', '0'))",1.0
-"((' United-States', '0', ' Male'), (' White', 'null'))",0.9058394909688012
-"((' United-States', 'null', ' Male'), (' White', '0'))",0.9058394909688012
-"((' White', '0', 'null', ' Male'), (' United-States',))",0.920673829143632
-"((' United-States', ' White', '0', ' Male'), ('null',))",1.0
-"((' United-States', ' White', 'null', ' Male'), ('0',))",1.0
-"((' United-States', 'null', '0', ' Male'), (' White',))",0.9058394909688012
-"((' Married-civ-spouse', ' Male'), (' White', '0', 'null'))",0.9036714468053157
-"((' White', ' Married-civ-spouse', ' Male'), ('null', '0'))",1.0
-"(('0', ' Married-civ-spouse', ' Male'), (' White', 'null'))",0.9036714468053157
-"(('null', ' Married-civ-spouse', ' Male'), (' White', '0'))",0.9036714468053157
-"((' White', '0', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"((' White', ' Married-civ-spouse', 'null', ' Male'), ('0',))",1.0
-"(('null', '0', ' Married-civ-spouse', ' Male'), (' White',))",0.9036714468053157
-"((' Husband',), (' White', '0', 'null', ' Male'))",0.9049495944819221
-"((' White', ' Husband'), ('null', '0', ' Male'))",0.9999162479061976
-"((' Husband', '0'), (' White', 'null', ' Male'))",0.9049495944819221
-"(('null', ' Husband'), (' White', '0', ' Male'))",0.9049495944819221
-"((' Husband', ' Male'), (' White', '0', 'null'))",0.905018192844148
-"((' White', '0', ' Husband'), ('null', ' Male'))",0.9999162479061976
-"((' White', 'null', ' Husband'), ('0', ' Male'))",0.9999162479061976
-"((' White', ' Husband', ' Male'), ('null', '0'))",1.0
-"(('null', '0', ' Husband'), (' White', ' Male'))",0.9049495944819221
-"((' Husband', '0', ' Male'), (' White', 'null'))",0.905018192844148
-"(('null', ' Husband', ' Male'), (' White', '0'))",0.905018192844148
-"((' White', '0', 'null', ' Husband'), (' Male',))",0.9999162479061976
-"((' White', ' Husband', '0', ' Male'), ('null',))",1.0
-"((' White', ' Husband', 'null', ' Male'), ('0',))",1.0
-"(('null', ' Husband', '0', ' Male'), (' White',))",0.905018192844148
-"((' Husband',), ('null', '0', ' Married-civ-spouse', ' Male'))",0.9992420222845448
-"((' Husband', '0'), ('null', ' Married-civ-spouse', ' Male'))",0.9992420222845448
-"(('null', ' Husband'), ('0', ' Married-civ-spouse', ' Male'))",0.9992420222845448
-"((' Husband', ' Male'), ('null', '0', ' Married-civ-spouse'))",0.9993177683444512
-"((' Married-civ-spouse', ' Male'), ('null', '0', ' Husband'))",0.98978902319994
-"((' Husband', ' Married-civ-spouse'), ('null', '0', ' Male'))",0.9999241504854368
-"(('null', '0', ' Husband'), (' Married-civ-spouse', ' Male'))",0.9992420222845448
-"((' Husband', '0', ' Male'), ('null', ' Married-civ-spouse'))",0.9993177683444512
-"(('0', ' Married-civ-spouse', ' Male'), ('null', ' Husband'))",0.98978902319994
-"((' Husband', '0', ' Married-civ-spouse'), ('null', ' Male'))",0.9999241504854368
-"(('null', ' Husband', ' Male'), ('0', ' Married-civ-spouse'))",0.9993177683444512
-"(('null', ' Married-civ-spouse', ' Male'), (' Husband', '0'))",0.98978902319994
-"(('null', ' Married-civ-spouse', ' Husband'), ('0', ' Male'))",0.9999241504854368
-"((' Husband', ' Married-civ-spouse', ' Male'), ('null', '0'))",1.0
-"(('null', ' Husband', '0', ' Male'), (' Married-civ-spouse',))",0.9993177683444512
-"(('null', '0', ' Married-civ-spouse', ' Male'), (' Husband',))",0.98978902319994
-"(('null', '0', ' Married-civ-spouse', ' Husband'), (' Male',))",0.9999241504854368
-"((' Husband', '0', ' Married-civ-spouse', ' Male'), ('null',))",1.0
-"(('null', ' Husband', ' Married-civ-spouse', ' Male'), ('0',))",1.0
-"((' Husband',), (' White', '0', ' Married-civ-spouse', ' Male'))",0.9042674145380125
-"((' White', ' Husband'), ('0', ' Married-civ-spouse', ' Male'))",0.9991624790619765
-"((' Husband', '0'), (' White', ' Married-civ-spouse', ' Male'))",0.9042674145380125
-"((' Husband', ' Male'), (' White', '0', ' Married-civ-spouse'))",0.9043359611885992
-"((' Husband', ' Married-civ-spouse'), (' White', '0', ' Male'))",0.904884708737864
-"((' White', '0', ' Husband'), (' Married-civ-spouse', ' Male'))",0.9991624790619765
-"((' White', ' Husband', ' Male'), ('0', ' Married-civ-spouse'))",0.9992461680207723
-"((' White', ' Married-civ-spouse', ' Male'), (' Husband', '0'))",0.9911930874044533
-"((' White', ' Married-civ-spouse', ' Husband'), ('0', ' Male'))",0.9999161847288576
-"((' Husband', '0', ' Male'), (' White', ' Married-civ-spouse'))",0.9043359611885992
-"((' Husband', '0', ' Married-civ-spouse'), (' White', ' Male'))",0.904884708737864
-"((' Husband', ' Married-civ-spouse', ' Male'), (' White', '0'))",0.9049533490100887
-"((' White', ' Husband', '0', ' Male'), (' Married-civ-spouse',))",0.9992461680207723
-"((' White', '0', ' Married-civ-spouse', ' Male'), (' Husband',))",0.9911930874044533
-"((' White', '0', ' Married-civ-spouse', ' Husband'), (' Male',))",0.9999161847288576
-"((' White', ' Husband', ' Married-civ-spouse', ' Male'), ('0',))",1.0
-"((' Husband', '0', ' Married-civ-spouse', ' Male'), (' White',))",0.9049533490100887
-"((' <=50K', ' White', ' Male'), (' United-States', '0'))",0.9104317921283914
-"((' <=50K', ' White', '0', ' Male'), (' United-States',))",0.9104317921283914
-"((' <=50K', ' White', ' United-States', ' Male'), ('0',))",1.0
-"((' White', ' Married-civ-spouse', ' Male'), (' United-States', '0'))",0.9243104021269525
-"((' United-States', ' Married-civ-spouse', ' Male'), (' White', '0'))",0.9311961161797943
-"((' White', '0', ' Married-civ-spouse', ' Male'), (' United-States',))",0.9243104021269525
-"((' United-States', ' White', ' Married-civ-spouse', ' Male'), ('0',))",1.0
-"((' United-States', '0', ' Married-civ-spouse', ' Male'), (' White',))",0.9311961161797943
-"((' White', '40'), (' United-States', 'null', '0'))",0.9108818738850538
-"((' White', '0', '40'), (' United-States', 'null'))",0.9108818738850538
-"((' White', 'null', '40'), (' United-States', '0'))",0.9108818738850538
-"((' United-States', ' White', '40'), ('null', '0'))",1.0
-"((' White', 'null', '0', '40'), (' United-States',))",0.9108818738850538
-"((' United-States', ' White', '0', '40'), ('null',))",1.0
-"((' United-States', ' White', 'null', '40'), ('0',))",1.0
-"((' <=50K', ' United-States', ' Male'), ('null', '0'))",1.0
-"((' <=50K', ' United-States', '0', ' Male'), ('null',))",1.0
-"((' <=50K', 'null', ' United-States', ' Male'), ('0',))",1.0
-"((' White', ' Husband'), (' United-States', 'null', '0', ' Male'))",0.9256281407035176
-"((' United-States', ' Husband'), (' White', '0', 'null', ' Male'))",0.9317932720681226
-"((' White', '0', ' Husband'), (' United-States', 'null', ' Male'))",0.9256281407035176
-"((' White', 'null', ' Husband'), (' United-States', '0', ' Male'))",0.9256281407035176
-"((' White', ' Husband', ' Male'), (' United-States', 'null', '0'))",0.925705670491666
-"((' United-States', ' White', ' Husband'), ('null', '0', ' Male'))",0.9999095268252962
-"((' United-States', ' Husband', '0'), (' White', 'null', ' Male'))",0.9317932720681226
-"((' United-States', 'null', ' Husband'), (' White', '0', ' Male'))",0.9317932720681226
-"((' United-States', ' Husband', ' Male'), (' White', '0', 'null'))",0.9318718381112985
-"((' White', '0', 'null', ' Husband'), (' United-States', ' Male'))",0.9256281407035176
-"((' White', ' Husband', '0', ' Male'), (' United-States', 'null'))",0.925705670491666
-"((' United-States', ' White', '0', ' Husband'), ('null', ' Male'))",0.9999095268252962
-"((' White', ' Husband', 'null', ' Male'), (' United-States', '0'))",0.925705670491666
-"((' United-States', ' White', 'null', ' Husband'), ('0', ' Male'))",0.9999095268252962
-"((' United-States', ' White', ' Husband', ' Male'), ('null', '0'))",1.0
-"((' United-States', 'null', '0', ' Husband'), (' White', ' Male'))",0.9317932720681226
-"((' United-States', ' Husband', '0', ' Male'), (' White', 'null'))",0.9318718381112985
-"((' United-States', 'null', ' Husband', ' Male'), (' White', '0'))",0.9318718381112985
-"((' White', '0', 'null', ' Male', ' Husband'), (' United-States',))",0.925705670491666
-"((' White', '0', 'null', ' United-States', ' Husband'), (' Male',))",0.9999095268252962
-"((' White', '0', ' Male', ' United-States', ' Husband'), ('null',))",1.0
-"((' White', 'null', ' Male', ' United-States', ' Husband'), ('0',))",1.0
-"(('0', 'null', ' Male', ' United-States', ' Husband'), (' White',))",0.9318718381112985
-"((' White', ' Husband'), (' United-States', '0', ' Married-civ-spouse', ' Male'))",0.9248743718592966
-"((' United-States', ' Husband'), (' White', '0', ' Married-civ-spouse', ' Male'))",0.9310344827586208
-"((' White', '0', ' Husband'), (' United-States', ' Married-civ-spouse', ' Male'))",0.9248743718592966
-"((' White', ' Husband', ' Male'), (' United-States', '0', ' Married-civ-spouse'))",0.9249518385124383
-"((' White', ' Married-civ-spouse', ' Male'), (' United-States', ' Husband', '0'))",0.9174975074775673
-"((' United-States', ' White', ' Husband'), ('0', ' Married-civ-spouse', ' Male'))",0.999095268252963
-"((' White', ' Married-civ-spouse', ' Husband'), (' United-States', '0', ' Male'))",0.9255720392255469
-"((' United-States', ' Husband', '0'), (' White', ' Married-civ-spouse', ' Male'))",0.9310344827586208
-"((' United-States', ' Husband', ' Male'), (' White', '0', ' Married-civ-spouse'))",0.9311129848229343
-"((' United-States', ' Married-civ-spouse', ' Male'), (' White', '0', ' Husband'))",0.9243324684021095
-"((' United-States', ' Husband', ' Married-civ-spouse'), (' White', '0', ' Male'))",0.9317414782315222
-"((' White', ' Husband', '0', ' Male'), (' United-States', ' Married-civ-spouse'))",0.9249518385124383
-"((' White', '0', ' Married-civ-spouse', ' Male'), (' United-States', ' Husband'))",0.9174975074775673
-"((' United-States', ' White', '0', ' Husband'), (' Married-civ-spouse', ' Male'))",0.999095268252963
-"((' White', '0', ' Married-civ-spouse', ' Husband'), (' United-States', ' Male'))",0.9255720392255469
-"((' United-States', ' White', ' Husband', ' Male'), ('0', ' Married-civ-spouse'))",0.999185667752443
-"((' United-States', ' White', ' Married-civ-spouse', ' Male'), (' Husband', '0'))",0.992629213483146
-"((' White', ' Husband', ' Married-civ-spouse', ' Male'), (' United-States', '0'))",0.9256496227996648
-"((' United-States', ' White', ' Married-civ-spouse', ' Husband'), ('0', ' Male'))",0.9999094530967042
-"((' United-States', ' Husband', '0', ' Male'), (' White', ' Married-civ-spouse'))",0.9311129848229343
-"((' United-States', '0', ' Married-civ-spouse', ' Male'), (' White', ' Husband'))",0.9243324684021095
-"((' United-States', ' Husband', '0', ' Married-civ-spouse'), (' White', ' Male'))",0.9317414782315222
-"((' United-States', ' Husband', ' Married-civ-spouse', ' Male'), (' White', '0'))",0.9318200995696565
-"((' White', '0', ' Male', ' United-States', ' Husband'), (' Married-civ-spouse',))",0.999185667752443
-"((' White', '0', ' Male', ' United-States', ' Married-civ-spouse'), (' Husband',))",0.992629213483146
-"((' White', '0', ' Male', ' Husband', ' Married-civ-spouse'), (' United-States',))",0.9256496227996648
-"((' White', '0', ' United-States', ' Husband', ' Married-civ-spouse'), (' Male',))",0.9999094530967042
-"((' White', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), ('0',))",1.0
-"(('0', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), (' White',))",0.9318200995696565
-"((' Husband',), (' White', '0', 'null', ' Male', ' Married-civ-spouse'))",0.9042674145380125
-"((' White', ' Husband'), ('null', '0', ' Married-civ-spouse', ' Male'))",0.9991624790619765
-"((' Husband', '0'), (' White', ' Married-civ-spouse', 'null', ' Male'))",0.9042674145380125
-"(('null', ' Husband'), (' White', '0', ' Married-civ-spouse', ' Male'))",0.9042674145380125
-"((' Husband', ' Male'), (' Married-civ-spouse', ' White', '0', 'null'))",0.9043359611885992
-"((' Husband', ' Married-civ-spouse'), (' White', '0', 'null', ' Male'))",0.904884708737864
-"((' White', '0', ' Husband'), ('null', ' Married-civ-spouse', ' Male'))",0.9991624790619765
-"((' White', 'null', ' Husband'), ('0', ' Married-civ-spouse', ' Male'))",0.9991624790619765
-"((' White', ' Husband', ' Male'), ('null', '0', ' Married-civ-spouse'))",0.9992461680207723
-"((' White', ' Married-civ-spouse', ' Male'), ('null', '0', ' Husband'))",0.9911930874044533
-"((' White', ' Married-civ-spouse', ' Husband'), ('null', '0', ' Male'))",0.9999161847288576
-"(('null', '0', ' Husband'), (' White', ' Married-civ-spouse', ' Male'))",0.9042674145380125
-"((' Husband', '0', ' Male'), (' White', ' Married-civ-spouse', 'null'))",0.9043359611885992
-"((' Husband', '0', ' Married-civ-spouse'), (' White', 'null', ' Male'))",0.904884708737864
-"(('null', ' Husband', ' Male'), (' White', '0', ' Married-civ-spouse'))",0.9043359611885992
-"(('null', ' Married-civ-spouse', ' Husband'), (' White', '0', ' Male'))",0.904884708737864
-"((' Husband', ' Married-civ-spouse', ' Male'), (' White', '0', 'null'))",0.9049533490100887
-"((' White', '0', 'null', ' Husband'), (' Married-civ-spouse', ' Male'))",0.9991624790619765
-"((' White', ' Husband', '0', ' Male'), ('null', ' Married-civ-spouse'))",0.9992461680207723
-"((' White', '0', ' Married-civ-spouse', ' Male'), ('null', ' Husband'))",0.9911930874044533
-"((' White', '0', ' Married-civ-spouse', ' Husband'), ('null', ' Male'))",0.9999161847288576
-"((' White', ' Husband', 'null', ' Male'), ('0', ' Married-civ-spouse'))",0.9992461680207723
-"((' White', ' Married-civ-spouse', 'null', ' Male'), (' Husband', '0'))",0.9911930874044533
-"((' White', ' Married-civ-spouse', 'null', ' Husband'), ('0', ' Male'))",0.9999161847288576
-"((' White', ' Husband', ' Married-civ-spouse', ' Male'), ('null', '0'))",1.0
-"(('null', ' Husband', '0', ' Male'), (' White', ' Married-civ-spouse'))",0.9043359611885992
-"(('null', '0', ' Married-civ-spouse', ' Husband'), (' White', ' Male'))",0.904884708737864
-"((' Husband', '0', ' Married-civ-spouse', ' Male'), (' White', 'null'))",0.9049533490100887
-"(('null', ' Husband', ' Married-civ-spouse', ' Male'), (' White', '0'))",0.9049533490100887
-"((' White', '0', 'null', ' Male', ' Husband'), (' Married-civ-spouse',))",0.9992461680207723
-"((' White', '0', 'null', ' Male', ' Married-civ-spouse'), (' Husband',))",0.9911930874044533
-"((' White', '0', 'null', ' Husband', ' Married-civ-spouse'), (' Male',))",0.9999161847288576
-"((' White', '0', ' Male', ' Husband', ' Married-civ-spouse'), ('null',))",1.0
-"((' White', 'null', ' Male', ' Husband', ' Married-civ-spouse'), ('0',))",1.0
-"(('0', 'null', ' Male', ' Husband', ' Married-civ-spouse'), (' White',))",0.9049533490100887
-"((' White', ' Married-civ-spouse', ' Male'), (' United-States', 'null', '0'))",0.9243104021269525
-"((' United-States', ' Married-civ-spouse', ' Male'), (' White', '0', 'null'))",0.9311961161797943
-"((' White', '0', ' Married-civ-spouse', ' Male'), (' United-States', 'null'))",0.9243104021269525
-"((' White', ' Married-civ-spouse', 'null', ' Male'), (' United-States', '0'))",0.9243104021269525
-"((' United-States', ' White', ' Married-civ-spouse', ' Male'), ('null', '0'))",1.0
-"((' United-States', '0', ' Married-civ-spouse', ' Male'), (' White', 'null'))",0.9311961161797943
-"((' United-States', 'null', ' Married-civ-spouse', ' Male'), (' White', '0'))",0.9311961161797943
-"((' White', '0', 'null', ' Male', ' Married-civ-spouse'), (' United-States',))",0.9243104021269525
-"((' White', '0', ' Male', ' United-States', ' Married-civ-spouse'), ('null',))",1.0
-"((' White', 'null', ' Male', ' United-States', ' Married-civ-spouse'), ('0',))",1.0
-"(('0', 'null', ' Male', ' United-States', ' Married-civ-spouse'), (' White',))",0.9311961161797943
-"((' White', ' Husband'), (' United-States', 'null', '0', ' Married-civ-spouse'))",0.9249581239530987
-"((' United-States', ' Husband'), (' Married-civ-spouse', ' White', '0', 'null'))",0.9311187926818987
-"((' White', '0', ' Husband'), (' United-States', 'null', ' Married-civ-spouse'))",0.9249581239530987
-"((' White', 'null', ' Husband'), (' United-States', '0', ' Married-civ-spouse'))",0.9249581239530987
-"((' United-States', ' White', ' Husband'), ('null', '0', ' Married-civ-spouse'))",0.9991857414276666
-"((' White', ' Married-civ-spouse', ' Husband'), (' United-States', 'null', '0'))",0.9256558544966892
-"((' United-States', ' Husband', '0'), (' White', ' Married-civ-spouse', 'null'))",0.9311187926818987
-"((' United-States', 'null', ' Husband'), (' White', '0', ' Married-civ-spouse'))",0.9311187926818987
-"((' United-States', ' Husband', ' Married-civ-spouse'), (' White', '0', 'null'))",0.9318258521768478
-"((' White', '0', 'null', ' Husband'), (' United-States', ' Married-civ-spouse'))",0.9249581239530987
-"((' United-States', ' White', '0', ' Husband'), ('null', ' Married-civ-spouse'))",0.9991857414276666
-"((' White', '0', ' Married-civ-spouse', ' Husband'), (' United-States', 'null'))",0.9256558544966892
-"((' United-States', ' White', 'null', ' Husband'), ('0', ' Married-civ-spouse'))",0.9991857414276666
-"((' White', ' Married-civ-spouse', 'null', ' Husband'), (' United-States', '0'))",0.9256558544966892
-"((' United-States', ' White', ' Married-civ-spouse', ' Husband'), ('null', '0'))",1.0
-"((' United-States', 'null', '0', ' Husband'), (' White', ' Married-civ-spouse'))",0.9311187926818987
-"((' United-States', ' Husband', '0', ' Married-civ-spouse'), (' White', 'null'))",0.9318258521768478
-"((' United-States', 'null', ' Married-civ-spouse', ' Husband'), (' White', '0'))",0.9318258521768478
-"((' White', '0', 'null', ' United-States', ' Husband'), (' Married-civ-spouse',))",0.9991857414276666
-"((' White', '0', 'null', ' Husband', ' Married-civ-spouse'), (' United-States',))",0.9256558544966892
-"((' White', '0', ' United-States', ' Husband', ' Married-civ-spouse'), ('null',))",1.0
-"((' White', 'null', ' United-States', ' Husband', ' Married-civ-spouse'), ('0',))",1.0
-"(('0', 'null', ' United-States', ' Husband', ' Married-civ-spouse'), (' White',))",0.9318258521768478
-"((' <=50K', ' White', ' Male'), (' United-States', 'null', '0'))",0.9104317921283914
-"((' <=50K', ' White', '0', ' Male'), (' United-States', 'null'))",0.9104317921283914
-"((' <=50K', ' White', 'null', ' Male'), (' United-States', '0'))",0.9104317921283914
-"((' <=50K', ' White', ' United-States', ' Male'), ('null', '0'))",1.0
-"((' White', '0', 'null', ' <=50K', ' Male'), (' United-States',))",0.9104317921283914
-"((' White', '0', ' <=50K', ' Male', ' United-States'), ('null',))",1.0
-"((' White', 'null', ' <=50K', ' Male', ' United-States'), ('0',))",1.0
-"((' White', ' Husband'), (' United-States', 'null', ' Married-civ-spouse', ' Male'))",0.9248743718592966
-"((' United-States', ' Husband'), (' White', ' Married-civ-spouse', 'null', ' Male'))",0.9310344827586208
-"((' White', 'null', ' Husband'), (' United-States', ' Married-civ-spouse', ' Male'))",0.9248743718592966
-"((' White', ' Husband', ' Male'), (' United-States', 'null', ' Married-civ-spouse'))",0.9249518385124383
-"((' White', ' Married-civ-spouse', ' Male'), (' United-States', 'null', ' Husband'))",0.9174975074775673
-"((' United-States', ' White', ' Husband'), ('null', ' Married-civ-spouse', ' Male'))",0.999095268252963
-"((' White', ' Married-civ-spouse', ' Husband'), (' United-States', 'null', ' Male'))",0.9255720392255469
-"((' United-States', 'null', ' Husband'), (' White', ' Married-civ-spouse', ' Male'))",0.9310344827586208
-"((' United-States', ' Husband', ' Male'), (' White', ' Married-civ-spouse', 'null'))",0.9311129848229343
-"((' United-States', ' Married-civ-spouse', ' Male'), (' White', 'null', ' Husband'))",0.9243324684021095
-"((' United-States', ' Husband', ' Married-civ-spouse'), (' White', 'null', ' Male'))",0.9317414782315222
-"((' White', ' Husband', 'null', ' Male'), (' United-States', ' Married-civ-spouse'))",0.9249518385124383
-"((' White', ' Married-civ-spouse', 'null', ' Male'), (' United-States', ' Husband'))",0.9174975074775673
-"((' United-States', ' White', 'null', ' Husband'), (' Married-civ-spouse', ' Male'))",0.999095268252963
-"((' White', ' Married-civ-spouse', 'null', ' Husband'), (' United-States', ' Male'))",0.9255720392255469
-"((' United-States', ' White', ' Husband', ' Male'), ('null', ' Married-civ-spouse'))",0.999185667752443
-"((' United-States', ' White', ' Married-civ-spouse', ' Male'), ('null', ' Husband'))",0.992629213483146
-"((' White', ' Husband', ' Married-civ-spouse', ' Male'), (' United-States', 'null'))",0.9256496227996648
-"((' United-States', ' White', ' Married-civ-spouse', ' Husband'), ('null', ' Male'))",0.9999094530967042
-"((' United-States', 'null', ' Husband', ' Male'), (' White', ' Married-civ-spouse'))",0.9311129848229343
-"((' United-States', 'null', ' Married-civ-spouse', ' Male'), (' White', ' Husband'))",0.9243324684021095
-"((' United-States', 'null', ' Married-civ-spouse', ' Husband'), (' White', ' Male'))",0.9317414782315222
-"((' United-States', ' Husband', ' Married-civ-spouse', ' Male'), (' White', 'null'))",0.9318200995696565
-"((' White', 'null', ' Male', ' United-States', ' Husband'), (' Married-civ-spouse',))",0.999185667752443
-"((' White', 'null', ' Male', ' United-States', ' Married-civ-spouse'), (' Husband',))",0.992629213483146
-"((' White', 'null', ' Male', ' Husband', ' Married-civ-spouse'), (' United-States',))",0.9256496227996648
-"((' White', 'null', ' United-States', ' Husband', ' Married-civ-spouse'), (' Male',))",0.9999094530967042
-"((' White', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), ('null',))",1.0
-"(('null', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), (' White',))",0.9318200995696565
-"((' United-States', ' Husband'), ('null', '0', ' Married-civ-spouse', ' Male'))",0.9991569007672204
-"((' United-States', ' Husband', '0'), ('null', ' Married-civ-spouse', ' Male'))",0.9991569007672204
-"((' United-States', 'null', ' Husband'), ('0', ' Married-civ-spouse', ' Male'))",0.9991569007672204
-"((' United-States', ' Husband', ' Male'), ('null', '0', ' Married-civ-spouse'))",0.9992411467116358
-"((' United-States', ' Married-civ-spouse', ' Male'), ('null', '0', ' Husband'))",0.9919645099188082
-"((' United-States', ' Husband', ' Married-civ-spouse'), ('null', '0', ' Male'))",0.9999156260546744
-"((' United-States', 'null', '0', ' Husband'), (' Married-civ-spouse', ' Male'))",0.9991569007672204
-"((' United-States', ' Husband', '0', ' Male'), ('null', ' Married-civ-spouse'))",0.9992411467116358
-"((' United-States', '0', ' Married-civ-spouse', ' Male'), ('null', ' Husband'))",0.9919645099188082
-"((' United-States', ' Husband', '0', ' Married-civ-spouse'), ('null', ' Male'))",0.9999156260546744
-"((' United-States', 'null', ' Husband', ' Male'), ('0', ' Married-civ-spouse'))",0.9992411467116358
-"((' United-States', 'null', ' Married-civ-spouse', ' Male'), (' Husband', '0'))",0.9919645099188082
-"((' United-States', 'null', ' Married-civ-spouse', ' Husband'), ('0', ' Male'))",0.9999156260546744
-"((' United-States', ' Husband', ' Married-civ-spouse', ' Male'), ('null', '0'))",1.0
-"(('0', 'null', ' Male', ' United-States', ' Husband'), (' Married-civ-spouse',))",0.9992411467116358
-"(('0', 'null', ' Male', ' United-States', ' Married-civ-spouse'), (' Husband',))",0.9919645099188082
-"(('0', 'null', ' United-States', ' Husband', ' Married-civ-spouse'), (' Male',))",0.9999156260546744
-"(('0', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), ('null',))",1.0
-"(('null', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), ('0',))",1.0
-"((' White', ' Husband'), ('0', 'null', ' Male', ' United-States', ' Married-civ-spouse'))",0.9248743718592966
-"((' United-States', ' Husband'), (' White', '0', 'null', ' Male', ' Married-civ-spouse'))",0.9310344827586208
-"((' White', '0', ' Husband'), (' United-States', 'null', ' Married-civ-spouse', ' Male'))",0.9248743718592966
-"((' White', 'null', ' Husband'), (' United-States', '0', ' Married-civ-spouse', ' Male'))",0.9248743718592966
-"((' White', ' Husband', ' Male'), (' United-States', 'null', '0', ' Married-civ-spouse'))",0.9249518385124383
-"((' White', ' Married-civ-spouse', ' Male'), (' United-States', 'null', '0', ' Husband'))",0.9174975074775673
-"((' United-States', ' White', ' Husband'), ('null', '0', ' Married-civ-spouse', ' Male'))",0.999095268252963
-"((' White', ' Married-civ-spouse', ' Husband'), (' United-States', 'null', '0', ' Male'))",0.9255720392255469
-"((' United-States', ' Husband', '0'), (' White', ' Married-civ-spouse', 'null', ' Male'))",0.9310344827586208
-"((' United-States', 'null', ' Husband'), (' White', '0', ' Married-civ-spouse', ' Male'))",0.9310344827586208
-"((' United-States', ' Husband', ' Male'), (' Married-civ-spouse', ' White', '0', 'null'))",0.9311129848229343
-"((' United-States', ' Married-civ-spouse', ' Male'), (' White', '0', 'null', ' Husband'))",0.9243324684021095
-"((' United-States', ' Husband', ' Married-civ-spouse'), (' White', '0', 'null', ' Male'))",0.9317414782315222
-"((' White', '0', 'null', ' Husband'), (' United-States', ' Married-civ-spouse', ' Male'))",0.9248743718592966
-"((' White', ' Husband', '0', ' Male'), (' United-States', 'null', ' Married-civ-spouse'))",0.9249518385124383
-"((' White', '0', ' Married-civ-spouse', ' Male'), (' United-States', 'null', ' Husband'))",0.9174975074775673
-"((' United-States', ' White', '0', ' Husband'), ('null', ' Married-civ-spouse', ' Male'))",0.999095268252963
-"((' White', '0', ' Married-civ-spouse', ' Husband'), (' United-States', 'null', ' Male'))",0.9255720392255469
-"((' White', ' Husband', 'null', ' Male'), (' United-States', '0', ' Married-civ-spouse'))",0.9249518385124383
-"((' White', ' Married-civ-spouse', 'null', ' Male'), (' United-States', ' Husband', '0'))",0.9174975074775673
-"((' United-States', ' White', 'null', ' Husband'), ('0', ' Married-civ-spouse', ' Male'))",0.999095268252963
-"((' White', ' Married-civ-spouse', 'null', ' Husband'), (' United-States', '0', ' Male'))",0.9255720392255469
-"((' United-States', ' White', ' Husband', ' Male'), ('null', '0', ' Married-civ-spouse'))",0.999185667752443
-"((' United-States', ' White', ' Married-civ-spouse', ' Male'), ('null', '0', ' Husband'))",0.992629213483146
-"((' White', ' Husband', ' Married-civ-spouse', ' Male'), (' United-States', 'null', '0'))",0.9256496227996648
-"((' United-States', ' White', ' Married-civ-spouse', ' Husband'), ('null', '0', ' Male'))",0.9999094530967042
-"((' United-States', 'null', '0', ' Husband'), (' White', ' Married-civ-spouse', ' Male'))",0.9310344827586208
-"((' United-States', ' Husband', '0', ' Male'), (' White', ' Married-civ-spouse', 'null'))",0.9311129848229343
-"((' United-States', '0', ' Married-civ-spouse', ' Male'), (' White', 'null', ' Husband'))",0.9243324684021095
-"((' United-States', ' Husband', '0', ' Married-civ-spouse'), (' White', 'null', ' Male'))",0.9317414782315222
-"((' United-States', 'null', ' Husband', ' Male'), (' White', '0', ' Married-civ-spouse'))",0.9311129848229343
-"((' United-States', 'null', ' Married-civ-spouse', ' Male'), (' White', '0', ' Husband'))",0.9243324684021095
-"((' United-States', 'null', ' Married-civ-spouse', ' Husband'), (' White', '0', ' Male'))",0.9317414782315222
-"((' United-States', ' Husband', ' Married-civ-spouse', ' Male'), (' White', '0', 'null'))",0.9318200995696565
-"((' White', '0', 'null', ' Male', ' Husband'), (' United-States', ' Married-civ-spouse'))",0.9249518385124383
-"((' White', '0', 'null', ' Male', ' Married-civ-spouse'), (' United-States', ' Husband'))",0.9174975074775673
-"((' White', '0', 'null', ' United-States', ' Husband'), (' Married-civ-spouse', ' Male'))",0.999095268252963
-"((' White', '0', 'null', ' Husband', ' Married-civ-spouse'), (' United-States', ' Male'))",0.9255720392255469
-"((' White', '0', ' Male', ' United-States', ' Husband'), ('null', ' Married-civ-spouse'))",0.999185667752443
-"((' White', '0', ' Male', ' United-States', ' Married-civ-spouse'), ('null', ' Husband'))",0.992629213483146
-"((' White', '0', ' Male', ' Husband', ' Married-civ-spouse'), (' United-States', 'null'))",0.9256496227996648
-"((' White', '0', ' United-States', ' Husband', ' Married-civ-spouse'), ('null', ' Male'))",0.9999094530967042
-"((' White', 'null', ' Male', ' United-States', ' Husband'), ('0', ' Married-civ-spouse'))",0.999185667752443
-"((' White', 'null', ' Male', ' United-States', ' Married-civ-spouse'), (' Husband', '0'))",0.992629213483146
-"((' White', 'null', ' Male', ' Husband', ' Married-civ-spouse'), (' United-States', '0'))",0.9256496227996648
-"((' White', 'null', ' United-States', ' Husband', ' Married-civ-spouse'), ('0', ' Male'))",0.9999094530967042
-"((' White', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), ('null', '0'))",1.0
-"(('0', 'null', ' Male', ' United-States', ' Husband'), (' White', ' Married-civ-spouse'))",0.9311129848229343
-"(('0', 'null', ' Male', ' United-States', ' Married-civ-spouse'), (' White', ' Husband'))",0.9243324684021095
-"(('0', 'null', ' United-States', ' Husband', ' Married-civ-spouse'), (' White', ' Male'))",0.9317414782315222
-"(('0', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), (' White', 'null'))",0.9318200995696565
-"(('null', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), (' White', '0'))",0.9318200995696565
-"((' White', '0', 'null', ' Male', ' United-States', ' Husband'), (' Married-civ-spouse',))",0.999185667752443
-"((' White', '0', 'null', ' Male', ' United-States', ' Married-civ-spouse'), (' Husband',))",0.992629213483146
-"((' White', '0', 'null', ' Male', ' Husband', ' Married-civ-spouse'), (' United-States',))",0.9256496227996648
-"((' White', '0', 'null', ' United-States', ' Husband', ' Married-civ-spouse'), (' Male',))",0.9999094530967042
-"((' White', '0', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), ('null',))",1.0
-"((' White', 'null', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), ('0',))",1.0
-"(('0', 'null', ' Male', ' United-States', ' Husband', ' Married-civ-spouse'), (' White',))",0.9318200995696565
+"((' United-States',), ('null',))",1.0
+"((' White',), ('0',))",1.0
+"((' Female',), ('0',))",1.0
+"((' Male',), ('0',))",1.0
+"((' White',), (' United-States',))",0.9207075471698114
+"((' Female',), ('null',))",1.0
+"((' White',), ('null',))",1.0
+"((' HS-grad',), ('0',))",1.0
+"((' HS-grad',), ('null',))",1.0
+"((' Husband',), (' Male',))",0.9999010880316518
+"(('40',), ('null',))",1.0
+"(('null',), ('0',))",1.0
+"(('0',), ('null',))",1.0
+"((' Husband',), ('0',))",1.0
+"((' United-States',), ('0',))",1.0
+"(('40',), ('0',))",1.0
+"((' Married-civ-spouse',), ('0',))",1.0
+"((' Male',), ('null',))",1.0
+"((' <=50K\r',), ('0',))",1.0
+"((' Husband',), (' White',))",0.9027695351137488
+"((' Married-civ-spouse',), ('null',))",1.0
+"((' <=50K\r',), ('null',))",1.0
+"((' Husband',), ('null',))",1.0
+"((' United-States', ' Male'), ('null',))",1.0
+"(('40',), ('null', '0'))",1.0
+"(('null', '40'), ('0',))",1.0
+"(('40', '0'), ('null',))",1.0
+"((' Married-civ-spouse', ' White'), ('null',))",1.0
+"((' <=50K\r', ' Male'), ('0',))",1.0
+"(('40', ' White'), (' United-States',))",0.9113717491075981
+"((' United-States', ' Married-civ-spouse'), ('0',))",1.0
+"(('40', ' Male'), ('null',))",1.0
+"((' Married-civ-spouse', ' Male'), ('null',))",1.0
+"((' <=50K\r', ' White'), ('0',))",1.0
+"((' United-States', ' <=50K\r'), ('null',))",1.0
+"(('40', ' White'), ('0',))",1.0
+"((' United-States', ' Married-civ-spouse'), ('null',))",1.0
+"((' <=50K\r', ' Male'), ('null',))",1.0
+"((' <=50K\r', ' White'), (' United-States',))",0.9144386720729852
+"(('40', ' Male'), ('0',))",1.0
+"((' United-States',), ('null', '0'))",1.0
+"(('null', ' United-States'), ('0',))",1.0
+"((' United-States', '0'), ('null',))",1.0
+"(('40', ' United-States'), ('null',))",1.0
+"((' Male', ' Married-civ-spouse'), ('0',))",1.0
+"((' Husband',), (' Male', '0'))",0.9999010880316518
+"((' Husband', '0'), (' Male',))",0.9999010880316518
+"((' Husband', ' Male'), ('0',))",1.0
+"((' Married-civ-spouse', ' White'), ('0',))",1.0
+"((' Husband',), ('null', ' Male'))",0.9999010880316518
+"((' Husband', 'null'), (' Male',))",0.9999010880316518
+"((' Husband', ' Male'), ('null',))",1.0
+"((' <=50K\r',), ('null', '0'))",1.0
+"(('null', ' <=50K\r'), ('0',))",1.0
+"((' <=50K\r', '0'), ('null',))",1.0
+"((' White',), ('null', '0'))",1.0
+"(('null', ' White'), ('0',))",1.0
+"(('0', ' White'), ('null',))",1.0
+"((' Husband',), ('0', ' White'))",0.9027695351137488
+"((' Husband', '0'), (' White',))",0.9027695351137488
+"((' Husband', ' White'), ('0',))",1.0
+"(('40', ' White'), ('null',))",1.0
+"((' Married-civ-spouse',), ('null', '0'))",1.0
+"(('null', ' Married-civ-spouse'), ('0',))",1.0
+"(('0', ' Married-civ-spouse'), ('null',))",1.0
+"((' United-States', ' Married-civ-spouse'), (' White',))",0.9169577741006313
+"((' Married-civ-spouse', ' White'), (' United-States',))",0.9227258711069997
+"(('40', ' United-States'), ('0',))",1.0
+"(('40', ' <=50K\r'), ('null',))",1.0
+"((' Male',), ('null', '0'))",1.0
+"(('null', ' Male'), ('0',))",1.0
+"((' Male', '0'), ('null',))",1.0
+"((' United-States', ' Male'), (' White',))",0.9057042680871148
+"((' Male', ' White'), (' United-States',))",0.9190585337484176
+"(('40', ' <=50K\r'), ('0',))",1.0
+"((' White',), (' United-States', '0'))",0.9207075471698114
+"((' United-States', ' White'), ('0',))",1.0
+"(('0', ' White'), (' United-States',))",0.9207075471698114
+"((' Husband', ' United-States'), ('0',))",1.0
+"((' Husband',), ('null', ' White'))",0.9027695351137488
+"(('null', ' Husband'), (' White',))",0.9027695351137488
+"((' Husband', ' White'), ('null',))",1.0
+"((' <=50K\r', ' White'), ('null',))",1.0
+"((' Husband', ' United-States'), ('null',))",1.0
+"((' Female',), ('null', '0'))",1.0
+"(('null', ' Female'), ('0',))",1.0
+"(('0', ' Female'), ('null',))",1.0
+"((' HS-grad',), ('null', '0'))",1.0
+"(('null', ' HS-grad'), ('0',))",1.0
+"(('0', ' HS-grad'), ('null',))",1.0
+"((' Husband', ' United-States'), (' Male',))",0.9998896064469835
+"((' Male', ' White'), ('0',))",1.0
+"((' Husband',), (' Male', ' White'))",0.9026706231454006
+"((' Husband', ' Male'), (' White',))",0.9027599169057275
+"((' Husband', ' White'), (' Male',))",0.9998904349731565
+"((' United-States', ' Male'), ('0',))",1.0
+"((' White',), ('null', ' United-States'))",0.9207075471698114
+"(('null', ' White'), (' United-States',))",0.9207075471698114
+"((' United-States', ' White'), ('null',))",1.0
+"((' Husband',), ('null', '0'))",1.0
+"(('null', ' Husband'), ('0',))",1.0
+"((' Husband', '0'), ('null',))",1.0
+"((' Husband', ' United-States'), (' White',))",0.9300104873875366
+"((' Husband', ' White'), (' United-States',))",0.9230305686424892
+"((' United-States', ' <=50K\r'), ('0',))",1.0
+"((' Male', ' White'), ('null',))",1.0
+"((' <=50K\r', ' White'), (' United-States', '0'))",0.9144386720729852
+"((' United-States', ' <=50K\r', ' White'), ('0',))",1.0
+"((' <=50K\r', '0', ' White'), (' United-States',))",0.9144386720729852
+"((' Husband', ' United-States'), ('null', '0'))",1.0
+"(('null', ' United-States', ' Husband'), ('0',))",1.0
+"((' Husband', ' United-States', '0'), ('null',))",1.0
+"(('40', ' White'), ('null', '0'))",1.0
+"(('null', '40', ' White'), ('0',))",1.0
+"(('40', '0', ' White'), ('null',))",1.0
+"((' <=50K\r', ' Male', ' White'), ('0',))",1.0
+"((' United-States', ' <=50K\r', ' Male'), ('null',))",1.0
+"((' United-States', ' Married-civ-spouse'), ('0', ' White'))",0.9169577741006313
+"((' Married-civ-spouse', ' White'), (' United-States', '0'))",0.9227258711069997
+"((' United-States', ' Married-civ-spouse', ' White'), ('0',))",1.0
+"((' United-States', '0', ' Married-civ-spouse'), (' White',))",0.9169577741006313
+"(('0', ' Married-civ-spouse', ' White'), (' United-States',))",0.9227258711069997
+"((' Husband',), ('0', ' Male', ' White'))",0.9026706231454006
+"((' Husband', ' Male'), ('0', ' White'))",0.9027599169057275
+"((' Husband', '0'), (' Male', ' White'))",0.9026706231454006
+"((' Husband', ' White'), ('0', ' Male'))",0.9998904349731565
+"((' Husband', '0', ' Male'), (' White',))",0.9027599169057275
+"((' Husband', ' Male', ' White'), ('0',))",1.0
+"((' Husband', '0', ' White'), (' Male',))",0.9998904349731565
+"((' United-States', ' Male'), ('0', ' White'))",0.9057042680871148
+"((' Male', ' White'), (' United-States', '0'))",0.9190585337484176
+"((' Male', ' United-States', '0'), (' White',))",0.9057042680871148
+"((' United-States', ' Male', ' White'), ('0',))",1.0
+"((' Male', '0', ' White'), (' United-States',))",0.9190585337484176
+"((' White',), ('null', ' United-States', '0'))",0.9207075471698114
+"((' United-States', ' White'), ('null', '0'))",1.0
+"(('null', ' White'), (' United-States', '0'))",0.9207075471698114
+"(('0', ' White'), ('null', ' United-States'))",0.9207075471698114
+"(('null', ' United-States', ' White'), ('0',))",1.0
+"((' United-States', '0', ' White'), ('null',))",1.0
+"(('null', '0', ' White'), (' United-States',))",0.9207075471698114
+"((' Husband',), ('null', '0', ' White'))",0.9027695351137488
+"((' Husband', ' White'), ('null', '0'))",1.0
+"(('null', ' Husband'), ('0', ' White'))",0.9027695351137488
+"((' Husband', '0'), ('null', ' White'))",0.9027695351137488
+"(('null', ' Husband', ' White'), ('0',))",1.0
+"((' Husband', '0', ' White'), ('null',))",1.0
+"(('null', '0', ' Husband'), (' White',))",0.9027695351137488
+"((' Husband', ' United-States'), ('0', ' Male'))",0.9998896064469835
+"((' Husband', ' United-States', ' Male'), ('0',))",1.0
+"((' Husband', ' United-States', '0'), (' Male',))",0.9998896064469835
+"((' Husband',), ('null', ' Male', ' White'))",0.9026706231454006
+"(('null', ' Husband'), (' Male', ' White'))",0.9026706231454006
+"((' Husband', ' White'), ('null', ' Male'))",0.9998904349731565
+"((' Husband', ' Male'), ('null', ' White'))",0.9027599169057275
+"(('null', ' Husband', ' White'), (' Male',))",0.9998904349731565
+"(('null', ' Male', ' Husband'), (' White',))",0.9027599169057275
+"((' Husband', ' Male', ' White'), ('null',))",1.0
+"(('40', ' <=50K\r', ' White'), ('null',))",1.0
+"((' Husband', ' United-States'), ('null', ' Male'))",0.9998896064469835
+"(('null', ' United-States', ' Husband'), (' Male',))",0.9998896064469835
+"((' Husband', ' United-States', ' Male'), ('null',))",1.0
+"((' United-States', ' Male'), ('null', '0'))",1.0
+"((' Male', ' United-States', '0'), ('null',))",1.0
+"(('null', ' United-States', ' Male'), ('0',))",1.0
+"(('40', ' <=50K\r'), ('null', '0'))",1.0
+"(('null', '40', ' <=50K\r'), ('0',))",1.0
+"(('40', ' <=50K\r', '0'), ('null',))",1.0
+"((' United-States', ' Male'), ('null', ' White'))",0.9057042680871148
+"((' Male', ' White'), ('null', ' United-States'))",0.9190585337484176
+"((' United-States', ' Male', ' White'), ('null',))",1.0
+"(('null', ' United-States', ' Male'), (' White',))",0.9057042680871148
+"(('null', ' Male', ' White'), (' United-States',))",0.9190585337484176
+"((' Husband', ' United-States'), ('0', ' White'))",0.9300104873875366
+"((' Husband', ' White'), (' United-States', '0'))",0.9230305686424892
+"((' Husband', ' United-States', ' White'), ('0',))",1.0
+"((' Husband', ' United-States', '0'), (' White',))",0.9300104873875366
+"((' Husband', '0', ' White'), (' United-States',))",0.9230305686424892
+"((' <=50K\r', ' White'), ('null', '0'))",1.0
+"(('null', ' <=50K\r', ' White'), ('0',))",1.0
+"((' <=50K\r', '0', ' White'), ('null',))",1.0
+"((' Male', ' White'), ('null', '0'))",1.0
+"(('null', ' Male', ' White'), ('0',))",1.0
+"(('0', ' Male', ' White'), ('null',))",1.0
+"(('40', ' United-States', ' <=50K\r'), ('null',))",1.0
+"(('40', ' <=50K\r', ' White'), ('0',))",1.0
+"(('40', ' United-States', ' <=50K\r'), ('0',))",1.0
+"(('40', ' White'), (' United-States', '0'))",0.9113717491075981
+"(('40', ' United-States', ' White'), ('0',))",1.0
+"(('40', '0', ' White'), (' United-States',))",0.9113717491075981
+"((' Married-civ-spouse', ' White'), ('null', '0'))",1.0
+"((' Married-civ-spouse', '0', ' White'), ('null',))",1.0
+"(('null', ' Married-civ-spouse', ' White'), ('0',))",1.0
+"((' Husband', ' United-States'), ('null', ' White'))",0.9300104873875366
+"((' Husband', ' White'), ('null', ' United-States'))",0.9230305686424892
+"((' Husband', ' United-States', ' White'), ('null',))",1.0
+"(('null', ' United-States', ' Husband'), (' White',))",0.9300104873875366
+"(('null', ' Husband', ' White'), (' United-States',))",0.9230305686424892
+"(('40', ' Male'), ('null', '0'))",1.0
+"(('null', '40', ' Male'), ('0',))",1.0
+"(('40', '0', ' Male'), ('null',))",1.0
+"((' <=50K\r', ' White'), ('null', ' United-States'))",0.9144386720729852
+"((' United-States', ' <=50K\r', ' White'), ('null',))",1.0
+"(('null', ' <=50K\r', ' White'), (' United-States',))",0.9144386720729852
+"((' Male', ' Married-civ-spouse'), ('null', '0'))",1.0
+"((' Male', ' Married-civ-spouse', '0'), ('null',))",1.0
+"(('null', ' Married-civ-spouse', ' Male'), ('0',))",1.0
+"((' <=50K\r', ' Male', ' White'), ('null',))",1.0
+"((' United-States', ' <=50K\r'), ('null', '0'))",1.0
+"(('null', ' United-States', ' <=50K\r'), ('0',))",1.0
+"((' United-States', ' <=50K\r', '0'), ('null',))",1.0
+"((' United-States', ' Married-civ-spouse'), ('null', ' White'))",0.9169577741006313
+"((' Married-civ-spouse', ' White'), ('null', ' United-States'))",0.9227258711069997
+"((' United-States', ' Married-civ-spouse', ' White'), ('null',))",1.0
+"(('null', ' United-States', ' Married-civ-spouse'), (' White',))",0.9169577741006313
+"(('null', ' Married-civ-spouse', ' White'), (' United-States',))",0.9227258711069997
+"(('40', ' United-States'), ('null', '0'))",1.0
+"(('null', '40', ' United-States'), ('0',))",1.0
+"(('40', ' United-States', '0'), ('null',))",1.0
+"((' <=50K\r', ' Male', ' White'), (' United-States',))",0.9095326353754445
+"((' United-States', ' Married-civ-spouse'), ('null', '0'))",1.0
+"(('null', ' United-States', ' Married-civ-spouse'), ('0',))",1.0
+"((' United-States', '0', ' Married-civ-spouse'), ('null',))",1.0
+"((' United-States', ' <=50K\r', ' Male'), ('0',))",1.0
+"((' <=50K\r', ' Male'), ('null', '0'))",1.0
+"(('null', ' <=50K\r', ' Male'), ('0',))",1.0
+"(('0', ' <=50K\r', ' Male'), ('null',))",1.0
+"(('40', ' White'), ('null', ' United-States'))",0.9113717491075981
+"(('40', ' United-States', ' White'), ('null',))",1.0
+"(('null', '40', ' White'), (' United-States',))",0.9113717491075981
+"((' Husband',), ('null', '0', ' Male'))",0.9999010880316518
+"(('null', ' Husband'), ('0', ' Male'))",0.9999010880316518
+"((' Husband', ' Male'), ('null', '0'))",1.0
+"((' Husband', '0'), ('null', ' Male'))",0.9999010880316518
+"(('null', ' Male', ' Husband'), ('0',))",1.0
+"(('null', '0', ' Husband'), (' Male',))",0.9999010880316518
+"((' Husband', '0', ' Male'), ('null',))",1.0
+"((' Husband', ' United-States'), (' Male', ' White'))",0.92990009383452
+"((' Husband', ' White'), (' United-States', ' Male'))",0.9229210036156458
+"((' Husband', ' United-States', ' White'), (' Male',))",0.9998812985933884
+"((' Husband', ' United-States', ' Male'), (' White',))",0.9300027601435275
+"((' Husband', ' Male', ' White'), (' United-States',))",0.923022134560596
+"((' Husband', ' White'), (' United-States', '0', ' Male'))",0.9229210036156458
+"((' Husband', ' United-States'), ('0', ' Male', ' White'))",0.92990009383452
+"((' Husband', ' Male', ' White'), (' United-States', '0'))",0.923022134560596
+"((' Husband', ' United-States', ' White'), ('0', ' Male'))",0.9998812985933884
+"((' Husband', '0', ' White'), (' United-States', ' Male'))",0.9229210036156458
+"((' Husband', ' United-States', ' Male'), ('0', ' White'))",0.9300027601435275
+"((' Husband', ' United-States', '0'), (' Male', ' White'))",0.92990009383452
+"((' Husband', ' United-States', ' Male', ' White'), ('0',))",1.0
+"((' Husband', '0', ' Male', ' White'), (' United-States',))",0.923022134560596
+"((' Husband', ' United-States', '0', ' White'), (' Male',))",0.9998812985933884
+"((' Husband', ' United-States', '0', ' Male'), (' White',))",0.9300027601435275
+"((' Husband', ' White'), ('null', ' United-States', '0'))",0.9230305686424892
+"((' Husband', ' United-States'), ('null', '0', ' White'))",0.9300104873875366
+"(('null', ' Husband', ' White'), (' United-States', '0'))",0.9230305686424892
+"((' Husband', ' United-States', ' White'), ('null', '0'))",1.0
+"((' Husband', '0', ' White'), ('null', ' United-States'))",0.9230305686424892
+"(('null', ' United-States', ' Husband'), ('0', ' White'))",0.9300104873875366
+"((' Husband', ' United-States', '0'), ('null', ' White'))",0.9300104873875366
+"(('null', ' United-States', ' Husband', ' White'), ('0',))",1.0
+"(('null', ' Husband', '0', ' White'), (' United-States',))",0.9230305686424892
+"((' Husband', ' United-States', '0', ' White'), ('null',))",1.0
+"(('null', ' United-States', '0', ' Husband'), (' White',))",0.9300104873875366
+"((' Male', ' White'), ('null', ' United-States', '0'))",0.9190585337484176
+"((' United-States', ' Male'), ('null', '0', ' White'))",0.9057042680871148
+"(('null', ' Male', ' White'), (' United-States', '0'))",0.9190585337484176
+"((' United-States', ' Male', ' White'), ('null', '0'))",1.0
+"(('0', ' Male', ' White'), ('null', ' United-States'))",0.9190585337484176
+"(('null', ' United-States', ' Male'), ('0', ' White'))",0.9057042680871148
+"((' United-States', '0', ' Male'), ('null', ' White'))",0.9057042680871148
+"(('null', ' United-States', ' Male', ' White'), ('0',))",1.0
+"(('null', '0', ' Male', ' White'), (' United-States',))",0.9190585337484176
+"((' United-States', '0', ' Male', ' White'), ('null',))",1.0
+"(('null', ' United-States', '0', ' Male'), (' White',))",0.9057042680871148
+"((' United-States', ' <=50K\r', ' Male'), ('null', '0'))",1.0
+"(('null', ' United-States', ' <=50K\r', ' Male'), ('0',))",1.0
+"((' United-States', '0', ' <=50K\r', ' Male'), ('null',))",1.0
+"((' <=50K\r', ' Male', ' White'), ('null', ' United-States'))",0.9095326353754445
+"(('null', ' <=50K\r', ' Male', ' White'), (' United-States',))",0.9095326353754445
+"((' United-States', ' <=50K\r', ' Male', ' White'), ('null',))",1.0
+"((' Husband', ' White'), ('null', ' United-States', ' Male'))",0.9229210036156458
+"((' Husband', ' United-States'), ('null', ' Male', ' White'))",0.92990009383452
+"(('null', ' Husband', ' White'), (' United-States', ' Male'))",0.9229210036156458
+"((' Husband', ' Male', ' White'), ('null', ' United-States'))",0.923022134560596
+"((' Husband', ' United-States', ' White'), ('null', ' Male'))",0.9998812985933884
+"(('null', ' United-States', ' Husband'), (' Male', ' White'))",0.92990009383452
+"((' Husband', ' United-States', ' Male'), ('null', ' White'))",0.9300027601435275
+"(('null', ' Husband', ' Male', ' White'), (' United-States',))",0.923022134560596
+"(('null', ' United-States', ' Husband', ' White'), (' Male',))",0.9998812985933884
+"((' Husband', ' United-States', ' Male', ' White'), ('null',))",1.0
+"(('null', ' United-States', ' Male', ' Husband'), (' White',))",0.9300027601435275
+"(('40', ' <=50K\r', ' White'), ('null', '0'))",1.0
+"(('null', '40', ' <=50K\r', ' White'), ('0',))",1.0
+"(('40', ' <=50K\r', '0', ' White'), ('null',))",1.0
+"((' <=50K\r', ' Male', ' White'), ('null', '0'))",1.0
+"(('null', ' <=50K\r', ' Male', ' White'), ('0',))",1.0
+"(('0', ' <=50K\r', ' Male', ' White'), ('null',))",1.0
+"((' <=50K\r', ' Male', ' White'), (' United-States', '0'))",0.9095326353754445
+"((' United-States', ' <=50K\r', ' Male', ' White'), ('0',))",1.0
+"(('0', ' <=50K\r', ' Male', ' White'), (' United-States',))",0.9095326353754445
+"(('40', ' White'), ('null', ' United-States', '0'))",0.9113717491075981
+"(('null', '40', ' White'), (' United-States', '0'))",0.9113717491075981
+"(('40', ' United-States', ' White'), ('null', '0'))",1.0
+"(('40', '0', ' White'), ('null', ' United-States'))",0.9113717491075981
+"(('null', '40', ' United-States', ' White'), ('0',))",1.0
+"(('null', '40', '0', ' White'), (' United-States',))",0.9113717491075981
+"(('40', ' United-States', '0', ' White'), ('null',))",1.0
+"((' Husband', ' United-States'), ('null', '0', ' Male'))",0.9998896064469835
+"(('null', ' United-States', ' Husband'), ('0', ' Male'))",0.9998896064469835
+"((' Husband', ' United-States', ' Male'), ('null', '0'))",1.0
+"((' Husband', ' United-States', '0'), ('null', ' Male'))",0.9998896064469835
+"(('null', ' United-States', ' Male', ' Husband'), ('0',))",1.0
+"(('null', ' United-States', '0', ' Husband'), (' Male',))",0.9998896064469835
+"((' Husband', ' United-States', '0', ' Male'), ('null',))",1.0
+"(('40', ' United-States', ' <=50K\r'), ('null', '0'))",1.0
+"(('null', '40', ' United-States', ' <=50K\r'), ('0',))",1.0
+"(('40', ' United-States', ' <=50K\r', '0'), ('null',))",1.0
+"((' Husband',), ('null', '0', ' Male', ' White'))",0.9026706231454006
+"((' Husband', ' White'), ('null', '0', ' Male'))",0.9998904349731565
+"((' Husband', 'null'), ('0', ' Male', ' White'))",0.9026706231454006
+"((' Husband', ' Male'), ('null', '0', ' White'))",0.9027599169057275
+"((' Husband', '0'), ('null', ' Male', ' White'))",0.9026706231454006
+"((' Husband', 'null', ' White'), ('0', ' Male'))",0.9998904349731565
+"((' Husband', ' Male', ' White'), ('null', '0'))",1.0
+"((' Husband', '0', ' White'), ('null', ' Male'))",0.9998904349731565
+"((' Husband', 'null', ' Male'), ('0', ' White'))",0.9027599169057275
+"((' Husband', 'null', '0'), (' Male', ' White'))",0.9026706231454006
+"((' Husband', '0', ' Male'), ('null', ' White'))",0.9027599169057275
+"((' Husband', 'null', ' Male', ' White'), ('0',))",1.0
+"((' Husband', 'null', '0', ' White'), (' Male',))",0.9998904349731565
+"((' Husband', '0', ' Male', ' White'), ('null',))",1.0
+"((' Husband', 'null', ' Male', '0'), (' White',))",0.9027599169057275
+"((' <=50K\r', ' White'), ('null', ' United-States', '0'))",0.9144386720729852
+"(('null', ' <=50K\r', ' White'), (' United-States', '0'))",0.9144386720729852
+"((' United-States', ' <=50K\r', ' White'), ('null', '0'))",1.0
+"((' <=50K\r', '0', ' White'), ('null', ' United-States'))",0.9144386720729852
+"(('null', ' United-States', ' <=50K\r', ' White'), ('0',))",1.0
+"(('null', ' <=50K\r', '0', ' White'), (' United-States',))",0.9144386720729852
+"((' United-States', ' <=50K\r', '0', ' White'), ('null',))",1.0
+"((' Married-civ-spouse', ' White'), ('null', ' United-States', '0'))",0.9227258711069997
+"((' United-States', ' Married-civ-spouse'), ('null', '0', ' White'))",0.9169577741006313
+"(('null', ' Married-civ-spouse', ' White'), (' United-States', '0'))",0.9227258711069997
+"((' United-States', ' Married-civ-spouse', ' White'), ('null', '0'))",1.0
+"(('0', ' Married-civ-spouse', ' White'), ('null', ' United-States'))",0.9227258711069997
+"(('null', ' United-States', ' Married-civ-spouse'), ('0', ' White'))",0.9169577741006313
+"((' United-States', '0', ' Married-civ-spouse'), ('null', ' White'))",0.9169577741006313
+"(('null', ' United-States', ' Married-civ-spouse', ' White'), ('0',))",1.0
+"(('null', '0', ' Married-civ-spouse', ' White'), (' United-States',))",0.9227258711069997
+"((' United-States', '0', ' Married-civ-spouse', ' White'), ('null',))",1.0
+"(('null', ' United-States', '0', ' Married-civ-spouse'), (' White',))",0.9169577741006313
+"((' <=50K\r', ' Male', ' White'), ('null', ' United-States', '0'))",0.9095326353754445
+"(('null', ' <=50K\r', ' Male', ' White'), (' United-States', '0'))",0.9095326353754445
+"((' United-States', ' <=50K\r', ' Male', ' White'), ('null', '0'))",1.0
+"(('0', ' <=50K\r', ' Male', ' White'), ('null', ' United-States'))",0.9095326353754445
+"((' White', 'null', ' Male', ' United-States', ' <=50K\r'), ('0',))",1.0
+"((' White', 'null', ' Male', ' <=50K\r', '0'), (' United-States',))",0.9095326353754445
+"((' White', ' Male', ' United-States', ' <=50K\r', '0'), ('null',))",1.0
+"((' Husband', ' White'), ('null', ' United-States', '0', ' Male'))",0.9229210036156458
+"((' Husband', ' United-States'), ('null', '0', ' Male', ' White'))",0.92990009383452
+"((' Husband', 'null', ' White'), (' United-States', '0', ' Male'))",0.9229210036156458
+"((' Husband', ' Male', ' White'), ('null', ' United-States', '0'))",0.923022134560596
+"((' Husband', ' United-States', ' White'), ('null', '0', ' Male'))",0.9998812985933884
+"((' Husband', '0', ' White'), ('null', ' United-States', ' Male'))",0.9229210036156458
+"((' Husband', ' United-States', 'null'), ('0', ' Male', ' White'))",0.92990009383452
+"((' Husband', ' United-States', ' Male'), ('null', '0', ' White'))",0.9300027601435275
+"((' Husband', ' United-States', '0'), ('null', ' Male', ' White'))",0.92990009383452
+"((' Husband', 'null', ' Male', ' White'), (' United-States', '0'))",0.923022134560596
+"((' Husband', ' United-States', 'null', ' White'), ('0', ' Male'))",0.9998812985933884
+"((' Husband', 'null', '0', ' White'), (' United-States', ' Male'))",0.9229210036156458
+"((' Husband', ' United-States', ' Male', ' White'), ('null', '0'))",1.0
+"((' Husband', '0', ' Male', ' White'), ('null', ' United-States'))",0.923022134560596
+"((' Husband', ' United-States', '0', ' White'), ('null', ' Male'))",0.9998812985933884
+"((' Husband', ' United-States', 'null', ' Male'), ('0', ' White'))",0.9300027601435275
+"((' Husband', ' United-States', 'null', '0'), (' Male', ' White'))",0.92990009383452
+"((' Husband', ' United-States', '0', ' Male'), ('null', ' White'))",0.9300027601435275
+"((' White', ' Husband', 'null', ' Male', ' United-States'), ('0',))",1.0
+"((' White', ' Husband', 'null', ' Male', '0'), (' United-States',))",0.923022134560596
+"((' White', ' Husband', 'null', ' United-States', '0'), (' Male',))",0.9998812985933884
+"((' White', ' Husband', ' Male', ' United-States', '0'), ('null',))",1.0
+"((' Husband', 'null', ' Male', ' United-States', '0'), (' White',))",0.9300027601435275

@@ -8,7 +8,7 @@ from collections import defaultdict
 from itertools import islice
 
 
-def master(file_name, min_supp, min_conf, logger):
+def master(start_dataframe, file_name, min_supp, min_conf, logger):
     '''
     Apriori data mingi implementation
 
@@ -19,13 +19,14 @@ def master(file_name, min_supp, min_conf, logger):
         logger: custom logging method
 
     Returns:
-        Nothing output is in a file
+        Nothing output is in a file dataFromList
     '''
     total_apriori_start = timeit.default_timer()
-    inFile = dataFromFile(file_name)
+    # inFile_old = dataFromFile(file_name)
+    inList = dataFromList(start_dataframe.to_csv(header=None, index=False).strip('\n').split('\n'))
     minSupport = min_supp
     minConfidence = min_conf
-    items, rules = runApriori(inFile, minSupport, minConfidence)
+    items, rules = runApriori(inList, minSupport, minConfidence, logger)
 
     # printResults(items, rules)
     with open("data/output/Apriori_items.txt", "w") as f1:
@@ -42,7 +43,7 @@ def master(file_name, min_supp, min_conf, logger):
 
     total_apriori_stop = timeit.default_timer()
     # logging the excecution time
-    logger.info(" Total apriori time is:" +
+    logger.debug(" Total apriori time is:" +
                  str(total_apriori_stop-total_apriori_start))
     return
 
@@ -52,9 +53,11 @@ def subsets(arr):
     return chain(*[combinations(arr, i + 1) for i, a in enumerate(arr)])
 
 
-def returnItemsWithMinSupport(itemSet, transactionList, minSupport, freqSet):
+def returnItemsWithMinSupport(itemSet, transactionList, minSupport, freqSet, logger):
         """calculates the support for items in the itemSet and returns a subset
        of the itemSet each of whose elements satisfies the minimum support"""
+
+        logger.debug('in returnItemsWithMinSupport')
         _itemSet = set()
         localSet = defaultdict(int)
 
@@ -73,12 +76,14 @@ def returnItemsWithMinSupport(itemSet, transactionList, minSupport, freqSet):
         return _itemSet
 
 
-def joinSet(itemSet, length):
+def joinSet(itemSet, length, logger):
         """Join a set with itself and returns the n-element itemsets"""
+        logger.debug('in joinSet')
         return set([i.union(j) for i in itemSet for j in itemSet if len(i.union(j)) == length])
 
 
-def getItemSetTransactionList(data_iterator):
+def getItemSetTransactionList(data_iterator, logger):
+    logger.debug('in getItemSetTransactionList')
     transactionList = list()
     itemSet = set()
     for record in data_iterator:
@@ -89,40 +94,44 @@ def getItemSetTransactionList(data_iterator):
     return itemSet, transactionList
 
 
-def runApriori(data_iter, minSupport, minConfidence):
+def runApriori(data_iter, minSupport, minConfidence, logger):
     """
     run the apriori algorithm. data_iter is a record iterator
     Return both:
      - items (tuple, support)
      - rules ((pretuple, posttuple), confidence)
     """
-    itemSet, transactionList = getItemSetTransactionList(data_iter)
+    logger.debug('In run apriori')
+    itemSet, transactionList = getItemSetTransactionList(data_iter, logger)
 
     freqSet = defaultdict(int)
+    logger.debug('freqSet: '+str(freqSet))
     largeSet = dict()
     # Global dictionary which stores (key=n-itemSets,value=support)
     # which satisfy minSupport
 
     assocRules = dict()
     # Dictionary which stores Association Rules
-
+    logger.debug('Sending to returnItemsWithMinSupport')
     oneCSet = returnItemsWithMinSupport(itemSet,
                                         transactionList,
                                         minSupport,
-                                        freqSet)
-
+                                        freqSet, logger)
+    logger.debug('Before loop')
     currentLSet = oneCSet
+    logger.debug('currentLSet: '+str(currentLSet))
     k = 2
     while(currentLSet != set([])):
+        logger.debug('in loop')
         largeSet[k-1] = currentLSet
-        currentLSet = joinSet(currentLSet, k)
+        currentLSet = joinSet(currentLSet, k, logger)
         currentCSet = returnItemsWithMinSupport(currentLSet,
                                                 transactionList,
                                                 minSupport,
-                                                freqSet)
+                                                freqSet, logger)
         currentLSet = currentCSet
         k = k + 1
-
+    logger.debug('Before getSuppot')
     def getSupport(item):
             """local function which Returns the support of an item"""
             return float(freqSet[item])/len(transactionList)
@@ -131,7 +140,7 @@ def runApriori(data_iter, minSupport, minConfidence):
     for key, value in largeSet.items():
         toRetItems.extend([(tuple(item), getSupport(item))
                            for item in value])
-
+    logger.debug('Before retrules')
     toRetRules = []
 #    for key, value in largeSet.items()[1:]:
     for key, value in islice(largeSet.items(), 1, None):
@@ -162,6 +171,12 @@ def dataFromFile(fname):
         file_iter = open(fname, 'rU')
         for line in file_iter:
             line = line.strip().rstrip(',')                         # Remove trailing comma
+            record = frozenset(line.split(','))
+            yield record
+
+def dataFromList(data_list):
+        """Function which reads from the list and yields a generator"""
+        for line in data_list:                       # Remove trailing comma
             record = frozenset(line.split(','))
             yield record
 
