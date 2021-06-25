@@ -21,12 +21,12 @@ def master(start_dataframe, file_name, min_supp, min_conf, logger):
     Returns:
         Nothing output is in a file dataFromList
     '''
-    total_apriori_start = timeit.default_timer()
-    # inFile_old = dataFromFile(file_name)
-    inList = dataFromList(start_dataframe.to_csv(header=None, index=False).strip('\n').split('\n'))
+    total_apriori_start = timeit.default_timer() 
+    # data_from_generator = dataFromFile(file_name) # Reading data from file
+    data_from_generator = dataFromList(start_dataframe.to_csv(header=None, index=False).strip('\n').split('\n')) # Reading data from dataframe
     minSupport = min_supp
     minConfidence = min_conf
-    items, rules = runApriori(inList, minSupport, minConfidence, logger)
+    items, rules = runApriori(data_from_generator, minSupport, minConfidence, logger)
 
     # printResults(items, rules)
     with open("data/output/Apriori_items.txt", "w") as f1:
@@ -87,6 +87,8 @@ def getItemSetTransactionList(data_iterator, logger):
     transactionList = list()
     itemSet = set()
     for record in data_iterator:
+        logger.debug('  ')
+        logger.debug('record: '+str(record))
         transaction = frozenset(record)
         transactionList.append(transaction)
         for item in transaction:
@@ -102,6 +104,7 @@ def runApriori(data_iter, minSupport, minConfidence, logger):
      - rules ((pretuple, posttuple), confidence)
     """
     logger.debug('In run apriori')
+    
     itemSet, transactionList = getItemSetTransactionList(data_iter, logger)
 
     freqSet = defaultdict(int)
@@ -170,13 +173,13 @@ def dataFromFile(fname):
         """Function which reads from the file and yields a generator"""
         file_iter = open(fname, 'rU')
         for line in file_iter:
-            line = line.strip().rstrip(',')                         # Remove trailing comma
+            line = line.strip().rstrip(',') # Remove trailing comma
             record = frozenset(line.split(','))
             yield record
 
 def dataFromList(data_list):
         """Function which reads from the list and yields a generator"""
-        for line in data_list:                       # Remove trailing comma
+        for line in data_list: # Remove trailing comma
             record = frozenset(line.split(','))
             yield record
 

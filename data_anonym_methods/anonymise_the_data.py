@@ -36,7 +36,7 @@ def master(start_dataframe, nums, kmin, save_to_file, anonym_file, logger):
                  str(anonymized_and_masked_data.shape))
     # saving to file if that option was set to True
     if save_to_file:
-        start_dataframe.to_csv(anonym_file, index=False, header=False)
+        anonymized_and_masked_data.to_csv(anonym_file, index=False, header=False)
     total_anonymise_stop = timeit.default_timer()
     # logging the excecution time
     logger.info(" Total anonymisation time is:" +
